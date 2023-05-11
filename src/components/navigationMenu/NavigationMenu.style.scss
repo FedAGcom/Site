@@ -1,0 +1,43 @@
+%navmenu-same-link-styles {
+  position: absolute;
+
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-decoration: none;
+
+  color: #FFFFFF;
+}
+
+.header-navmenu {
+
+  .header-navmenu-ul{
+    list-style-type: none;
+
+    .header-navmenu-services {
+      @extend %navmenu-same-link-styles;
+      left: 63.96%;
+      right: 31.25%;
+      top: 34.18%;
+      bottom: 34.18%;
+
+    }
+    .header-navmenu-cases {
+      @extend %navmenu-same-link-styles;
+      left: 71.94%;
+      right: 24.65%;
+      top: 34.18%;
+      bottom: 34.18%;
+
+    }
+    .header-navmenu-customer {
+      @extend %navmenu-same-link-styles;
+      left: 77.36%;
+      right: 11.46%;
+      top: 34.18%;
+      bottom: 34.18%;
+    }
+  }
+}

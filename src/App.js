@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from "react";
+import { Routes, Route } from 'react-router-dom';
+
+import Header from './components/header/Header.component';
+import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
+
+import HomePageComponent from "./pages/homePage/HomePage.component";
+import CareerComponent from "./pages/career/Career.component";
+import ContactUsComponent from "./pages/contactUs/ContactUs.component";
+import TechnologyComponent from "./pages/tecnhology/Technology.component";
+import CasesStudyComponent from "./pages/casesStudy/CasesStudy.component";
+import CasesComponent from "./pages/cases/Cases.component";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ErrorBoundary>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePageComponent />} />
+          <Route path='/career' element={<CareerComponent/>} />
+          <Route path='/cases-study' element={<CasesStudyComponent />} />
+          <Route path="/contact-us" element={<ContactUsComponent />} />
+          <Route path="/technology" element={<TechnologyComponent />} />
+          <Route path="/cases" element={<CasesComponent />} />
+        </Routes>
+      </ErrorBoundary>
     </div>
   );
 }
