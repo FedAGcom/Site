@@ -33,21 +33,6 @@ export const StyledNav = styled.nav`
 	  
 	  animation: show 500ms 1;
 	  
-	  .leave {
-		  animation: hide 500ms 1;
-		  
-		  @keyframes hide{
-        0% {
-          opacity: 1;
-        }
-
-        100% {
-          opacity: 0;
-	        //display: none;
-        }
-		  }
-	  }
-	  
 	  @keyframes show{
 		  0% {
 			  opacity: 0;
@@ -80,9 +65,6 @@ export const StyledListElements = styled.li`
     justify-content: center;
     animation: fadeIn 1.5s ease-in both;
   }
-  &:active {
-    animation: fadeOut 1s ease-out;
-  }
 	&:nth-child(1) {
 		${sameListStyles};
     left: 63.96%;
@@ -107,6 +89,7 @@ export const StyledListElements = styled.li`
     top: 34.18%;
     bottom: 34.18%;
 		animation-delay: 2s;
+		margin-bottom: 3.3rem;
 	}
 
   @keyframes fadeIn {

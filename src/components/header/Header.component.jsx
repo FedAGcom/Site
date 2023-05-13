@@ -35,6 +35,6 @@ const Header = ({ hidden }) => {
 
 const mapStateToProps = createStructuredSelector ({
   hidden: selectDropdownHidden
-})
+});
 
 export default connect(mapStateToProps, null)(withWrapper(Header));

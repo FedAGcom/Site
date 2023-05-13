@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ReactComponent as Logo } from '../../assets/fedag.svg';
+import {ReactComponent as Logo} from '../../assets/fedag.svg';
 
 import {StyledLogoForHeader} from "./Logo.styles";
 

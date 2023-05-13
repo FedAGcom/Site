@@ -1,10 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
 
-import './NavigationButton.styles.scss'
 import {toggleCartHidden} from "../../redux/dropdown/dropdown.actions";
 import {createStructuredSelector} from "reselect";
 import {selectDropdownHidden} from "../../redux/dropdown/dropdown.selectors";
+
+import './NavigationButton.styles.scss'
 
 const NavigationButtonComponent = ({ hidden, toggleCartHidden }) => {
   return (
@@ -19,6 +20,7 @@ const NavigationButtonComponent = ({ hidden, toggleCartHidden }) => {
 const mapStateToProps = createStructuredSelector ({
 	hidden: selectDropdownHidden
 });
+
 const mapDispatchToProps = dispatch => ({
 	toggleCartHidden: () => dispatch(toggleCartHidden())
 });
