@@ -11,11 +11,12 @@ import TechnologyComponent from "./pages/tecnhology/Technology.component";
 import CasesStudyComponent from "./pages/casesStudy/CasesStudy.component";
 import CasesComponent from "./pages/cases/Cases.component";
 
-import './App.css';
+import {GlobalStyle} from "./global.styles";
 
 function App() {
   return (
     <div>
+      <GlobalStyle />
       <ErrorBoundary>
         <Header />
         <Routes>

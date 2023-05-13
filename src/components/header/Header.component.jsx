@@ -1,18 +1,40 @@
-import React from "react";
+import React, {useMemo} from "react";
+import {connect} from "react-redux";
+import {createStructuredSelector} from "reselect";
+
+import {selectDropdownHidden} from "../../redux/dropdown/dropdown.selectors";
 
 import withWrapper from "../withWrapper/withWrapper.component";
 import LogoComponent from "../logo/Logo.component";
-import CallToComponent from "../callTo/CallTo.component";
 import NavigationMenuComponent from "../navigationMenu/NavigationMenu.component";
+import NavigationButtonComponent from "../navigationButton/NavigationButton.component";
 
-import './Header.style.scss';
+import {StyledHeader} from "./Header.styles";
 
-const Header = () => (
-  <div className="header">
-    <LogoComponent />
-    <CallToComponent className="header-phone-number" phone="+79112507289">+7 (911) 250-72-89</CallToComponent>
-    <NavigationMenuComponent />
-  </div> 
-);
+const Header = ({ hidden }) => {
+  console.log(hidden)
 
-export default withWrapper(Header);
+  let navigationMenu = useMemo(() => {
+    if (window.innerWidth > 800 && (hidden === false)) {
+      return <NavigationMenuComponent />
+    } else if (window.innerWidth < 800 && (hidden === true)) {
+      return <NavigationMenuComponent />
+    } else {
+      return null
+    }
+  },[hidden]);
+
+  return(
+    <StyledHeader>
+      <LogoComponent />
+      <NavigationButtonComponent />
+      {navigationMenu}
+    </StyledHeader>
+  );
+}
+
+const mapStateToProps = createStructuredSelector ({
+  hidden: selectDropdownHidden
+})
+
+export default connect(mapStateToProps, null)(withWrapper(Header));

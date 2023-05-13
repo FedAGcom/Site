@@ -1,9 +1,9 @@
 import React from "react";
 
-import './CallTo.style.scss'
+import {StyledCallTo} from "./CallTo.styles";
 
 const CallToComponent = ({ phone, children }) => {
-	return <a className='header-phone-number' href={`tel:${phone}`}>{children}</a>;
+	return <StyledCallTo href={`tel:${phone}`}>{children}</StyledCallTo>;
 };
 
 export default CallToComponent;

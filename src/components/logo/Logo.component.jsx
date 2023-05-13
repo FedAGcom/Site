@@ -1,13 +1,11 @@
 import React from "react";
 
-import { ReactComponent as Logotype } from '../../assets/fedag.svg';
+import { ReactComponent as Logo } from '../../assets/fedag.svg';
 
-import './Logo.style.scss';
+import {StyledLogoForHeader} from "./Logo.styles";
 
 const LogoComponent = () => (
-	<a href='/'>
-		<Logotype className='logo' />
-	</a>
+	<StyledLogoForHeader as="a" href="/"><Logo /></StyledLogoForHeader>
 );
 
 export default LogoComponent;

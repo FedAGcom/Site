@@ -1,11 +1,12 @@
 import React from "react";
-import './withWrapper.style.scss';
+
+import {StyledWithWrapper} from "./withWrapper.styles";
 
 const withWrapper = (WrappedComponent) => {
   class WithWrapper extends React.Component {
     render() {
       return (
-        <WrappedComponent className='wrapped-component' {...this.props}/>
+        <StyledWithWrapper as={WrappedComponent} {...this.props} />
       )
     }
   }

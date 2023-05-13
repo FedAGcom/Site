@@ -1,18 +1,33 @@
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
 
-import './NavigationMenu.style.scss';
+import {
+	StyledNavLink,
+	StyledListElements,
+	StyledUnorderedList,
+	StyledNav
+} from "./NavigationMenu.styles";
+
+import CallToComponent from "../callTo/CallTo.component";
+import {toggleCartHidden} from "../../redux/dropdown/dropdown.actions";
+import {selectDropdownHidden} from "../../redux/dropdown/dropdown.selectors";
+
 
 const NavigationMenuComponent = () => {
+	const dispatch = useDispatch();
+	const hidden = useSelector(selectDropdownHidden);
+	const handleEvent = () => {
+		dispatch(toggleCartHidden())
+	}
 	return (
-		<div className='header-navmenu'>
-			<ul className='header-navmenu-ul'>
-				<li><a className='header-navmenu-services' href='#'>Services</a></li>
-				<li><a className='header-navmenu-cases' href='#'>Cases</a></li>
-				<li><a className='header-navmenu-customer' href='#'>Become a customer</a></li>
-			</ul>
-			<div className="header-burger" >
-			</div>
-		</div>
+		<StyledNav className={hidden ? "container" : "container"}>
+			<CallToComponent className="header-phone-number" phone="+79112507289">+7 (911) 250-72-89</CallToComponent>
+			<StyledUnorderedList className={hidden ? "" : ""}>
+				<StyledListElements onClick={handleEvent}><StyledNavLink to="/technology" >Services</StyledNavLink></StyledListElements>
+				<StyledListElements onClick={handleEvent}><StyledNavLink to="/cases" >Cases</StyledNavLink></StyledListElements>
+				<StyledListElements onClick={handleEvent}><StyledNavLink to="/contact-us" >Become a customer</StyledNavLink></StyledListElements>
+			</StyledUnorderedList>
+		</StyledNav>
 	)
 }
 
