@@ -1,7 +1,7 @@
 import DropdownActionTypes from "./dropdown.types";
 
 const INITIAL_STATE = {
-	hidden: false
+	hidden: true
 }
 
 const dropdownReducer = (state = INITIAL_STATE, action) => {

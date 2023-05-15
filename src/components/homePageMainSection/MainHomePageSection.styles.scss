@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-section-of-home-page {
+  position: absolute;
+  width: 100vw;
+  height: 800px;
+  left: 0;
+  top: 79px;
+
+  background: #272727;
+  border-radius: 0 0 50px 50px;
+
+  @media only screen and (max-width: 800px) {
+    height: 771px;
+    left: 0;
+    top: 57px;
+
+    border-radius: 0 0 30px 30px;
+  }
+
+  .logotype-of-fedag-in-main-section {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 1168px;
+    top: 103px;
+    background: url("../../assets/homepage/logoIcon.png");
+    background-size: cover;
+    @media only screen and (max-width: 800px) {
+      width: 66px;
+      height: 66px;
+      left: 65.6%;
+      top: 19px;
+      opacity: 0.8;
+    }
+  }
+
+
+  .image-and-score-of-main-section {
+    position: absolute;
+    width: 445px;
+    height: 498px;
+    left: 830px;
+    top: 142px;
+    border-radius: 20px;
+
+    background: url("../../assets/homepage/mainPhotoForBadge.png");
+    background-size: cover;
+
+    @media only screen and (max-width: 800px) {
+      width: 353px;
+      height: 305px;
+      left: -75px;
+      top: 0;
+
+      background: url("../../assets/homepage/mainPhotoForMobileBadge.png");
+      background-size: cover;
+    }
+  }
+
+}

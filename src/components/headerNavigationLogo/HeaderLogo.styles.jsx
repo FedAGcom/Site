@@ -8,10 +8,10 @@ export const StyledLogoForHeader = styled.a`
 	bottom: 24.05%;
 
 	@media only screen and (max-width: 800px) {
-		position: fixed;
+		position: absolute;
     left: 4.27%;
     right: 69.33%;
-    top: 0.65%;
+    top: 15%;
     bottom: 99.05%;
 	}
 `;

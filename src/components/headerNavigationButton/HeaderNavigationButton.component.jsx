@@ -5,11 +5,17 @@ import {toggleCartHidden} from "../../redux/dropdown/dropdown.actions";
 import {createStructuredSelector} from "reselect";
 import {selectDropdownHidden} from "../../redux/dropdown/dropdown.selectors";
 
-import './NavigationButton.styles.scss'
+import './HeaderNavigationButton.styles.scss'
 
-const NavigationButtonComponent = ({ hidden, toggleCartHidden }) => {
+const HeaderNavigationButtonComponent = ({ hidden, toggleCartHidden }) => {
+	const handleEvent = () => {
+		toggleCartHidden()
+	}
+
+	// кнопка Header`а без svg or png
+	// необходима оптимизация для стилей.
   return (
-	  <div className={hidden ? "is-active hamburger" : "hamburger"} onClick={toggleCartHidden} >
+	  <div className={hidden ? "hamburger" : "is-active hamburger"} onClick={handleEvent} >
 		  <span className="line"></span>
 		  <span className="line"></span>
 		  <span className="line"></span>
@@ -25,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
 	toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationButtonComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderNavigationButtonComponent);

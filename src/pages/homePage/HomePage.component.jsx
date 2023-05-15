@@ -1,9 +1,11 @@
 import React from "react";
 
+import HomePageMainSectionComponent from "../../components/homePageMainSection/HomePageMainSection.component";
+
 const HomePageComponent = () => {
 	return (
 		<div>
-			<p>This is Home Page</p>
+			<HomePageMainSectionComponent />
 		</div>
 	)
 };
