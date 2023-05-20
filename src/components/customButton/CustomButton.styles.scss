@@ -20,6 +20,25 @@
     background: #790A22;
   }
 
+    &:active, &:focus {
+    animation-name: faded;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+
+    @-webkit-keyframes faded {
+      1% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(2px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  }
+
+
   span {
     font-style: normal;
     font-weight: 600;
@@ -30,3 +49,4 @@
     text-align: center;
   }
 }
+

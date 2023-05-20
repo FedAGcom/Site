@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', serif;
   }
 	
   ul {

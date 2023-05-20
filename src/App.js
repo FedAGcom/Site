@@ -7,7 +7,7 @@ import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
 import HomePageComponent from "./pages/homePage/HomePage.component";
 import CareerComponent from "./pages/career/Career.component";
 import ContactUsComponent from "./pages/contactUs/ContactUs.component";
-import TechnologyComponent from "./pages/tecnhology/Technology.component";
+import TechnologyComponent from "./pages/tecnhologies/Technology.component";
 import CasesStudyComponent from "./pages/casesStudy/CasesStudy.component";
 import CasesComponent from "./pages/cases/Cases.component";
 
