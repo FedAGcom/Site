@@ -27,6 +27,7 @@ export const StyledProjectTagsButtonSpan = styled.span`
   font-weight: 400;
   font-size: ${({ tag }) => tag ? "16px" : "20px"};
   line-height: ${({ tag }) => tag ? "22px" : "27px"};
+  white-space: nowrap;
 
   color: #606060;
 
@@ -36,7 +37,6 @@ export const StyledProjectTagsButtonSpan = styled.span`
 	
 	@media only screen and (max-width: 800px) {
     width: ${({respspanwidth}) => respspanwidth};
-
 		height: ${({tag}) => tag ? "19px" : "27px"};
 		font-size: ${({tag}) => tag ? "14px" : "20px"};
     line-height: ${({tag}) => tag ? "19px" : "27px"};

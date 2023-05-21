@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import mainPhotoForBadge from "../../assets/homepage/mainPhotoForBadge.png";
+import mainPhotoForBadge from "../../assets/homepage/mainPhotoForBadge.svg";
 import mainPhotoForMobileBadge from "../../assets/homepage/mainPhotoForMobileBadge.png";
-import logoIconOfFedag from '../../assets/homepage/logoIcon.png'
+import logoIconOfFedag from '../../assets/homepage/logoIcon.svg'
 
 export const StyledMainSectionOfHomePage = styled.section`
   position: absolute;

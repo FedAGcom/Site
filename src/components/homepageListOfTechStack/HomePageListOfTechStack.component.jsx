@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 
-import {selectTechCollection} from "../../redux/technology/technology.selectors";
+import {selectTechCollection} from "../../redux/technologies/technologies.selectors";
 
 import {
 	StyledListOfTechStack,

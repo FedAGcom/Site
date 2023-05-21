@@ -49,7 +49,7 @@ export const casesListData = {
 			"nameWidth": ["239px", "207px"],
 			"tags": [
 				{
-					"tagName": "Information technology",
+					"tagName": "Information technologies",
 					"key": "allPACInformationTechnologyTag",
 					"tagBtnWidth": ["207px", "186px"],
 					"tagSpanWidth": ["167px", "146px"]
@@ -163,7 +163,7 @@ export const casesListData = {
 			"nameWidth": ["239px", "207px"],
 			"tags": [
 				{
-					"tagName": "Information technology",
+					"tagName": "Information technologies",
 					"key": "healthCarePACInformationTechnologyTag",
 					"tagBtnWidth": ["207px", "186px"],
 					"tagSpanWidth": ["167px", "146px"]

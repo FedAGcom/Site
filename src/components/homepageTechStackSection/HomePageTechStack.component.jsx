@@ -21,7 +21,7 @@ const HomePageTechStackComponent = () => {
 				If you have not found the necessary glasses, we are ready to quickly select a team or gain special knowledge for non-standard tasks.
 			</StyledParagraphOfTechStackSection>
 
-			<FilterButtonComponent collection="technology" top="192px" />
+			<FilterButtonComponent collection="technologies" top="192px" />
 
 			<HomePageListOfTechStackComponent />
 		</StyledTechStackSection>

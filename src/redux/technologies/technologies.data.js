@@ -5,7 +5,7 @@ const reactImage = require("../../assets/homepage/react.png");
 const phpImage = require("../../assets/homepage/php.png");
 const vueImage = require("../../assets/homepage/vue.png");
 
-export const technologyListData = {
+export const technologiesData = {
 	"frontend": [
 		{
 			"name": "Angular",

@@ -12,9 +12,9 @@ import {
 	selectDevOpsTechnologies,
 	selectFrontendTechnologies,
 	selectPopularTechnologies,
-	selectTechnologyButtons
-} from "../../redux/technology/technology.selectors";
-import {switchTechnologyType} from "../../redux/technology/technology.actions";
+	selectTechnologiesButtons
+} from "../../redux/technologies/technologies.selectors";
+import {switchTechnologiesType} from "../../redux/technologies/technologies.actions";
 
 import {
 	selectCasesButton,
@@ -42,21 +42,21 @@ const FilterButtonComponent = ({ collection, top }) => {
 	const enterpriseCases = useSelector(selectEnterpriseCases);
 
 	let buttonCollection;
-	const techButtons = useSelector(selectTechnologyButtons);
+	const techButtons = useSelector(selectTechnologiesButtons);
 	const casesButtons = useSelector(selectCasesButton);
-	if (collection === "technology") {
+	if (collection === "technologies") {
 		buttonCollection = techButtons;
 	} else if (collection === "cases") {
 		buttonCollection = casesButtons
 	}
 
-	const [active, setActive] = useState((collection === "technology") ? "Popular" : "All");
+	const [active, setActive] = useState((collection === "technologies") ? "Popular" : "All");
 	const dispatch = useDispatch();
 
 	const handleEvent = (collection, btnName) => {
 		if ((btnName === "Frontend") || (btnName === "Popular")
 			|| (btnName === "Backend") || (btnName === "DevOps")) {
-			dispatch(switchTechnologyType(collection))
+			dispatch(switchTechnologiesType(collection))
 		} else {
 			dispatch(switchCasesType(collection))
 		}
