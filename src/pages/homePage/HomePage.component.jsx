@@ -5,6 +5,7 @@ import HomePageTechStackComponent from "../../components/homepageTechStackSectio
 import HomePageApproachComponent from "../../components/homepageApproachSection/HomePageApproach.component";
 import HomePageCasesComponent from "../../components/homepageCasesSection/HomePageCases.component";
 import HomePageEmployeesComponent from "../../components/homepageEmployeesSection/HomePageEmployees.component";
+import HomePageContactUsComponent from "../../components/homepageContactUsSection/HomePageContactUs.component";
 
 const HomePageComponent = () => {
 	return (
@@ -14,6 +15,7 @@ const HomePageComponent = () => {
 			<HomePageApproachComponent />
 			<HomePageCasesComponent />
 			<HomePageEmployeesComponent />
+			<HomePageContactUsComponent />
 		</div>
 	)
 };

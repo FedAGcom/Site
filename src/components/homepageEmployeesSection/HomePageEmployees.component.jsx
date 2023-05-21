@@ -24,17 +24,22 @@ import {
 	StyledScoreDefinition,
 	StyledScoreOfEmployeesSection,
 	StyledScorePercentage,
-	StyledTitleOfMainEmployees
+	StyledTitleOfMainEmployees,
+	StyledContainerForMainEmployees, StyledDivForMainEmployee
 } from "./HomePageEmployees.styles";
 
 const HomePageEmployeesComponent = () => {
 	const [active, setActive] = useState("");
+	const [read, setRead] = useState(false);
 
 	const score = useSelector(selectScoreEmployees);
 	const mainEmployees = useSelector(selectMainEmployees);
 	const generalEmployees = useSelector(selectGeneralEmployees);
 
-	console.log(score)
+	const handleClick = (name) => {
+		setActive(name);
+		setRead(!read);
+	}
 	return (
 		<StyledEmployeesSection>
 			<StyledEmployeesSectionHeadline className="desktop">
@@ -56,31 +61,33 @@ const HomePageEmployeesComponent = () => {
 				}
 			</StyledScoreOfEmployeesSection>
 
-			{
-				mainEmployees.map((main) => (
-					<div key={main.key}>
-						<StyledRectangleForEmployees cto={(main.position === "CTO") ? "true" : ""} />
-						<StyledImageOfMainEmployees src={main.imageSource[0]} alt={main.name} cto={(main.position === "CTO") ? "true" : ""} />
-						<StyledTitleOfMainEmployees cto={(main.position === "CTO") ? "true" : ""} >
-							<StyledNameOfMainEmployees  cto={(main.position === "CTO") ? "true" : ""}>
-								{main.name}
-							</StyledNameOfMainEmployees>
-							<StyledPositionNameOfMainEmployees>{main.position}</StyledPositionNameOfMainEmployees>
-						</StyledTitleOfMainEmployees>
-					</div>
-				))
-			}
+			<StyledContainerForMainEmployees>
+				{
+					mainEmployees.map((main) => (
+						<StyledDivForMainEmployee key={main.key}>
+							<StyledRectangleForEmployees cto={(main.position === "CTO") ? "true" : ""} />
+							<StyledImageOfMainEmployees src={main.imageSource[0]} alt={main.name} cto={(main.position === "CTO") ? "true" : ""} />
+							<StyledTitleOfMainEmployees cto={(main.position === "CTO") ? "true" : ""} >
+								<StyledNameOfMainEmployees  cto={(main.position === "CTO") ? "true" : ""}>
+									{main.name}
+								</StyledNameOfMainEmployees>
+								<StyledPositionNameOfMainEmployees>{main.position}</StyledPositionNameOfMainEmployees>
+							</StyledTitleOfMainEmployees>
+						</StyledDivForMainEmployee>
+					))
+				}
+			</StyledContainerForMainEmployees>
 
 			<StyledFrameOfGeneralEmployees>
 				{
 					generalEmployees.map((general) => (
 						<StyledContainerForEmployeesImage
-							key={general.key} className={(active === general.name) ? "active" : ""}
-							onClick={() => setActive(general.name)}>
+							key={general.key} className={((active === general.name) && (read === true)) ? "active" : ""}
+							onClick={() => handleClick(general.name)} >
 
 							<StyledImageOfGeneralEmployee
-								src={active ? general.imageSource[1] : general.imageSource[0]}
-								className={(active === general.name) ? "active" : ""} alt={general.name}/>
+								src={((active === general.name) && (read === true)) ? general.imageSource[1] : general.imageSource[0]}
+								className={((active === general.name) && (read === true)) ? "read" : ""} alt={general.name}/>
 
 							<StyledInfoAboutEmployee className="employee-info">
 								<StyledEmployeeNameOfInfoPart>{general.name}</StyledEmployeeNameOfInfoPart>

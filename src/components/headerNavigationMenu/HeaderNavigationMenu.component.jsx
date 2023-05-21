@@ -40,8 +40,6 @@ const HeaderNavigationMenuComponent = () => {
 	}
 
 	// Компонент навигационного меню
-	// Не исчезает с DOM на мобильной версии при hidden=true
-	// Свойство display не работает с анимацией.
 	return (
 		<StyledNav className={classNameValue}>
 

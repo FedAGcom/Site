@@ -1,28 +1,8 @@
 import styled from "styled-components";
 
-export const StyledImageOfGeneralEmployee = styled.img`
-  position: absolute;
-	top: 0;
-	height: 164px;
-  width: 160px;
-  border-radius: 30px;
-	z-index: 1;
-	
-	&:hover {
-    height: 193px;
-    width: 160px;
-    top: 10px;
-    border-radius: 30px;
-  }
-	
-	&.active {
-		z-index: 3;
-	}
-`;
-
 export const StyledPositionOfGeneralEmployee = styled.p`
   position: absolute;
-	top: 75px;
+	top: 65px;
 	left: 20px;
 	font-weight: 600;
   font-size: 18px;
@@ -32,7 +12,7 @@ export const StyledPositionOfGeneralEmployee = styled.p`
 
 export const StyledEmployeeNameOfInfoPart = styled.p`
 	position: absolute;
-  top: 40px;
+  top: 30px;
 	left: 20px;
   font-weight: 700;
   font-size: 24px;
@@ -40,15 +20,48 @@ export const StyledEmployeeNameOfInfoPart = styled.p`
   color: #FFFFFF;
 `;
 
+export const StyledImageOfGeneralEmployee = styled.img`
+  position: absolute;
+	top: 0;
+	height: 164px;
+  width: 160px;
+  border-radius: 30px;
+	z-index: 0;
+	
+	&:hover {
+    height: 193px;
+    width: 160px;
+    top: 10px;
+    border-radius: 30px;
+  }
+	
+	@media only screen and (max-width: 800px) {
+    &:hover {
+      height: 164px;
+      width: 160px;
+      top: 0;
+    }
+	}
+	
+	&.read {
+		z-index: 2;
+	}
+`;
+
+
 export const StyledInfoAboutEmployee = styled.div`
   display: none;
-	z-index: 2;
+	z-index: 1;
 	position: relative;
 	top: 173px;
 	background-color: #B81034;
 	height: 140px;
   width: 285px;
   border-radius: 0 30px 30px 30px;
+	
+	@media only screen and (max-width: 800px) {
+		height: 100px;
+	}
 `;
 
 export const StyledContainerForEmployeesImage = styled.div`
@@ -61,15 +74,14 @@ export const StyledContainerForEmployeesImage = styled.div`
 	&.active {
 		.employee-info {
 			display: block;
-			
 		}
 		
-		.active {
+    .read {
       height: 193px;
       width: 160px;
       top: 10px;
       border-radius: 30px;
-		}
+    }
 	}
 `;
 
@@ -85,6 +97,15 @@ export const StyledFrameOfGeneralEmployees = styled.div`
   height: 164px;
   left: 165px;
   top: 605px;
+	
+	@media only screen and (max-width: 800px) {
+    gap: 15px;
+		overflow: scroll;
+    width: 335px;
+    height: 273px;
+    left: 16px;
+    top: 1499px;
+	}
 `;
 
 export const StyledTitleOfMainEmployees = styled.div`
@@ -95,8 +116,14 @@ export const StyledTitleOfMainEmployees = styled.div`
   position: absolute;
   width: ${({ cto }) => (cto) ? "174px" : "96px"};
   height: 87px;
-  left: ${({ cto }) => (cto) ? "546px" : "165px"} ;
-  top: 488px;
+  left: ${({ cto }) => (cto) ? "381px" : "0"} ;
+  top: 403px;
+	
+	@media only screen and (max-width: 800px) {
+		position: relative;
+		top: ${({ cto }) => (cto) ? "30px" : "40px"};
+    left: ${({ cto }) => (cto) ? "0" : "0"} ;
+	}
 `;
 
 export const StyledPositionNameOfMainEmployees = styled.p`
@@ -124,27 +151,64 @@ export const StyledNameOfMainEmployees = styled.p`
 `;
 
 export const StyledImageOfMainEmployees = styled.img`
-  position: absolute;
+	position: absolute;
+	height: ${({ cto }) => (cto) ? "360px" : "332px"};
   width: ${({ cto }) => (cto) ? "350px" : "321px"};
-  height: ${({ cto }) => (cto) ? "360px" : "332px"};
-  left: ${({ cto }) => (cto) ? "546px" : "195px"};
-  top: ${({ cto }) => (cto) ? "85px" : "121px"};
+	left: ${({ cto }) => (cto) ? "382px" : "29px"};
+  top: ${({ cto }) => (cto) ? "0" : "36px"};
   border-radius: 30px;
 	z-index: 1;
+	
+	@media only screen and (max-width: 800px) {
+    height: ${({ cto }) => (cto) ? "332px" : "348px"};
+    width: ${({ cto }) => (cto) ? "322px" : "338px"};
+		left: ${({ cto }) => (cto) ? "0" : "5px"};
+    top: ${({ cto }) => (cto) ? "493px" : "16px"};
+	} 
 `;
 
-export const StyledContainerForMainEmployee = styled.div`
+export const StyledDivForMainEmployee = styled.div`
+	width: 350px;
+	height: 490px;
 	
+	@media only screen and (max-width: 800px) {
+		width: 343px;
+		height: 463px;
+	}
+`;
+
+export const StyledContainerForMainEmployees = styled.div`
+	display: flex;
+	flex-direction: row;
+	width: 730px;
+	height: 490px;
+	position: absolute;
+	top: 85px;
+	gap: 30px;
+	
+	@media only screen and (max-width: 800px) {
+		width: 343px;
+		top: 527px;
+		flex-direction: column;
+		height: 942px;
+	}
 `;
 
 export const StyledRectangleForEmployees = styled.div`
-  position: absolute;
-  width: 350px;
-  height: 360px;
-  top: ${({ cto }) => (cto) ? "95px" : "85px"};
-	left: ${({ cto }) => (cto) ? "568px" : "165px"};
+  position: relative;
+  width: ${({ cto }) => (cto) ? "328px" : "350px"};
+  height: ${({ cto }) => (cto) ? "383px" : "360px"};
+  top: ${({ cto }) => (cto) ? "10px" : "0"};
+	left: ${({ cto }) => (cto) ? "22px" : "0"};
   background: #B81034;
   border-radius: 30px;
+	
+	@media only screen and (max-width: 800px) {
+    position: relative;
+    width: ${({ cto }) => (cto) ? "338px" : "326px"};
+    height: ${({ cto }) => (cto) ? "348px" : "336px"};
+    left: ${({ cto }) => (cto) ? "5px" : "0"};
+	}
 `;
 
 export const StyledScoreDefinition = styled.p`
@@ -195,6 +259,12 @@ export const StyledScoreOfEmployeesSection = styled.div`
   height: 390px;
   left: 926px;
   top: 85px;
+	
+	@media only screen and (max-width: 800px) {
+		left: 0;
+		top: 75px;
+		padding: 0 16px;
+	}
 `;
 
 export const StyledEmployeesSectionHeadline = styled.p`
