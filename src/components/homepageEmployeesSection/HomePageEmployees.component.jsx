@@ -9,43 +9,41 @@ import {
 
 import {
 	StyledContainerForEmployeesImage,
-	StyledEmployeeNameOfInfoPart,
-	StyledPositionOfGeneralEmployee,
-	StyledEmployeesSection,
-	StyledEmployeesSectionHeadline,
-	StyledFrameOfGeneralEmployees,
-	StyledImageOfGeneralEmployee,
-	StyledImageOfMainEmployees,
-	StyledInfoAboutEmployee,
-	StyledLayoutForScoreOfEmployees,
-	StyledNameOfMainEmployees,
-	StyledPositionNameOfMainEmployees,
-	StyledRectangleForEmployees,
-	StyledScoreDefinition,
-	StyledScoreOfEmployeesSection,
-	StyledScorePercentage,
-	StyledTitleOfMainEmployees,
+	StyledEmployeeNameOfInfoPart, StyledPositionOfGeneralEmployee,
+	StyledEmployeesSection, StyledEmployeesSectionHeadline,
+	StyledFrameOfGeneralEmployees, StyledImageOfGeneralEmployee,
+	StyledImageOfMainEmployees, StyledInfoAboutEmployee,
+	StyledLayoutForScoreOfEmployees, StyledNameOfMainEmployees,
+	StyledPositionNameOfMainEmployees, StyledRectangleForEmployees,
+	StyledScoreDefinition, StyledScoreOfEmployeesSection,
+	StyledScorePercentage, StyledTitleOfMainEmployees,
 	StyledContainerForMainEmployees, StyledDivForMainEmployee
 } from "./HomePageEmployees.styles";
 
 const HomePageEmployeesComponent = () => {
 	const [active, setActive] = useState("");
 	const [read, setRead] = useState(false);
+	const widthOfWindow = window.innerWidth;
 
 	const score = useSelector(selectScoreEmployees);
 	const mainEmployees = useSelector(selectMainEmployees);
 	const generalEmployees = useSelector(selectGeneralEmployees);
 
 	const handleClick = (name) => {
+		console.log(active, name)
+		if (active === name) {
+			setRead(!read);
+		} else {
+			setRead(true);
+		}
 		setActive(name);
-		setRead(!read);
 	}
+
 	return (
 		<StyledEmployeesSection>
 			<StyledEmployeesSectionHeadline className="desktop">
 				Who are working for you
 			</StyledEmployeesSectionHeadline>
-
 			<StyledEmployeesSectionHeadline className="mobile">
 				About us
 			</StyledEmployeesSectionHeadline>
@@ -66,7 +64,7 @@ const HomePageEmployeesComponent = () => {
 					mainEmployees.map((main) => (
 						<StyledDivForMainEmployee key={main.key}>
 							<StyledRectangleForEmployees cto={(main.position === "CTO") ? "true" : ""} />
-							<StyledImageOfMainEmployees src={main.imageSource[0]} alt={main.name} cto={(main.position === "CTO") ? "true" : ""} />
+							<StyledImageOfMainEmployees src={main.imageSource} alt={main.name} cto={(main.position === "CTO") ? "true" : ""} />
 							<StyledTitleOfMainEmployees cto={(main.position === "CTO") ? "true" : ""} >
 								<StyledNameOfMainEmployees  cto={(main.position === "CTO") ? "true" : ""}>
 									{main.name}
@@ -78,16 +76,15 @@ const HomePageEmployeesComponent = () => {
 				}
 			</StyledContainerForMainEmployees>
 
-			<StyledFrameOfGeneralEmployees>
+			<StyledFrameOfGeneralEmployees id="frame-employees-container">
 				{
 					generalEmployees.map((general) => (
 						<StyledContainerForEmployeesImage
-							key={general.key} className={((active === general.name) && (read === true)) ? "active" : ""}
+							key={general.key} className={((active === general.name) && (read === true)) ? "active" : (widthOfWindow <= 800) ? "disable" : ""}
 							onClick={() => handleClick(general.name)} >
 
-							<StyledImageOfGeneralEmployee
-								src={((active === general.name) && (read === true)) ? general.imageSource[1] : general.imageSource[0]}
-								className={((active === general.name) && (read === true)) ? "read" : ""} alt={general.name}/>
+							<StyledImageOfGeneralEmployee name={general.name}
+                className={((active === general.name) && (read === true)) ? "read" : ""} />
 
 							<StyledInfoAboutEmployee className="employee-info">
 								<StyledEmployeeNameOfInfoPart>{general.name}</StyledEmployeeNameOfInfoPart>
@@ -98,7 +95,6 @@ const HomePageEmployeesComponent = () => {
 					))
 				}
 			</StyledFrameOfGeneralEmployees>
-
 		</StyledEmployeesSection>
 	);
 };

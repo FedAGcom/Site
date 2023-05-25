@@ -6,6 +6,7 @@ import HomePageApproachComponent from "../../components/homepageApproachSection/
 import HomePageCasesComponent from "../../components/homepageCasesSection/HomePageCases.component";
 import HomePageEmployeesComponent from "../../components/homepageEmployeesSection/HomePageEmployees.component";
 import HomePageContactUsComponent from "../../components/homepageContactUsSection/HomePageContactUs.component";
+import HomePageSliderSectionComponent from "../../components/homepageSliderSection/HomePageSliderSection.component";
 
 const HomePageComponent = () => {
 	return (
@@ -16,6 +17,7 @@ const HomePageComponent = () => {
 			<HomePageCasesComponent />
 			<HomePageEmployeesComponent />
 			<HomePageContactUsComponent />
+			<HomePageSliderSectionComponent />
 		</div>
 	)
 };

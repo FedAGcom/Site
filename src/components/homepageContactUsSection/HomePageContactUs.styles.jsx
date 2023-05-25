@@ -15,6 +15,7 @@ export const StyledContactUsButtonOfHomePage = styled.button`
 	outline: none;
 	color: white;
 	background-color: #B81034;
+  border-radius: 5px;
 	
 	@media only screen and (max-width: 800px) {
 		width: 313px;

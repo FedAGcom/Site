@@ -1,12 +1,11 @@
-const defaultMakarenkoGleb = require("../../assets/employees/makarenkogleb1.png");
-const activeMakarenkoGleb = require("../../assets/employees/makarenkogleb2.png");
-const fedor = require("../../assets/employees/fedor.png");
-const alexander = require("../../assets/employees/alexander.png");
-const person1 = require("../../assets/employees/person1.png");
-const person2 = require("../../assets/employees/person2.png");
-const person3 = require("../../assets/employees/person3.png");
-const person4 = require("../../assets/employees/person4.png");
-const person5 = require("../../assets/employees/person5.png");
+import makarenkoGleb from "../../assets/employees/makarenkogleb1.png";
+import fedor from "../../assets/employees/fedor.png";
+import alexander from "../../assets/employees/alexander.png";
+import person1 from "../../assets/employees/person1.png";
+import person2 from "../../assets/employees/person2.png";
+import person3 from "../../assets/employees/person3.png";
+import person4 from "../../assets/employees/person4.png";
+import person5 from "../../assets/employees/person5.png";
 
 export const employeesList = {
 	"score": [
@@ -26,52 +25,51 @@ export const employeesList = {
 			"key": "mainCEOFedor",
 			"name": "Fedor",
 			"position": "CEO",
-			"imageSource": [fedor]
+			"imageSource": fedor
 		},
 		{
 			"key": "mainCTOAlexander",
 			"name": "Alexander",
 			"position": "CTO",
-			"imageSource": [alexander]
+			"imageSource": alexander
 		}
 	],
-
 	"general": [
 		{
 			"key": "glebmakarenko",
 			"name": "Gleb Makarenko",
 			"position": "Project manager (3+ years)",
-			"imageSource": [defaultMakarenkoGleb, activeMakarenkoGleb]
+			"imageSource": makarenkoGleb
 		},
 		{
 			"key": "person1",
 			"name": "person1",
 			"position": "developer",
-			"imageSource": [person1, person1]
+			"imageSource": person1
 		},
 		{
 			"key": "person2",
 			"name": "person2",
 			"position": "developer",
-			"imageSource": [person2, person2]
+			"imageSource": person2
 		},
 		{
 			"key": "person3",
 			"name": "person3",
 			"position": "developer",
-			"imageSource": [person3, person3]
+			"imageSource": person3
 		},
 		{
 			"key": "person4",
 			"name": "person4",
 			"position": "developer",
-			"imageSource": [person4, person4]
+			"imageSource": person4
 		},
 		{
 			"key": "person5",
 			"name": "person5",
 			"position": "developer",
-			"imageSource": [person5, person5]
+			"imageSource": person5
 		},
 	]
 }

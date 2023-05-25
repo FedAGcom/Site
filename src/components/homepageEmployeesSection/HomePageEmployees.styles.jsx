@@ -1,5 +1,38 @@
 import styled from "styled-components";
 
+import makarenkoGleb from "../../assets/employees/gleb.png";
+import fedor from "../../assets/employees/fedor.png";
+import alexander from "../../assets/employees/alexander.png";
+import person1 from "../../assets/employees/person1.png";
+import person2 from "../../assets/employees/person2.png";
+import person3 from "../../assets/employees/person3.png";
+import person4 from "../../assets/employees/person4.png";
+import person5 from "../../assets/employees/person5.png";
+
+const setBackgroundImage = (name) => {
+	switch(name) {
+		case "Alexander":
+			return alexander
+		case "Fedor":
+			return fedor
+		case "Gleb Makarenko":
+			return makarenkoGleb
+		case "person1":
+			return person1
+		case "person2":
+			return person2
+		case "person3":
+			return person3
+		case "person4":
+			return person4
+		case "person5":
+			return person5
+
+		default:
+			return ""
+	}
+}
+
 export const StyledPositionOfGeneralEmployee = styled.p`
   position: absolute;
 	top: 65px;
@@ -20,31 +53,24 @@ export const StyledEmployeeNameOfInfoPart = styled.p`
   color: #FFFFFF;
 `;
 
-export const StyledImageOfGeneralEmployee = styled.img`
+export const StyledImageOfGeneralEmployee = styled.div`
   position: absolute;
 	top: 0;
 	height: 164px;
   width: 160px;
   border-radius: 30px;
 	z-index: 0;
-	
-	&:hover {
-    height: 193px;
-    width: 160px;
-    top: 10px;
-    border-radius: 30px;
+	background-image: url(${({ name }) => setBackgroundImage(name)});
+  background-size: cover;
+	&.read {
+    z-index: 2;
   }
-	
 	@media only screen and (max-width: 800px) {
     &:hover {
       height: 164px;
       width: 160px;
       top: 0;
     }
-	}
-	
-	&.read {
-		z-index: 2;
 	}
 `;
 
@@ -53,14 +79,14 @@ export const StyledInfoAboutEmployee = styled.div`
   display: none;
 	z-index: 1;
 	position: relative;
-	top: 173px;
+	top: 133px;
 	background-color: #B81034;
-	height: 140px;
+	height: 116px;
   width: 285px;
   border-radius: 0 30px 30px 30px;
 	
 	@media only screen and (max-width: 800px) {
-		height: 100px;
+		height: 110px;
 	}
 `;
 
@@ -70,19 +96,57 @@ export const StyledContainerForEmployeesImage = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+  transition: all 300ms;
 	
+  &:not(.disable):hover {
+    position: relative;
+    top: 30px;
+    width: 160px;
+	  transform: scaleY(1.1768);
+    border-radius: 30px;
+  }
+	
+	.background-image {
+		&:hover {
+      overflow: hidden;
+      width: 160px;
+      height: 164px;
+      border-radius: inherit;
+      transition: all 100ms;
+      transform: translateZ(0);
+
+      .background-img {
+        transform: scale(1.1);
+      }
+		}
+	}
 	&.active {
+		position: relative;
+		top: 30px;
+    transform: scaleY(1.1768);
+		
 		.employee-info {
+			animation: fadeInDown 1s;
 			display: block;
 		}
-		
     .read {
-      height: 193px;
       width: 160px;
-      top: 10px;
       border-radius: 30px;
     }
 	}
+  @keyframes fadeInDown {
+    0% {
+      transform: translateY(-100px);
+	    opacity: 0.2;
+    }
+	  80% {
+      opacity: 0.6;
+	  }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 `;
 
 export const StyledFrameOfGeneralEmployees = styled.div`
@@ -101,10 +165,15 @@ export const StyledFrameOfGeneralEmployees = styled.div`
 	@media only screen and (max-width: 800px) {
     gap: 15px;
 		overflow: scroll;
+		scroll-behavior: smooth;
     width: 335px;
-    height: 273px;
+    height: 303px;
     left: 16px;
     top: 1499px;
+		
+    &::-webkit-scrollbar {
+      display: none;
+    }
 	}
 `;
 
