@@ -48,10 +48,36 @@ const SliderComponent = () => {
 		dispatch(rightBtnClicked(arrayToShow[0]))
 	}
 
+	let startPos = 0;
+	let currentPos = 0;
+	const handleEnd = () => {
+		let currPos = Math.floor(currentPos)
+		let initPos = Math.floor(startPos)
+		let distance = currentPos - initPos
 
+		if (currPos !== 0) {
+			if((80 <= distance)) {
+				handleLeftBtnClick()
+
+			} else if((-80 >= distance) ) {
+				handleRightBtnClick()
+
+			}
+		}
+	}
 	return (
 		<div className="slider">
-			<div className="slider-container">
+			<div className="slider-container"
+		     onTouchStart={event => {
+			     startPos = event.targetTouches[0].screenX
+		     }}
+		     onTouchMove={(event) => {
+			     currentPos = event.targetTouches[0].screenX
+		     }}
+		     onTouchEnd={(event) => {
+			     handleEnd()
+		     }}
+			>
 				{
 					arrayToShow.map((slide) => {
 						return (
