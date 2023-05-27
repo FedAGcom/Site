@@ -8,7 +8,7 @@ import {
 } from "../../redux/employees/employees.selectors";
 
 import {
-	StyledContainerForEmployeesImage,
+	StyledContainerForEmployeesImage, StyledGeneralEmployeeBlock,
 	StyledEmployeeNameOfInfoPart, StyledPositionOfGeneralEmployee,
 	StyledEmployeesSection, StyledEmployeesSectionHeadline,
 	StyledFrameOfGeneralEmployees, StyledImageOfGeneralEmployee,
@@ -17,7 +17,7 @@ import {
 	StyledPositionNameOfMainEmployees, StyledRectangleForEmployees,
 	StyledScoreDefinition, StyledScoreOfEmployeesSection,
 	StyledScorePercentage, StyledTitleOfMainEmployees,
-	StyledContainerForMainEmployees, StyledDivForMainEmployee
+	StyledContainerForMainEmployees, StyledDivForMainEmployee,
 } from "./HomePageEmployees.styles";
 
 const HomePageEmployeesComponent = () => {
@@ -79,19 +79,27 @@ const HomePageEmployeesComponent = () => {
 			<StyledFrameOfGeneralEmployees id="frame-employees-container">
 				{
 					generalEmployees.map((general) => (
-						<StyledContainerForEmployeesImage
-							key={general.key} className={((active === general.name) && (read === true)) ? "active" : (widthOfWindow <= 800) ? "disable" : ""}
-							onClick={() => handleClick(general.name)} >
+						<StyledGeneralEmployeeBlock key={general.key}>
+							<StyledContainerForEmployeesImage
+								onClick={() => handleClick(general.name)}
+								className={((active === general.name) && (read === true)) ?
+								"active container-for-image" : (widthOfWindow <= 800) ?
+								"disable container-for-image" : "container-for-image"}>
 
-							<StyledImageOfGeneralEmployee name={general.name}
-                className={((active === general.name) && (read === true)) ? "read" : ""} />
+								<StyledImageOfGeneralEmployee
+									name={general.name}
+									className={((active === general.name) && (read === true)) ?
+									"active background-img-container" : "background-img-container"} />
 
-							<StyledInfoAboutEmployee className="employee-info">
+							</StyledContainerForEmployeesImage>
+
+
+							<StyledInfoAboutEmployee className={((active === general.name) && (read === true)) ?
+								"active employee-info" : "employee-info"}>
 								<StyledEmployeeNameOfInfoPart>{general.name}</StyledEmployeeNameOfInfoPart>
 								<StyledPositionOfGeneralEmployee>{general.position}</StyledPositionOfGeneralEmployee>
 							</StyledInfoAboutEmployee>
-
-						</StyledContainerForEmployeesImage>
+						</StyledGeneralEmployeeBlock>
 					))
 				}
 			</StyledFrameOfGeneralEmployees>

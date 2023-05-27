@@ -22,11 +22,11 @@ export const StyledButtonOfPreview = styled.img`
 
 export const StyledProjectTagsButtonSpan = styled.span`
 	width: ${({spanwidth}) => spanwidth};
-  height: ${({ tag }) => tag ? "22px" : "27px"};
+  height: ${({ tag }) => tag ? "" : "27px"};
 
   font-weight: 400;
   font-size: ${({ tag }) => tag ? "16px" : "20px"};
-  line-height: ${({ tag }) => tag ? "22px" : "27px"};
+  line-height: ${({ tag }) => tag ? "" : "27px"};
   white-space: nowrap;
 
   color: #606060;
@@ -44,10 +44,7 @@ export const StyledProjectTagsButtonSpan = styled.span`
 `;
 
 export const StyledProjectTagsButton = styled.button`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 10px 20px;
+  //padding: 10px 20px;
   width: ${({ btnwidth }) => btnwidth};
   height: ${({tag}) => tag ? "39px" : "47px"};
   border-radius: 20px;

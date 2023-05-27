@@ -9,6 +9,44 @@ div {
       width: 367px;
       top: 140px;
     }
+
+    &.left {
+      .slide {
+        &.previous-slide {
+          animation: fadePreviousFromL 1s;
+
+        }
+        &.next-slide {
+          animation: fadeNextFromL 1s;
+
+        }
+        &.active-slide {
+          animation: fadeActiveFromL 1s;
+          @media only screen and (max-width: 800px) {
+            animation: fadePreviousFromL 0.5s;
+          }
+        }
+      }
+    }
+
+    &.right {
+      .slide {
+        &.previous-slide {
+          animation: fadePreviousFromR 1s;
+
+        }
+        &.next-slide {
+          animation: fadeNextFromR 1s
+
+        }
+        &.active-slide {
+          animation: fadeActiveFromR 1s;
+          @media only screen and (max-width: 800px) {
+            animation: fadeNextFromR 0.5s;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -20,7 +58,7 @@ div {
 
   .slide-quote-div {
     height: 197px;
-    background: #f2f2f2;
+    background: #fcfcfc;
     border-radius: 10px;
 
     .left-double-quotes {
@@ -101,17 +139,11 @@ div {
       display: none;
     }
   }
-  &.previous-slide {
-    animation: fadeInLeft 650ms;
-  }
   &.next-slide {
     right: 38px;
-    animation: fadeInRight 750ms;
   }
 
   &.active-slide {
-    animation-delay: 200ms;
-    animation: fadeInToCenter 700ms;
     opacity: 1;
     position: relative;
     left: -19px;
@@ -249,65 +281,145 @@ div {
 
 .arrow-left-btn,
 .arrow-right-btn {
+  outline: none;
+  border: none;
   z-index: 1;
   position: absolute;
   height: 35px;
   width: 35px;
   top: 367px;
+
+  &:active {
+    animation: arrow-btn-clicked 0.3s ease;
+  }
+
   @media only screen and (max-width: 800px) {
-    object-fit: contain;
     height: 50px;
     width: 50px;
     top: 352px;
+
+    &:active {
+      animation: arrow-btn-clicked-mob 0.3s ease;
+    }
+  }
+
+  @keyframes arrow-btn-clicked {
+    0% {
+      top: 368px
+    }
+    25% {
+      top: 369px
+    }
+    50% {
+      top: 368px
+    }
+    100% {
+      top: 367px
+    }
+  }
+  @keyframes arrow-btn-clicked-mob {
+    0% {
+      top: 353px
+    }
+    25% {
+      top: 354px
+    }
+    50% {
+      top: 353px
+    }
+    100% {
+      top: 352px
+    }
   }
 }
 .arrow-left-btn {
+  background: url("../../assets/homepage/slider/button_left.svg");
   left: 451px;
   @media only screen and (max-width: 800px) {
+    background-size: cover;
     left: 124px;
   }
 }
 .arrow-right-btn {
   right: 451px;
+  background: url("../../assets/homepage/slider/button_right.svg");
   @media only screen and (max-width: 800px) {
+    background-size: cover;
     right: 124px;
   }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadePreviousFromL {
   0% {
     opacity: 0;
-  }
-  80% {
-    opacity: 0;
-    right: 100vw;
+    transform: scale(0.1);
   }
   100% {
     opacity: 0.8;
-    left: 0;
+    transform: scale(1);
   }
 }
-@keyframes fadeInToCenter {
-  1% {
-    opacity: 0.1;
-    transform: scale(0.1);
+@keyframes fadeActiveFromL {
+  0% {
+    opacity: 0.8;
+    left: -29vw;
+    transform: scale(0.78, 0.78);
   }
-  80% {
+  50% {
     opacity: 0.8;
   }
   100% {
     opacity: 1;
     transform: scale(1);
+    left: -19px;
   }
 }
-@keyframes fadeInRight {
+@keyframes fadeNextFromL {
   0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
+    opacity: 1;
+    transform: scale(1.27, 1.27);
+    right: 29.5vw;
   }
   100% {
     opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadePreviousFromR {
+  0% {
+    opacity: 1;
+    transform: scale(1.27, 1.27);
+    left: 27vw;
+  }
+  100% {
+    left: 0;
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+@keyframes fadeNextFromR {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+@keyframes fadeActiveFromR {
+  0% {
+    opacity: 0.8;
+    left: 25.4vw;
+    transform: scale(0.78, 0.78);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    left: -19px;
   }
 }

@@ -43,10 +43,20 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 								<StyledTechStackOfCase>
 									{
 										data.tags.map((tag) => (
-											<StyledProjectTagsButton className="btnTags" btnwidth={tag.tagBtnWidth[0]} respbtnwidth={tag.tagBtnWidth[1]} key={tag.key} tag="true">
-												<StyledProjectTagsButtonSpan spanwidth={tag.tagSpanWidth[0]} respspanwidth={tag.tagSpanWidth[1]} tag="true">
+											<StyledProjectTagsButton
+												className="btnTags"
+												btnwidth={tag.tagBtnWidth[0]}
+												respbtnwidth={tag.tagBtnWidth[1]}
+												key={tag.key}
+												tag="true">
+
+												<StyledProjectTagsButtonSpan
+													spanwidth={tag.tagSpanWidth[0]}
+													respspanwidth={tag.tagSpanWidth[1]}
+													tag="true">
 													{tag.tagName}
 												</StyledProjectTagsButtonSpan>
+
 											</StyledProjectTagsButton>
 										))
 									}

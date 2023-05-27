@@ -1,12 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 
 import './Slider.styles.scss';
 
 import leftDoubleQuotes from '../../assets/homepage/slider/ci_double-quotes-l.svg';
 import rightDoubleQuotes from '../../assets/homepage/slider/ci_double-quotes-r.svg';
-import leftArrowButton from '../../assets/homepage/slider/button_left.svg';
-import rightArrowButton from '../../assets/homepage/slider/button_right.svg';
 
 import {
 	selectSliderPrevious,
@@ -28,7 +26,7 @@ const SliderComponent = () => {
 
 	let arrayToShow = [previous, current, next];
 	const dispatch = useDispatch();
-
+	const [translateFrom, setTranslateFrom] = useState('right');
 
 	const handleStatus = (key) => {
 		let classname;
@@ -41,11 +39,13 @@ const SliderComponent = () => {
 		}
 		return classname;
 	}
-	const handleLeftBtnClick = (e) => {
-		dispatch(leftBtnClicked(arrayToShow[0], arrayToShow[2]))
+	const handleLeftBtnClick = () => {
+		dispatch(leftBtnClicked(arrayToShow[0], arrayToShow[2]));
+		setTranslateFrom('left')
 	}
-	const handleRightBtnClick = (e) => {
-		dispatch(rightBtnClicked(arrayToShow[0]))
+	const handleRightBtnClick = () => {
+		dispatch(rightBtnClicked(arrayToShow[0]));
+		setTranslateFrom('right')
 	}
 
 	let startPos = 0;
@@ -67,16 +67,18 @@ const SliderComponent = () => {
 	}
 	return (
 		<div className="slider">
-			<div className="slider-container"
-		     onTouchStart={event => {
-			     startPos = event.targetTouches[0].screenX
-		     }}
-		     onTouchMove={(event) => {
-			     currentPos = event.targetTouches[0].screenX
-		     }}
-		     onTouchEnd={(event) => {
-			     handleEnd()
-		     }}
+			<div
+				className={translateFrom + " slider-container"}
+
+	      onTouchStart={event => {
+					startPos = event.targetTouches[0].screenX
+	      }}
+	      onTouchMove={(event) => {
+		      currentPos = event.targetTouches[0].screenX
+	      }}
+        onTouchEnd={() => {
+	         handleEnd()
+        }}
 			>
 				{
 					arrayToShow.map((slide) => {
@@ -105,8 +107,13 @@ const SliderComponent = () => {
 						})
 					}
 				</ul>
-				<img src={leftArrowButton} className="arrow-left-btn" alt="arrow-left-btn" onClick={handleLeftBtnClick}/>
-				<img src={rightArrowButton} className="arrow-right-btn" alt="arrow-right-btn" onClick={handleRightBtnClick} />
+				<button
+					className={"arrow-left-btn"}
+					onClick={handleLeftBtnClick}/>
+
+				<button
+					className="arrow-right-btn"
+					onClick={handleRightBtnClick} />
 			</div>
 
 		</div>

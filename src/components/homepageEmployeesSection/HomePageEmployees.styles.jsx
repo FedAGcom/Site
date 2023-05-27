@@ -54,7 +54,9 @@ export const StyledEmployeeNameOfInfoPart = styled.p`
 `;
 
 export const StyledImageOfGeneralEmployee = styled.div`
-  position: absolute;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+	position: absolute;
 	top: 0;
 	height: 164px;
   width: 160px;
@@ -65,21 +67,13 @@ export const StyledImageOfGeneralEmployee = styled.div`
 	&.read {
     z-index: 2;
   }
-	@media only screen and (max-width: 800px) {
-    &:hover {
-      height: 164px;
-      width: 160px;
-      top: 0;
-    }
-	}
 `;
-
 
 export const StyledInfoAboutEmployee = styled.div`
   display: none;
 	z-index: 1;
-	position: relative;
-	top: 133px;
+	position: absolute;
+	top: 173px;
 	background-color: #B81034;
 	height: 116px;
   width: 285px;
@@ -91,57 +85,75 @@ export const StyledInfoAboutEmployee = styled.div`
 `;
 
 export const StyledContainerForEmployeesImage = styled.div`
-	width: 160px;
+  z-index: 1;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
   height: 164px;
+  max-height: 193px;
   flex: none;
   order: 0;
   flex-grow: 0;
-  transition: all 300ms;
-	
-  &:not(.disable):hover {
-    position: relative;
-    top: 30px;
-    width: 160px;
-	  transform: scaleY(1.1768);
-    border-radius: 30px;
-  }
-	
-	.background-image {
-		&:hover {
-      overflow: hidden;
-      width: 160px;
-      height: 164px;
-      border-radius: inherit;
-      transition: all 100ms;
-      transform: translateZ(0);
+  border-radius: 30px;
+`;
 
-      .background-img {
-        transform: scale(1.1);
+export const StyledGeneralEmployeeBlock = styled.div`
+	&:hover {
+		position: relative;
+		
+		.container-for-image {
+      &:not(.disable) {
+        position: relative;
+        top: 27px;
+        transform: scaleY(1.1768);
+        transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+	      
+        overflow-x: hidden;
+        z-index: 2;
+
+        .background-img-container {
+          transform: scaleX(1.1);
+          transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
       }
 		}
 	}
-	&.active {
-		position: relative;
-		top: 30px;
-    transform: scaleY(1.1768);
-		
-		.employee-info {
-			animation: fadeInDown 1s;
-			display: block;
-		}
-    .read {
-      width: 160px;
-      border-radius: 30px;
+	
+	.container-for-image {
+    &.active {
+      position: relative;
+      top: 27px;
+      transform: scaleY(1.1768);
+      overflow-x: hidden;
+      z-index: 3;
+
+
+      .background-img-container {
+        -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0);
+        transform: scaleX(1.1) ;
+        transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
     }
 	}
+	
+  .employee-info {
+    &.active {
+      display: block;
+      animation: fadeInDown 1s;
+    }
+  }
+	
   @keyframes fadeInDown {
     0% {
-      transform: translateY(-100px);
-	    opacity: 0.2;
+      transform: translateY(-130px);
+      opacity: 0.2;
     }
-	  80% {
-      opacity: 0.6;
-	  }
+    80% {
+      opacity: 0.8;
+    }
     100% {
       transform: translateY(0);
       opacity: 1;

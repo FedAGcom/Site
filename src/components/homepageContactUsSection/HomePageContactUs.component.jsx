@@ -20,11 +20,12 @@ const HomePageContactUsComponent = () => {
 					a member of our sales team
 				</StyledContactUsParagraphOfHomePage>
 
-				<StyledContactUsButtonOfHomePage phone="true">
-					<CallToComponent phone="+79112507289">
-						+7 (911) 250-72-89
-					</CallToComponent>
-				</StyledContactUsButtonOfHomePage>
+				<CallToComponent phone="+79112507289">
+					<StyledContactUsButtonOfHomePage phone="true">
+					+7 (911) 250-72-89
+					</StyledContactUsButtonOfHomePage>
+				</CallToComponent>
+
 
 			</StyledContactUsElementOfHomePage>
 
