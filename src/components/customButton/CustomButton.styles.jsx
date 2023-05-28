@@ -1,15 +1,19 @@
-.button {
+import styled from 'styled-components';
+
+export const StyledCustomButton = styled.button`
   position: absolute;
   border: 0;
   height: 52px;
   width: 350px;
-  top: 306px;
+  left: ${({ left }) => left ? left : ""};
+  top: ${({ top }) => top ? top : "306px"};
   color: white;
   background: #B81034;
   border-radius: 5px;
   @media only screen and (max-width: 800px) {
     position: absolute;
-    top: 270px;
+    top: ${({ resptop }) => resptop ? resptop : "270px"};
+	  left: ${({ resptop }) => resptop ? "16px" : ""};
   }
 
   &:hover {
@@ -20,7 +24,7 @@
     background: #790A22;
   }
 
-    &:active, &:focus {
+  &:active, &:focus {
     animation-name: faded;
     animation-timing-function: ease-in-out;
     animation-duration: 500ms;
@@ -44,9 +48,6 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height */
-
     text-align: center;
   }
-}
-
+`;

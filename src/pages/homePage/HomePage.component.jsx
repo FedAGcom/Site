@@ -7,6 +7,8 @@ import HomePageCasesComponent from "../../components/homepageCasesSection/HomePa
 import HomePageEmployeesComponent from "../../components/homepageEmployeesSection/HomePageEmployees.component";
 import HomePageContactUsComponent from "../../components/homepageContactUsSection/HomePageContactUs.component";
 import HomePageSliderSectionComponent from "../../components/homepageSliderSection/HomePageSliderSection.component";
+import ApplicationLeaveRequestComponent
+	from "../../components/applicationLeaveRequest/ApplicationLeaveRequest.component";
 
 const HomePageComponent = () => {
 	return (
@@ -18,6 +20,7 @@ const HomePageComponent = () => {
 			<HomePageEmployeesComponent />
 			<HomePageContactUsComponent />
 			<HomePageSliderSectionComponent />
+			<ApplicationLeaveRequestComponent />
 		</div>
 	)
 };

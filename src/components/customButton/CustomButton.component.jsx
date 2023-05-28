@@ -1,13 +1,19 @@
 import React from 'react';
 
-import './CustomButton.styles.scss'
+import {StyledCustomButton} from "./CustomButton.styles";
 
-const CustomButton = ({ children, ...props}) => (
-	<button {...props} className="button" >
-		<span>
-			{children}
-		</span>
-	</button>
-);
+const CustomButton = ({ children, ...props}) => {
+	const scroll = () => {
+		const section = document.querySelector( '#application-section' );
+		section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+	};
+	return (
+		<StyledCustomButton onClick={scroll} {...props} className="button">
+			<span>
+				{children}
+			</span>
+		</StyledCustomButton>
+	);
+};
 
 export default CustomButton;

@@ -8,6 +8,10 @@ import {
 import CallToComponent from "../callTo/CallTo.component";
 
 const HomePageContactUsComponent = () => {
+	const scroll = () => {
+		const section = document.querySelector( '#application-section' );
+		section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+	};
 	return (
 		<StyledContactUsOfHomePage>
 			<StyledContactUsElementOfHomePage small="true" >
@@ -21,7 +25,7 @@ const HomePageContactUsComponent = () => {
 				</StyledContactUsParagraphOfHomePage>
 
 				<CallToComponent phone="+79112507289">
-					<StyledContactUsButtonOfHomePage phone="true">
+					<StyledContactUsButtonOfHomePage  phone="true">
 					+7 (911) 250-72-89
 					</StyledContactUsButtonOfHomePage>
 				</CallToComponent>
@@ -40,7 +44,7 @@ const HomePageContactUsComponent = () => {
 					Leave a request for a call with our representative!
 				</StyledContactUsParagraphOfHomePage>
 
-				<StyledContactUsButtonOfHomePage>
+				<StyledContactUsButtonOfHomePage onClick={scroll}>
 					<span>Submit</span>
 				</StyledContactUsButtonOfHomePage>
 			</StyledContactUsElementOfHomePage>

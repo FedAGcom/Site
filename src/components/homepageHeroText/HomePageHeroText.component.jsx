@@ -24,7 +24,7 @@ const HomePageHeroTextComponent = () => {
 			</StyledTextOfMainSection>
 
 
-			<CustomButton className="button-of-main-section">
+			<CustomButton  className="button-of-main-section">
 				Build a project
 			</CustomButton>
 		</StyledHeroTextOfMainSection>
