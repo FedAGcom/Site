@@ -6,7 +6,7 @@
 .pnp.js
 
 # tool for development
-../.idea
+..//.idea
 
 # testing
 /coverage
