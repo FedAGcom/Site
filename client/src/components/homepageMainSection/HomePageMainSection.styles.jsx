@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import mainPhotoForBadge from "../../assets/homepage/mainPhotoForBadge.svg";
+import mainPhotoForBadge from "../../assets/homepage/mainPhotoForBadge.png";
 import mainPhotoForMobileBadge from "../../assets/homepage/mainPhotoForMobileBadge.png";
 import logoIconOfFedag from '../../assets/homepage/logoIcon.svg'
 

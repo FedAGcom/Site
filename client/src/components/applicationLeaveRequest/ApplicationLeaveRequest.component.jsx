@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 import {
 	StyledApplicationRequestContainer, StyledApplicationRequestElementOfInputList,
@@ -12,11 +13,11 @@ import CustomButtonComponent from "../customButton/CustomButton.component";
 
 const ApplicationLeaveRequestComponent = () => {
 	const [credentials, setCredentials] = useState({
-		"first-name": "",
-		"last-name": "",
+		"firstName": "",
+		"lastName": "",
 		"company": "",
 		"email": "",
-		"project-info": ""
+		"projectInfo": ""
 	});
 
 	const handleInputChange = (e) => {
@@ -24,6 +25,15 @@ const ApplicationLeaveRequestComponent = () => {
 	}
 
 	const handleSubmit = (e) => {
+		axios.post("/", {
+				firstName: credentials.firstName,
+				lastName: credentials.lastName,
+				company: credentials.company,
+				email: credentials.email,
+				projectInfo: credentials.projectInfo
+			})
+			.then(() => alert("Message sent successfully"))
+			.catch(() => alert("An error has occurred"));
 
 	}
 	return (
@@ -38,14 +48,14 @@ const ApplicationLeaveRequestComponent = () => {
 					<StyledApplicationRequestElementOfInputList naming="true">
 						<StyledApplicationRequestLabel>
 							First name:
-							<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" name="first-name" required={true}/>
+							<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" name="firstName" required={true}/>
 						</StyledApplicationRequestLabel>
 					</StyledApplicationRequestElementOfInputList>
 
 					<StyledApplicationRequestElementOfInputList naming="true">
 						<StyledApplicationRequestLabel>
 							Last name:
-							<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" name="last-name" required={true}/>
+							<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" name="lastName" required={true}/>
 						</StyledApplicationRequestLabel>
 					</StyledApplicationRequestElementOfInputList>
 
@@ -66,13 +76,13 @@ const ApplicationLeaveRequestComponent = () => {
 					<StyledApplicationRequestElementOfInputList>
 						<StyledApplicationRequestLabel>
 							What is your project about?
-							<StyledApplicationRequestTextArea onChange={handleInputChange} name="project-info" required={true}/>
+							<StyledApplicationRequestTextArea onChange={handleInputChange} name="projectInfo" required={true}/>
 						</StyledApplicationRequestLabel>
 					</StyledApplicationRequestElementOfInputList>
 
 				</StyledApplicationRequestListOfInputs>
 
-				<CustomButtonComponent onSubmit={handleSubmit} resptop="670px" type="submit" top="451px" left="665px" children="Submit"/>
+				<CustomButtonComponent onClick={handleSubmit} resptop="670px" type="submit" top="451px" left="665px" children="Submit"/>
 			</StyledApplicationRequestForm>
 		</StyledApplicationRequestContainer>
 	);
