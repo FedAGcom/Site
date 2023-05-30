@@ -40,7 +40,7 @@ export const StyledPreviewImageOfMainSection = styled.div`
   background-size: cover;
 
   @media only screen and (max-width: 800px) {
-    width: 353px;
+    width: 94.133vw;
     height: 305px;
     left: -75px;
     top: 0;
@@ -58,7 +58,7 @@ export const StyledLogoTypeOfMainSection = styled.div`
   top: 103px;
   background-image: url(${logoIconOfFedag});
   background-size: cover;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 66px;
     height: 66px;
     left: 65.6%;

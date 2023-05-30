@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   
   p {
     color: #FFFFFF;
+	  
   }
   
   input {

@@ -12,8 +12,9 @@ export const StyledCustomButton = styled.button`
   border-radius: 5px;
   @media only screen and (max-width: 800px) {
     position: absolute;
+	  width: 91.467vw;
     top: ${({ resptop }) => resptop ? resptop : "270px"};
-	  left: ${({ resptop }) => resptop ? "16px" : ""};
+	  left: ${({ resptop }) => resptop ? "4.267vw" : ""};
   }
 
   &:hover {

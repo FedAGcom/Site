@@ -25,16 +25,24 @@ const ApplicationLeaveRequestComponent = () => {
 	}
 
 	const handleSubmit = (e) => {
-		axios.post("/", {
+		if (
+			credentials.projectInfo &&
+			credentials.firstName &&
+			credentials.lastName &&
+			credentials.company &&
+			credentials.email
+		) {
+			axios.post("/", {
 				firstName: credentials.firstName,
 				lastName: credentials.lastName,
 				company: credentials.company,
 				email: credentials.email,
 				projectInfo: credentials.projectInfo
 			})
-			.then(() => alert("Message sent successfully"))
-			.catch(() => alert("An error has occurred"));
+				.then(() => alert("Message sent successfully"))
+				.catch(() => alert("An error has occurred"));
 
+		}
 	}
 	return (
 		<StyledApplicationRequestContainer>

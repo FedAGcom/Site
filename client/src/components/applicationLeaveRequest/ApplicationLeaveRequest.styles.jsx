@@ -12,7 +12,7 @@ export const StyledApplicationRequestListOfInputs = styled.ul`
   gap: 15px;
   @media only screen and (max-width: 800px) {
 	  top: 220px;
-	  left: 16px;
+	  left: 4.267vw;
   }
 `;
 
@@ -41,7 +41,7 @@ export const StyledApplicationRequestInput = styled.input`
   width: ${({ naming }) => naming === "true" ? "160px" : "350px"};
 	
   @media only screen and (max-width: 800px) {
-		width: 350px;
+		width: 93.333vw;
   }
 `;
 
@@ -54,6 +54,10 @@ export const StyledApplicationRequestTextArea = styled.textarea`
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
+	
+	@media only screen and (max-width: 600px) {
+    width: 93.333vw;
+	}
 `;
 
 export const StyledApplicationRequestForm= styled.form`
@@ -91,9 +95,9 @@ export const StyledApplicationRequestHeadline = styled.p`
 	
 	@media only screen and (max-width: 800px) {
     position: absolute;
-    width: 343px;
+    width: 91.467vw;
     height: 110px;
-    left: 16px;
+    left: 4.267vw;
     top: 80px;
     font-weight: 600;
     font-size: 40px;

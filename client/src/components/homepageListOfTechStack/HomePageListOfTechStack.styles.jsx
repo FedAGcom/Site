@@ -37,5 +37,5 @@ export const StyledTechnologyIconOfTechStack = styled.img`
 `;
 
 export const StyledTechnologyTitleOfTechStack = styled.p`
-	
+	color: black;
 `;

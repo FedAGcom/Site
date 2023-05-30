@@ -151,7 +151,7 @@ export const StyledNavigationLine = styled.hr`
   display: none;
 	@media only screen and (max-width: 800px) {
 		display: block;
-	  width: 268px;
+	  width: 71.467vw;
 	  height: 0;
 	  border: 1px solid #FFFFFF;
 	  margin: 0 5.333% 30px 0;

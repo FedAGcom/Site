@@ -225,7 +225,7 @@ export const StyledListOfCases = styled.ul`
 	position: absolute;
 	top: ${({ top }) => top}; // 155px
 	height: 643px;
-	width: 88.542%;
+	width: 88.542vw;
 	overflow: scroll;
 	flex-direction: row;
   display: flex;
@@ -236,7 +236,7 @@ export const StyledListOfCases = styled.ul`
 	
 	@media only screen and (max-width: 800px) {
 		height: 517px;
-		width: 343px;
+		width: 91.467vw	;
 	}
 `;
 

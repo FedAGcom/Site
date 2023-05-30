@@ -29,7 +29,7 @@ export const StyledHomePageApproachHeadline = styled.h2`
   color: #333333;
 
   @media only screen and (max-width: 800px) {
-    width: 315px;
+    width: 84vw;
     height: 55px;
     left: 16px;
     font-size: 40px;
@@ -47,7 +47,7 @@ export const StyledHomePageApproachImage = styled.div`
   border-radius: 20px;
 
   @media only screen and (max-width: 800px) {
-    width: 375px;
+    width: 100vw;
     height: 226px;
     padding: 0;
 	  left: 0;
@@ -161,24 +161,25 @@ export const StyledHomePageApproachInfoBlock = styled.div`
       gap: 10px;
 
       position: absolute;
-      width: 343px;
+      width: 91.467vw;
       height: 389px;
-      left: 16px;
+      left: 4.267vw;
       top: 170px;
 			
 			h3 {
-        width: 283px;
+        width: 75.467vw;
         height: 81px;
         font-size: 20px;
         line-height: 27px;
         flex: none;
+				top: 36px;
         order: 0;
         flex-grow: 0;
 			}
 			
 			p {
 				top: 141px;
-        width: 283px;
+        width: 75.467vw;
         height: 198px;
         font-size: 16px;
         line-height: 22px;
@@ -195,7 +196,7 @@ export const StyledHomePageApproachInfoBlock = styled.div`
       padding: 40px 30px;
       gap: 10px;
       left: 16px;
-      width: 343px;
+      width: 91.457vw;
       
 			
 			h3 {
@@ -221,45 +222,48 @@ export const StyledHomePageApproachInfoBlock = styled.div`
 			}
 			
 			&.first {
+        width: 91.457vw;
       	top: 570px;
         height: 193px;
 				
 				h3 {
-	        width: 198px;
+	        width: 52.8vw;
 	        height: 27px;
 				}
 				p {
-	        width: 283px;
+	        width: 75.467vw;
 	        height: 66px;
 				}
 			}
 			
 			&.second {
+        width: 91.457vw;
 				left: 16px;
         top: 773px;
         height: 193px;
 				
 				h3 {
-          width: 198px;
+          width: 52.8vw;
           height: 27px;
 				}
 				p {
-          width: 283px;
+          width: 75.467vw;
           height: 66px;
 				}
 			}
 			
 			&.third {
+        width: 91.457vw;
         height: 237px;
 				left: 16px;
 				top: 976px;
 				
 				h3 {
-          width: 201px;
+          width: 53.6vw;
           height: 27px;
 				}
 				p {
-          width: 283px;
+          width: 75.467vw;
           height: 110px;
 				}
 			}

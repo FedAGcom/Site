@@ -28,10 +28,10 @@ export const StyledHomePageSliderSectionHeadline = styled.p`
   line-height: 68px;
   color: #333333;
 	
-	@media only screen and (max-width: 800px) {
-    width: 343px;
+	@media only screen and (max-width: 600px) {
+    width: 91.467vw;
     height: 110px;
-    left: 16px;
+    left: 4.267vw;
 		
     font-weight: 600;
     font-size: 40px;

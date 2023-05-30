@@ -18,9 +18,9 @@ export const StyledContactUsButtonOfHomePage = styled.button`
   border-radius: 5px;
 	
 	@media only screen and (max-width: 800px) {
-		width: 313px;
+		width: 83.467vw;
 		top: 94px;
-		left: 17px;
+		left: 4.267vw;
 	}
 	
   &:hover {
@@ -74,9 +74,9 @@ export const StyledContactUsParagraphOfHomePage = styled.p`
   color: #FFFFFF;
 	
 	@media only screen and (max-width: 800px) {
-    width: 313px;
+    width: 85.467vw;
     height: 75px;
-    left: 15px;
+    left: 4.267vw;
     top: 78px;
 	}
 `;
@@ -92,11 +92,11 @@ export const StyledContactUsHeadlineOfHomePage = styled.p`
   line-height: 38px;
   color: #FFFFFF;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		height: ${({small}) => small ? "38px" : "76px"};
-    left: ${({ small }) => small ? "108px" : "69px"};
+    left: ${({ small }) => small ? "28.8vw" : "13vw"};
     top: ${({ small }) => small ? "68px" : "68px"};
-    width: ${({ small }) => small ? "127px" : "205px"};
+    width: ${({ small }) => small ? "39.867vw" : "64.667vw"};
 		text-align: center;
 	}
 `;
@@ -110,7 +110,7 @@ export const StyledContactUsIconOfHomePage = styled.div`
 	background-image: url(${({ phone }) => phone ? phoneIcon : emailIcon});
   background-repeat: no-repeat;
 	@media only screen and (max-width: 800px){
-		left: 121px;
+		left: 32.267vw;
 	}
 `;
 
@@ -122,7 +122,7 @@ export const StyledContactUsElementOfHomePage = styled.div`
   border-radius: 30px;
 	
 	@media only screen and (max-width: 800px) {
-    width: 343px;
+    width: 91.467vw;
     height: ${({ small }) => small ? "410px" : "448px"};
 	}
 `;

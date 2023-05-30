@@ -13,10 +13,10 @@ export const StyledHeroTextOfMainSection = styled.div`
   left: 165px;
   top: 234px;
 
-  @media only screen and (max-width: 800px) {
-    width: 343px;
+  @media only screen and (max-width: 500px) {
+    width: 91.467vw;
     height: 239px;
-    left: 16px;
+    left: 4.267vw;
     top: 225px;
   }
 `;
@@ -36,7 +36,7 @@ export const StyledTextOfMainSection = styled.div`
   flex-grow: 0;
 
   @media only screen and (max-width: 800px) {
-    width: 343px;
+    width: 91.467vw;
     height: 239px;
   }
 `;
@@ -53,8 +53,8 @@ export const StyledFrameOfMainSection = styled.div`
   order: 0;
   flex-grow: 0;
 
-  @media only screen and (max-width: 800px) {
-    width: 343px;
+  @media only screen and (max-width: 600px) {
+    width: 91.467vw;
     height: 239px;
   }
 `;
@@ -73,8 +73,8 @@ export const StyledHeadlineOfMainSection = styled.h1`
   order: 0;
   flex-grow: 0;
 
-  @media only screen and (max-width: 800px) {
-    width: 343px;
+  @media only screen and (max-width: 600px) {
+    width: 91.467vw;
     height: 165px;
     font-size: 40px;
     line-height: 55px;
@@ -97,7 +97,7 @@ export const StyledParagraphOfMainSection = styled.p`
   flex-grow: 0;
 
   @media only screen and (max-width: 800px) {
-    width: 343px;
+    width: 91.467vw;
     height: 54px;
     font-size: 20px;
   }

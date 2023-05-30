@@ -5,9 +5,9 @@ div {
     height: 402px;
     width: 1110px;
     display: flex;
-    @media only screen and (max-width: 800px) {
-      width: 367px;
-      top: 140px;
+    @media only screen and (max-width: 600px) {
+      width: 97.867vw;
+      top: 179px;
     }
 
     &.left {
@@ -69,7 +69,7 @@ div {
       left: 15px;
       @media only screen and (max-width: 800px) {
         top: 20px;
-        left: 12px;
+        left: 3.2vw;
       }
     }
     .slide-quote-p {
@@ -90,16 +90,18 @@ div {
       left: 307px;
       @media only screen and (max-width: 800px) {
         top: 14px;
-        left: 315px ;
+        left: 84vw;
       }
     }
   }
   .slide-customer-review {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .slide-customer-image {
       position: relative;
       top: -31px;
-      left: 144px;
+      //left: 144px;
       width: 62px;
       height: 62px;
     }
@@ -153,7 +155,7 @@ div {
 
     @media only screen and (max-width: 790px) {
       left: 0;
-      width: 367px;
+      width: 97.867vw;
       height: 412px;
     }
     .slide-quote-div {
@@ -175,7 +177,7 @@ div {
         line-height: 25px;
         color: #333333;
         @media only screen and (max-width: 800px) {
-          width: 343px;
+          width: 91.467vw;
           top: 20px;
           left: 12px;
         }
@@ -187,7 +189,7 @@ div {
         left: 24px;
         @media only screen and (max-width: 800px) {
           top: 20px;
-          left: 12px;
+          left: 3.2vw;
         }
       }
 
@@ -197,20 +199,22 @@ div {
         left: 384px;
         @media only screen and (max-width: 800px) {
           top: 14px;
-          left: 315px ;
+          left: 84vw;
         }
       }
     }
     .slide-customer-review {
-
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .slide-customer-image {
         position: relative;
         top: -40px;
-        left: 184px;
+        //left: 184px;
         width: 80px;
         height: 80px;
         @media only screen and (max-width: 800px) {
-          left: 144px;
+          //left: 38.4vw;
           border: 1px solid #790A22;
           border-radius: 50px;
         }
@@ -337,7 +341,7 @@ div {
   left: 451px;
   @media only screen and (max-width: 800px) {
     background-size: cover;
-    left: 124px;
+    left: 33.067vw;
   }
 }
 .arrow-right-btn {
@@ -345,7 +349,7 @@ div {
   background: url("../../assets/homepage/slider/button_right.svg");
   @media only screen and (max-width: 800px) {
     background-size: cover;
-    right: 124px;
+    right: 33.067vw;
   }
 }
 

@@ -16,7 +16,7 @@ export const StyledFilterButtonDiv = styled.div`
     position: absolute;
     width: 95.73%;
     height: 49px;
-    left: 17px;
+    left: 4.267vw;
 		overflow: scroll;
 		
 		&::-webkit-scrollbar {
@@ -41,7 +41,8 @@ export const StyledFilterButton = styled.button`
   outline: none;
 	background: white;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
+		
 	}
 	
 	&.active {

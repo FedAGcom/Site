@@ -178,9 +178,9 @@ export const StyledFrameOfGeneralEmployees = styled.div`
     gap: 15px;
 		overflow: scroll;
 		scroll-behavior: smooth;
-    width: 335px;
+    width: 89.333vw;
     height: 303px;
-    left: 16px;
+    left: 4.267vw;
     top: 1499px;
 		
     &::-webkit-scrollbar {
@@ -242,9 +242,9 @@ export const StyledImageOfMainEmployees = styled.img`
 	
 	@media only screen and (max-width: 800px) {
     height: ${({ cto }) => (cto) ? "332px" : "348px"};
-    width: ${({ cto }) => (cto) ? "322px" : "338px"};
-		left: ${({ cto }) => (cto) ? "0" : "5px"};
-    top: ${({ cto }) => (cto) ? "493px" : "16px"};
+    width: ${({ cto }) => (cto) ? "85.867vw" : "90.133vw"};
+		left: ${({ cto }) => (cto) ? "0" : "1.333vw"};
+    top: ${({ cto }) => (cto) ? "493px" : "4.267vw"};
 	} 
 `;
 
@@ -252,8 +252,8 @@ export const StyledDivForMainEmployee = styled.div`
 	width: 350px;
 	height: 490px;
 	
-	@media only screen and (max-width: 800px) {
-		width: 343px;
+	@media only screen and (max-width: 600px) {
+		width: 91.467vw;
 		height: 463px;
 	}
 `;
@@ -268,7 +268,7 @@ export const StyledContainerForMainEmployees = styled.div`
 	gap: 30px;
 	
 	@media only screen and (max-width: 800px) {
-		width: 343px;
+		width: 91.467vw;
 		top: 527px;
 		flex-direction: column;
 		height: 942px;
@@ -286,9 +286,9 @@ export const StyledRectangleForEmployees = styled.div`
 	
 	@media only screen and (max-width: 800px) {
     position: relative;
-    width: ${({ cto }) => (cto) ? "338px" : "326px"};
+    width: ${({ cto }) => (cto) ? "90.133vw" : "86.933vw"};
     height: ${({ cto }) => (cto) ? "348px" : "336px"};
-    left: ${({ cto }) => (cto) ? "5px" : "0"};
+    left: ${({ cto }) => (cto) ? "1.333vw" : "0"};
 	}
 `;
 
@@ -302,6 +302,9 @@ export const StyledScoreDefinition = styled.p`
   flex: none;
   order: 1;
   flex-grow: 0;
+  @media only screen and (max-width: 600px) {
+    width: 84vw;
+  }
 `;
 
 export const StyledScorePercentage = styled.p`
@@ -326,6 +329,9 @@ export const StyledLayoutForScoreOfEmployees = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+	@media only screen and (max-width: 600px) {
+		width: 84vw;
+	}
 `;
 
 export const StyledScoreOfEmployeesSection = styled.div`
@@ -344,7 +350,7 @@ export const StyledScoreOfEmployeesSection = styled.div`
 	@media only screen and (max-width: 800px) {
 		left: 0;
 		top: 75px;
-		padding: 0 16px;
+		padding: 0 4.267vw;
 	}
 `;
 
@@ -360,14 +366,15 @@ export const StyledEmployeesSectionHeadline = styled.p`
 		display: none;
 	}
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		&.desktop {
 			display: none;
 		}
 		&.mobile {
 			display: block;
+			width: 52vw;
 		}
-    width: 166px;
+    width: 44.267vw;
     height: 55px;
     left: 16px;
 		content: "About us";
@@ -391,6 +398,6 @@ export const StyledEmployeesSection = styled.section`
 		height: 1663px;
 		top: 3348px;
 		margin-top: 80px;
-		padding: 0 16px;
+		padding: 0 4.267vw;
 	}
 `;
