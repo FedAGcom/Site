@@ -65,7 +65,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 							</StyledAboutProjectPartOfCase>
 
 							<StyledButtonOfPreview className="button-arrow" alt={mainButton.name}
-								onClick={() => {navigate("/cases-study")}}/>
+								onClick={() => {navigate(`/cases-study${data.navTo}`)}}/>
 
 						</StyledPreviewOfListElement>
 					)

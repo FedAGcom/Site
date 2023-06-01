@@ -7,7 +7,7 @@ export const StyledHomePageCasesSection = styled.section`
 	top: 2420px;
 	padding: 0 165px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		height: 624px;
 		padding: 0 16px;
 		top: 2710px
@@ -27,7 +27,7 @@ export const StyledHomePageCasesHeadline = styled.h2`
   line-height: 68px;
   color: #333333;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     position: absolute;
     width: 109px;
     height: 55px;
@@ -44,7 +44,7 @@ export const StyledHomePageCasesArrow = styled.img`
   left: 1165px;
 	top: 22px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		left: 141px;
 	}
 `;

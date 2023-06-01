@@ -40,7 +40,8 @@ export const casesListData = {
 					"tagBtnWidth": ["71px", "67px"],
 					"tagSpanWidth": ["31px", "27px"]
 				}
-			]
+			],
+			"navTo": "/telegram-bot"
 		},
 		{
 			"key": "personalAccountCase",
@@ -72,7 +73,8 @@ export const casesListData = {
 					"tagBtnWidth": ["154px", "140px"],
 					"tagSpanWidth": ["114px", "100px"]
 				}
-			]
+			],
+			"navTo": "/personal-account"
 		},
 		{
 			"key": "onlinePlaygroundCase",
@@ -110,7 +112,9 @@ export const casesListData = {
 					"tagBtnWidth": ["71px", "67px"],
 					"tagSpanWidth": ["31px", "27px"]
 				}
-			]
+			],
+			"navTo": "/online-playground"
+
 		}
 	],
 	"marketplace": [],
@@ -151,7 +155,8 @@ export const casesListData = {
 					"tagBtnWidth": ["71px", "67px"],
 					"tagSpanWidth": ["31px", "27px"]
 				}
-			]
+			],
+			"navTo": "/online-playground"
 		}
 	],
 	"corporate_website": [],
@@ -186,7 +191,8 @@ export const casesListData = {
 					"tagBtnWidth": ["154px", "140px"],
 					"tagSpanWidth": ["114px", "100px"]
 				}
-			]
+			],
+			"navTo": "/personal-account"
 		}
 	],
 	"gaming": [
@@ -226,7 +232,8 @@ export const casesListData = {
 					"tagBtnWidth": ["71px", "67px"],
 					"tagSpanWidth": ["31px", "27px"]
 				}
-			]
+			],
+			"navTo": "/online-playground"
 		}
 	],
 

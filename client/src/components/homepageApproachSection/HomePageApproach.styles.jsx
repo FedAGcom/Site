@@ -10,7 +10,7 @@ export const StyledHomePageApproachSection = styled.section`
 	margin: 0 0 120px 0;
 	width: 100vw;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		margin-bottom: 80px;
 		padding: 0 16px;
 		height: 1222px;
@@ -28,7 +28,7 @@ export const StyledHomePageApproachHeadline = styled.h2`
   line-height: 68px;
   color: #333333;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 84vw;
     height: 55px;
     left: 16px;
@@ -46,7 +46,7 @@ export const StyledHomePageApproachImage = styled.div`
 	background-size: cover;
   border-radius: 20px;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 100vw;
     height: 226px;
     padding: 0;
@@ -152,7 +152,7 @@ export const StyledHomePageApproachInfoBlock = styled.div`
 		}
 	}
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		&.big-info-block {
       display: flex;
       flex-direction: column;

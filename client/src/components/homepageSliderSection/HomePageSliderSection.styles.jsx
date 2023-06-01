@@ -8,7 +8,7 @@ export const StyledHomePageSliderSection = styled.section`
 	height: 518px; 
 	width: 100vw;
 	
-	@media only screen and (max-width: 790px) {
+	@media only screen and (max-width: 600px) {
 		width: 100vw;
 		height: 552px;
 		margin-top: 80px;

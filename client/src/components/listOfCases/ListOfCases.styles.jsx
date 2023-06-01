@@ -14,7 +14,7 @@ export const StyledButtonOfPreview = styled.img`
 	content: url(${defaultArrowBtn});
 	border-radius: 50%;
 
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		left: 15px;
 		bottom: 30px;
 	}
@@ -35,7 +35,7 @@ export const StyledProjectTagsButtonSpan = styled.span`
   order: 0;
   flex-grow: 0;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: ${({respspanwidth}) => respspanwidth};
 		height: ${({tag}) => tag ? "19px" : "27px"};
 		font-size: ${({tag}) => tag ? "14px" : "20px"};
@@ -55,7 +55,7 @@ export const StyledProjectTagsButton = styled.button`
   outline: none;
   background: white;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: ${({ respbtnwidth }) => respbtnwidth};
   }
 
@@ -95,7 +95,7 @@ export const StyledTechStackOfCase = styled.div`
   order: 1;
   flex-grow: 0;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: 298px;
     height: 83px;
 	}
@@ -112,7 +112,7 @@ export const StyledNameOfProject = styled.p`
   flex-grow: 0;
 	position: relative;
 	
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: ${({ namewidth}) =>  namewidth[1]};
     font-size: 26px;
     line-height: 35px;
@@ -135,7 +135,7 @@ export const StyledAboutProjectPartOfCase = styled.div`
   left: 30px;
   top: 359px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: 302px;
     height: 128px;
     left: 15px;
@@ -149,7 +149,7 @@ export const StyledPreviewImageOfListElement = styled.img`
   border-radius: 49px;
 	object-fit: cover;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: 342px;
 		height: 218px;
     border-radius: 29px;
@@ -211,7 +211,7 @@ export const StyledPreviewOfListElement = styled.li`
 		}
 	}
 	
-	@media only screen and (max-width: 800px){
+	@media only screen and (max-width: 600px){
     width: 343px;
     height: 482px;
     border-radius: 30px;
@@ -234,7 +234,7 @@ export const StyledListOfCases = styled.ul`
     display: none;
   }
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		height: 517px;
 		width: 91.467vw	;
 	}

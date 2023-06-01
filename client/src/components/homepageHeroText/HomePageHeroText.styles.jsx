@@ -13,7 +13,7 @@ export const StyledHeroTextOfMainSection = styled.div`
   left: 165px;
   top: 234px;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     width: 91.467vw;
     height: 239px;
     left: 4.267vw;
@@ -35,7 +35,7 @@ export const StyledTextOfMainSection = styled.div`
   order: 0;
   flex-grow: 0;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 91.467vw;
     height: 239px;
   }
@@ -96,7 +96,7 @@ export const StyledParagraphOfMainSection = styled.p`
   order: 1;
   flex-grow: 0;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 91.467vw;
     height: 54px;
     font-size: 20px;

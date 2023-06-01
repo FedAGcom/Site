@@ -17,7 +17,7 @@ export const StyledContactUsButtonOfHomePage = styled.button`
 	background-color: #B81034;
   border-radius: 5px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		width: 83.467vw;
 		top: 94px;
 		left: 4.267vw;
@@ -73,7 +73,7 @@ export const StyledContactUsParagraphOfHomePage = styled.p`
   text-align: center;
   color: #FFFFFF;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: 85.467vw;
     height: 75px;
     left: 4.267vw;
@@ -109,7 +109,7 @@ export const StyledContactUsIconOfHomePage = styled.div`
   top: 50px;
 	background-image: url(${({ phone }) => phone ? phoneIcon : emailIcon});
   background-repeat: no-repeat;
-	@media only screen and (max-width: 800px){
+	@media only screen and (max-width: 600px){
 		left: 32.267vw;
 	}
 `;
@@ -121,7 +121,7 @@ export const StyledContactUsElementOfHomePage = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: 91.467vw;
     height: ${({ small }) => small ? "410px" : "448px"};
 	}
@@ -141,7 +141,7 @@ export const StyledContactUsOfHomePage = styled.section`
 	background-image: url(${backgroundVector});
 	background-position: -33px 61px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		margin-top: 189px;
 		flex-direction: column;
 		gap: 20px;

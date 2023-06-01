@@ -10,7 +10,7 @@ export const StyledApplicationRequestListOfInputs = styled.ul`
   align-items: flex-start;
   padding: 0;
   gap: 15px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
 	  top: 220px;
 	  left: 4.267vw;
   }
@@ -19,7 +19,7 @@ export const StyledApplicationRequestListOfInputs = styled.ul`
 export const StyledApplicationRequestElementOfInputList = styled.li`
   &:nth-child(1) {
 	  margin-right: 15px;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 600px) {
 			margin-right: 0;
     }
   }
@@ -40,8 +40,8 @@ export const StyledApplicationRequestInput = styled.input`
 	padding: 10px 10px;
   width: ${({ naming }) => naming === "true" ? "160px" : "350px"};
 	
-  @media only screen and (max-width: 800px) {
-		width: 93.333vw;
+  @media only screen and (max-width: 600px) {
+		width: 91.333vw;
   }
 `;
 
@@ -56,7 +56,7 @@ export const StyledApplicationRequestTextArea = styled.textarea`
   line-height: 25px;
 	
 	@media only screen and (max-width: 600px) {
-    width: 93.333vw;
+    width: 91.333vw;
 	}
 `;
 
@@ -73,7 +73,7 @@ export const StyledApplicationRequestContainer = styled.section`
   background: #272727;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     position: absolute;
     width: 100vw;
     height: 802px;
@@ -93,7 +93,7 @@ export const StyledApplicationRequestHeadline = styled.p`
   font-size: 50px;
   line-height: 68px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     position: absolute;
     width: 91.467vw;
     height: 110px;
@@ -103,4 +103,9 @@ export const StyledApplicationRequestHeadline = styled.p`
     font-size: 40px;
     line-height: 55px;
 	}
+  @media only screen and (max-width: 320px) {
+    top: 60px;
+	  font-size: 35px;
+	  line-height: 50px;
+  }
 `;

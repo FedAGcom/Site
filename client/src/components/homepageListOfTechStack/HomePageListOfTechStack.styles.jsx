@@ -8,7 +8,7 @@ export const StyledListOfTechStack = styled.ul`
 	top: 184px;
 	gap: 30px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		gap: 20px;
 		overflow: scroll;
 		&::-webkit-scrollbar {

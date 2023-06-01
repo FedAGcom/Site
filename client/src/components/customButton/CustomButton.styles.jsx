@@ -10,7 +10,7 @@ export const StyledCustomButton = styled.button`
   color: white;
   background: #B81034;
   border-radius: 5px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     position: absolute;
 	  width: 91.467vw;
     top: ${({ resptop }) => resptop ? resptop : "270px"};

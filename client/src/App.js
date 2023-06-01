@@ -2,8 +2,7 @@ import React from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header.component';
-import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
-
+import Footer from './components/footer/Footer.component'
 import HomePageComponent from "./pages/homePage/HomePage.component";
 import CareerComponent from "./pages/career/Career.component";
 import ContactUsComponent from "./pages/contactUs/ContactUs.component";
@@ -11,11 +10,12 @@ import TechnologyComponent from "./pages/tecnhologies/Technology.component";
 import CasesStudyComponent from "./pages/casesStudy/CasesStudy.component";
 import CasesComponent from "./pages/cases/Cases.component";
 
+import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
 import {GlobalStyle} from "./global.styles";
 
 function App() {
   return (
-    <div>
+    <div className="app-wrapper">
       <GlobalStyle />
       <ErrorBoundary>
         <Header />
@@ -27,6 +27,7 @@ function App() {
           <Route path="/technology" element={<TechnologyComponent />} />
           <Route path="/cases" element={<CasesComponent />} />
         </Routes>
+        <Footer />
       </ErrorBoundary>
     </div>
   );

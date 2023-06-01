@@ -79,7 +79,7 @@ export const StyledInfoAboutEmployee = styled.div`
   width: 285px;
   border-radius: 0 30px 30px 30px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		height: 110px;
 	}
 `;
@@ -142,17 +142,14 @@ export const StyledGeneralEmployeeBlock = styled.div`
   .employee-info {
     &.active {
       display: block;
-      animation: fadeInDown 1s;
+      animation: fadeInDown 0.75s;
     }
   }
 	
   @keyframes fadeInDown {
     0% {
-      transform: translateY(-130px);
-      opacity: 0.2;
-    }
-    80% {
-      opacity: 0.8;
+      transform: translateY(-100px);
+      opacity: 0;
     }
     100% {
       transform: translateY(0);
@@ -174,7 +171,7 @@ export const StyledFrameOfGeneralEmployees = styled.div`
   left: 165px;
   top: 605px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     gap: 15px;
 		overflow: scroll;
 		scroll-behavior: smooth;
@@ -200,7 +197,7 @@ export const StyledTitleOfMainEmployees = styled.div`
   left: ${({ cto }) => (cto) ? "381px" : "0"} ;
   top: 403px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		position: relative;
 		top: ${({ cto }) => (cto) ? "30px" : "40px"};
     left: ${({ cto }) => (cto) ? "0" : "0"} ;
@@ -240,12 +237,15 @@ export const StyledImageOfMainEmployees = styled.img`
   border-radius: 30px;
 	z-index: 1;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     height: ${({ cto }) => (cto) ? "332px" : "348px"};
     width: ${({ cto }) => (cto) ? "85.867vw" : "90.133vw"};
 		left: ${({ cto }) => (cto) ? "0" : "1.333vw"};
     top: ${({ cto }) => (cto) ? "493px" : "4.267vw"};
 	} 
+	//@media only screen and (min-width: 450px) and (max-width: 600px) {
+	//	// code...
+	//}
 `;
 
 export const StyledDivForMainEmployee = styled.div`
@@ -267,7 +267,7 @@ export const StyledContainerForMainEmployees = styled.div`
 	top: 85px;
 	gap: 30px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		width: 91.467vw;
 		top: 527px;
 		flex-direction: column;
@@ -284,7 +284,7 @@ export const StyledRectangleForEmployees = styled.div`
   background: #B81034;
   border-radius: 30px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     position: relative;
     width: ${({ cto }) => (cto) ? "90.133vw" : "86.933vw"};
     height: ${({ cto }) => (cto) ? "348px" : "336px"};
@@ -347,7 +347,7 @@ export const StyledScoreOfEmployeesSection = styled.div`
   left: 926px;
   top: 85px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		left: 0;
 		top: 75px;
 		padding: 0 4.267vw;
@@ -383,6 +383,12 @@ export const StyledEmployeesSectionHeadline = styled.p`
     line-height: 55px;
     color: #333333;
 	}
+	
+	@media only screen and (max-width: 350px) {
+		&.mobile {
+			white-space: nowrap;
+		}
+	}
 `;
 
 export const StyledEmployeesSection = styled.section`
@@ -393,7 +399,7 @@ export const StyledEmployeesSection = styled.section`
 	padding: 0 165px;
 	margin-top: 120px;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		width: 100vw;
 		height: 1663px;
 		top: 3348px;

@@ -19,7 +19,7 @@ export const StyledMainSectionOfHomePage = styled.section`
 		padding: 0;
 	}
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     height: 771px;
     left: 0;
     top: 57px;
@@ -39,7 +39,7 @@ export const StyledPreviewImageOfMainSection = styled.div`
   background-image: url(${mainPhotoForBadge});
   background-size: cover;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     width: 94.133vw;
     height: 305px;
     left: -75px;

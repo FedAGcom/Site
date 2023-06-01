@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const sameListStyles = `
-	position: absolute;
+	text-align: center;
 	font-family: 'Nunito Sans';
 	font-style: normal;
 	font-weight: 600;
@@ -10,13 +10,13 @@ const sameListStyles = `
 	line-height: 25px;
 	text-decoration: none;
 	color: #FFFFFF;
-	@media only screen and (max-width: 800px) {
-	  position: static;
+	@media only screen and (max-width: 500px) {
+	  // position: static;
   }
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  position: absolute;
+  //position: absolute;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -31,7 +31,7 @@ export const StyledNavLink = styled(NavLink)`
     transition-timing-function: ease;
 	}
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 500px) {
 	  position: static;
 	  &:nth-child(1) {
 		  margin-top: 30px;
@@ -43,7 +43,12 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const StyledNav = styled.nav`
-  @media only screen and (max-width: 800px) {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 63.333vw;
+  @media only screen and (max-width: 600px) {
     display: none;
     background-color: #272727;
     width: 80vw;
@@ -52,6 +57,8 @@ export const StyledNav = styled.nav`
     position: absolute;
     top: 57px;
     right: 0;
+	  padding-right: 5.333vw;
+	  gap: 30px;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column-reverse;
@@ -80,7 +87,6 @@ export const StyledNav = styled.nav`
         left: 20vw;
       }
     }
-	
   	@-webkit-keyframes close {
 	    0% {
 		    visibility: visible;
@@ -94,7 +100,7 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledListElements = styled.li`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     display: flex;
     justify-content: flex-end;
     //animation: fadeIn 1s ease-in both;
@@ -140,33 +146,37 @@ export const StyledListElements = styled.li`
 
 export const StyledUnorderedList = styled.ul`
 	list-style-type: none;
-	width: 100vw;
+	width: 340px;
 	display: flex;
-	flex-direction: column;
-	margin: 0 5.333% 30px 0;
-	padding: 0;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
+	@media only screen and (max-width: 600px) {
+		flex-direction: column;
+		align-items: flex-end;
+	}
 `;
 
 export const StyledNavigationLine = styled.hr`
   display: none;
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
 		display: block;
 	  width: 71.467vw;
 	  height: 0;
 	  border: 1px solid #FFFFFF;
-	  margin: 0 5.333% 30px 0;
 	}
 `;
 
 export const StyledHeaderCallTo = styled.div`
-  position: absolute;
-  left: 25.21%;
-  right: 63.19%;
-  top: 34.18%;
-  bottom: 34.18%;
+  //position: absolute;
+  //left: 25.21%;
+  //right: 63.19%;
+  //top: 34.18%;
+  //bottom: 34.18%;
 
-  @media only screen and (max-width: 800px) {
-    position: static;
-    margin: 0 5.333% 0 0;
+  @media only screen and (max-width: 600px) {
+    //position: static;
+    //margin: 0 5.333% 0 0;
   }
 `;

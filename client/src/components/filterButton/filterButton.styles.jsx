@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const StyledFilterButtonDiv = styled.div`
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
   width: 64.8%;
   gap: 15px;
-	
-	position: absolute;
-	top: ${({ top }) => top};
-	
-	@media only screen and (max-width: 800px) {
+
+  position: absolute;
+  top: ${({top}) => top};
+
+  @media only screen and (max-width: 600px) {
     align-items: flex-start;
     padding: 0;
 
@@ -17,11 +17,11 @@ export const StyledFilterButtonDiv = styled.div`
     width: 95.73%;
     height: 49px;
     left: 4.267vw;
-		overflow: scroll;
-		
-		&::-webkit-scrollbar {
-			display: none;
-		}
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
@@ -82,7 +82,7 @@ export const StyledFilterButtonSpan = styled.span`
   order: 0;
   flex-grow: 0;
 	
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 600px) {
     width: ${({spanwidth}) => spanwidth};
 
 		height: ${({tag}) => tag ? "19px" : "27px"};

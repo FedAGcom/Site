@@ -30,7 +30,6 @@ const HomePageEmployeesComponent = () => {
 	const generalEmployees = useSelector(selectGeneralEmployees);
 
 	const handleClick = (name) => {
-		console.log(active, name)
 		if (active === name) {
 			setRead(!read);
 		} else {

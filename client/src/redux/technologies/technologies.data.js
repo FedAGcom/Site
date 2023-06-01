@@ -1,9 +1,9 @@
-const angularImage = require("../../assets/homepage/angular.png");
-const javaImage = require("../../assets/homepage/java.png");
-const pythonImage = require("../../assets/homepage/python.png");
-const reactImage = require("../../assets/homepage/react.png");
-const phpImage = require("../../assets/homepage/php.png");
-const vueImage = require("../../assets/homepage/vue.png");
+const angularImage = require("../../assets/homepage/technologies/angular.png");
+const javaImage = require("../../assets/homepage/technologies/java.png");
+const pythonImage = require("../../assets/homepage/technologies/python.png");
+const reactImage = require("../../assets/homepage/technologies/react.png");
+const phpImage = require("../../assets/homepage/technologies/php.png");
+const vueImage = require("../../assets/homepage/technologies/vue.png");
 
 export const technologiesData = {
 	"frontend": [

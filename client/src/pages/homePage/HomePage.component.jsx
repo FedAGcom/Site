@@ -7,12 +7,14 @@ import HomePageCasesComponent from "../../components/homepageCasesSection/HomePa
 import HomePageEmployeesComponent from "../../components/homepageEmployeesSection/HomePageEmployees.component";
 import HomePageContactUsComponent from "../../components/homepageContactUsSection/HomePageContactUs.component";
 import HomePageSliderSectionComponent from "../../components/homepageSliderSection/HomePageSliderSection.component";
-import ApplicationLeaveRequestComponent
-	from "../../components/applicationLeaveRequest/ApplicationLeaveRequest.component";
+import ApplicationLeaveRequestComponent from "../../components/applicationLeaveRequest/ApplicationLeaveRequest.component";
+import HomePageOtherServicesComponent from "../../components/homepageOtherServices/HomePageOtherServices.component";
+
+import {StyledHomePage} from "./HomePage.styles";
 
 const HomePageComponent = () => {
 	return (
-		<div>
+		<StyledHomePage>
 			<HomePageMainSectionComponent />
 			<HomePageTechStackComponent />
 			<HomePageApproachComponent />
@@ -21,7 +23,8 @@ const HomePageComponent = () => {
 			<HomePageContactUsComponent />
 			<HomePageSliderSectionComponent />
 			<ApplicationLeaveRequestComponent />
-		</div>
+			<HomePageOtherServicesComponent />
+		</StyledHomePage>
 	)
 };
 

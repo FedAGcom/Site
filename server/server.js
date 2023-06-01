@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const myEmail = 'muhammadk2103@gmail.com';
 const passOfMyEmail = "jqtsliqxepnxltww";
-const email = 'navruz.kudratov971@gmail.com';
+// const email = 'navruz.kudratov971@gmail.com';
 
 const app = express();
 const PORT = 5000;
@@ -35,9 +35,9 @@ function sendEmail(requestData) {
 			subject: "The FedAG Team",
 			html: `
 				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-				<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+				<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 				<head>
-					<meta charset="utf-8">
+					<meta>
 					<meta name="viewport" content="width=device-width, initial-scale=1">
 					<title>%{request.firstName} %{request.lastName}</title>
 					<style>
@@ -251,14 +251,14 @@ function sendEmail(requestData) {
 			if (error) {
 				return reject({ message: `An error has occurred` });
 			}
-			return resolve({ message: "Email sent successfully" });
+			return resolve({ message: info });
 		});
 	});
 }
 
 app.post("/", (req, res) => {
-	console.log(req.query)
-	sendEmail(req.query)
+	console.log(req.body)
+	sendEmail(req.body)
 		.then((response) => res.send(response.message))
 		.catch((error) => res.status(500).send(error.message));
 });
