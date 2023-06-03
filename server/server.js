@@ -224,7 +224,7 @@ function sendEmail(requestData) {
 				      <div class="logo-wrapper">
 				        <div class="logo-image"></div>
 				        <div class="both-links">	
-				          <a target="_blank" href="tel:79113515055" class="phone-link">
+				          <a target="_blank" href="tel:+79113515055" class="phone-link">
 				            <img src="https://mssmca.stripocdn.email/content/guids/CABINET_b5bfed0b11252243ebfb1c00df0e3977/images/envelope_1.png" alt="+7 (911) 351-50-55" title="+7 (911) 351-50-55" class="phone-img">
 				            +7 (911) 351-50-55
 				          </a>

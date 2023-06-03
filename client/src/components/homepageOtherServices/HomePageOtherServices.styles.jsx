@@ -11,6 +11,7 @@ export const StyledHomePageOtherServicesSection = styled.section`
 		margin-top: 80px;
 		height: 637px;
 		top: 7672px;
+		width: 100vw;
 	}
 `;
 export const StyledHomePageOtherServicesHeadline = styled.p`
