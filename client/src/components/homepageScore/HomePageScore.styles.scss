@@ -1,0 +1,102 @@
+.score-of-main-section {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+  position: absolute;
+  width: 400px;
+  height: 175px;
+  left: 800px;
+  top: 520px;
+
+  background: #F2F2F2;
+  box-shadow: 0 4px 20px 2px rgba(235, 238, 247, 0.25);
+  border-radius: 20px;
+
+  .visual-part-of-first-score,
+  .visual-part-of-second-score {
+    position: absolute;
+    width: 144px;
+    height: 95px;
+
+    .demonstration-part-of-first-score,
+    .demonstration-part-of-second-score {
+      img {
+        position: absolute;
+        width: 68px;
+        height: 68px;
+      }
+
+      .first-paragraph-of-score,
+      .second-paragraph-of-score {
+        position: absolute;
+        width: 66px;
+        height: 33px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+
+        color: #333333;
+      }
+    }
+
+    p {
+      position: absolute;
+      width: 144px;
+      height: 22px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: #333333;
+
+    }
+  }
+
+  .visual-part-of-first-score {
+    left: 30px;
+    top: 40px;
+
+    .demonstration-part-of-first-score {
+      .first-paragraph-of-score {
+        left: 78px;
+        top: 17px;
+      }
+    }
+    p {
+      left: 0;
+      top: calc(5px + 68px);
+    }
+  }
+
+  .visual-part-of-second-score {
+    left: 224px;
+    top: 40px;
+
+    .demonstration-part-of-second-score {
+      .second-paragraph-of-score {
+        left: 78px;
+        top: 17px;
+      }
+    }
+    p {
+      left: 0;
+      top: calc(5px + 68px);
+    }
+  }
+
+  .line-between-score {
+    display: block;
+    position: absolute;
+    width: 115px;
+    height: 0;
+    left: 150px;
+    top: 87px;
+
+    border: 2px solid #DBDEE6;
+    transform: rotate(90deg);
+  }
+}

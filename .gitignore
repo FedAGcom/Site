@@ -4,15 +4,17 @@
 /node_modules
 /.pnp
 .pnp.js
+../server/node_modules
+
 
 # tool for development
-/.idea
-
+.idea
+node_modules
 # testing
-/coverage
+client/coverage
 
 # production
-/build
+client/build
 
 # misc
 .DS_Store
