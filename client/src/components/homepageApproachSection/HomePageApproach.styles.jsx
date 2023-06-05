@@ -3,26 +3,27 @@ import styled from "styled-components";
 import approachImage from '../../assets/homepage/approach.png'
 
 export const StyledHomePageApproachSection = styled.section`
-	height: 733px;
 	position: relative;
-	top: 1576px;
-	padding: 0 165px 0 165px;
-	margin: 0 0 120px 0;
+	min-height: 100px;
+	padding: 0 11.458vw;
+	margin: 120px 0;
 	width: 100vw;
+	max-height: 733px;
 	
 	@media only screen and (max-width: 600px) {
-		margin-bottom: 80px;
-		padding: 0 16px;
-		height: 1222px;
-		top: 1408px
+		margin: 80px 0;
+		padding: 0 4.267vw;
+    max-height: ${({ russian }) => russian === "true" ? "1237px" : "1222px"};
 	}
+  @media only screen and (max-width: 374px) {
+    max-height: ${({ russian }) => russian === "true" ? "1334px" : "1222px"};
+  }
 `;
 
 export const StyledHomePageApproachHeadline = styled.h2`
   width: 311px;
-  height: 68px;
-	position: absolute;
-	left: 165px;
+  min-height: 68px;
+	position: relative;
   font-weight: 600;
   font-size: 50px;
   line-height: 68px;
@@ -30,28 +31,27 @@ export const StyledHomePageApproachHeadline = styled.h2`
 
   @media only screen and (max-width: 600px) {
     width: 84vw;
-    height: 55px;
-    left: 16px;
+    min-height: 55px;
     font-size: 40px;
     line-height: 55px;
   }
 `;
 
 export const StyledHomePageApproachImage = styled.div`
-	position: absolute;
+	position: relative;
   width: 730px;
-  height: 419px;
-  left: 545px;
+  min-height: 419px;
+	top: -68px;
+  left: 26.447vw;
   background: url(${approachImage});
 	background-size: cover;
   border-radius: 20px;
 
   @media only screen and (max-width: 600px) {
     width: 100vw;
-    height: 226px;
-    padding: 0;
-	  left: 0;
-    top: 75px;
+    min-height: 226px;
+	  top: 20px;
+	  left: -4.267vw;
   }
 `;
 
@@ -65,7 +65,6 @@ export const StyledHomePageApproachInfoBlock = styled.div`
     line-height: 38px;
     color: #333333;
 	}
-	
 	p {
     font-weight: 400;
     font-size: 20px;
@@ -74,80 +73,81 @@ export const StyledHomePageApproachInfoBlock = styled.div`
 	}
 	
 	&.big-info-block {
-    position: absolute;
+    position: relative;
     width: 635px;
-    height: 321px;
-    top: 78px;
-		
-		h3 {
-      position: absolute;
-			top: 50px;
+    min-height: 321px;
+    top: -409px;
+
+    h3 {
+      position: relative;
+			padding-top: 50px;
 			left: 30px;
       width: 531px;
-      height: 76px;
+      min-height: 76px;
 		}
 		
 		p {
-			position: absolute;
-			top: 136px;
+			position: relative;
+			padding-top: 10px;
 			left: 30px;
       width: 555px;
-      height: 135px;
+      min-height: 135px;
 		}
 	}
-	
 	&.small-info-block {
-    position: absolute;
-    top: 439px;
+    position: relative;
+    top: -369px;
 		
 		h3 {
-      position: absolute;
-      height: 76px;
+      position: relative;
+      min-height: 76px;
       left: 25px;
-      top: 50px;
+      padding-top: 50px;
 		}
 		
 		p {
-      position: absolute;
+      position: relative;
       left: 25px;
-      top: 146px;
+      padding-top: 20px;
 		}
 		
 		&.first {
       width: 350px;
-      height: 294px;
+      min-height: 294px;
       h3 {
         width: 198px;
       }
       p {
         width: 297px;
-        height: 108px;
+        min-height: 108px;
       } 
 		}
 		
 		&.second {
       width: 350px;
-      height: 294px;
-      left: 545px;
+      min-height: 294px;
+			top: -663px;
+      left: 380px;
 			h3 {
         width: 166px;
 			}
 			p {
         width: 298px;
-        height: 108px;
+        min-height: 108px;
 			}
 		}
 		
 		&.third {
       width: 350px;
-      height: 294px;
-      left: 925px;
+      min-height: 294px;
+      left: 760px;
+			top: -957px;
 			h3 {
         width: 201px;
 			}
 			p {
         width: 291px;
-        height: 135px;
+        min-height: 135px;
 			}
 		}
 	}
@@ -157,114 +157,84 @@ export const StyledHomePageApproachInfoBlock = styled.div`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 50px 30px;
-      gap: 10px;
-
-      position: absolute;
+			top: -101px;
+      position: relative;
       width: 91.467vw;
-      height: 389px;
-      left: 4.267vw;
-      top: 170px;
-			
+      min-height: 389px;
 			h3 {
         width: 75.467vw;
-        height: 81px;
+        min-height: 81px;
         font-size: 20px;
         line-height: 27px;
-        flex: none;
-				top: 36px;
-        order: 0;
-        flex-grow: 0;
 			}
-			
 			p {
-				top: 141px;
         width: 75.467vw;
-        height: 198px;
+        min-height: 198px;
         font-size: 16px;
         line-height: 22px;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
 			}
 		}
-		
 		&.small-info-block {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 40px 30px;
-      gap: 10px;
-      left: 16px;
       width: 91.457vw;
-      
 			
 			h3 {
         font-weight: 600;
         font-size: 20px;
         line-height: 27px;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        top: 40px;
-        left: 30px;
 			}
-			
 			p {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        top: 87px;
-        left: 30px;
 			}
-			
 			&.first {
         width: 91.457vw;
-      	top: 570px;
-        height: 193px;
+      	top: -91px;
+        min-height: 193px;
 				
 				h3 {
 	        width: 52.8vw;
-	        height: 27px;
+	        min-height: 27px;
 				}
 				p {
 	        width: 75.467vw;
-	        height: 66px;
+	        min-height: 66px;
 				}
 			}
 			
 			&.second {
         width: 91.457vw;
-				left: 16px;
-        top: 773px;
-        height: 193px;
+        top: -81px;
+        min-height: 193px;
+        left: 0;
+				
 				
 				h3 {
           width: 52.8vw;
-          height: 27px;
+          min-height: 27px;
 				}
 				p {
           width: 75.467vw;
-          height: 66px;
+          min-height: 66px;
 				}
 			}
 			
 			&.third {
         width: 91.457vw;
-        height: 237px;
-				left: 16px;
-				top: 976px;
+        min-height: 237px;
+				top: -71px;
+				left: 0;
 				
 				h3 {
           width: 53.6vw;
-          height: 27px;
+          min-height: 27px;
 				}
 				p {
           width: 75.467vw;
-          height: 110px;
+          min-height: 110px;
 				}
 			}
 		}

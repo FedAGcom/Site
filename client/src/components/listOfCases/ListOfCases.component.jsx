@@ -18,6 +18,7 @@ import {
 	selectCasesMainButton
 } from "../../redux/cases/cases.selectors";
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 
 const ListOfCasesComponent = ({ top, routepage }) => {
@@ -25,7 +26,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 
 	const casesCollections = useSelector(selectCasesCollection);
 	const mainButton = useSelector(selectCasesMainButton);
-
+	const {t} = useTranslation()
 	return (
 		<StyledListOfCases top={top}>
 			{
@@ -36,7 +37,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 
 							<StyledAboutProjectPartOfCase routepage={routepage}>
 								<StyledNameOfProject namewidth={data.nameWidth} routepage={routepage}>
-									{data.name}
+									{t(`main.homepage.casesSection.cases.${data.name}.headline`)}
 								</StyledNameOfProject>
 
 
@@ -54,7 +55,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 													spanwidth={tag.tagSpanWidth[0]}
 													respspanwidth={tag.tagSpanWidth[1]}
 													tag="true">
-													{tag.tagName}
+													{t(`main.homepage.casesSection.cases.${data.name}.tags.${tag.tagName}`)}
 												</StyledProjectTagsButtonSpan>
 
 											</StyledProjectTagsButton>

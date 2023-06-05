@@ -19,6 +19,7 @@ import {
 	StyledScorePercentage, StyledTitleOfMainEmployees,
 	StyledContainerForMainEmployees, StyledDivForMainEmployee,
 } from "./HomePageEmployees.styles";
+import {useTranslation} from "react-i18next";
 
 const HomePageEmployeesComponent = () => {
 	const [active, setActive] = useState("");
@@ -37,14 +38,14 @@ const HomePageEmployeesComponent = () => {
 		}
 		setActive(name);
 	}
-
+	const {t} = useTranslation();
 	return (
 		<StyledEmployeesSection>
 			<StyledEmployeesSectionHeadline className="desktop">
-				Who are working for you
+				{t(`main.homepage.employeesSection.headlineDesktop`)}
 			</StyledEmployeesSectionHeadline>
 			<StyledEmployeesSectionHeadline className="mobile">
-				About us
+				{t(`main.homepage.employeesSection.headlineMobile`)}
 			</StyledEmployeesSectionHeadline>
 
 			<StyledScoreOfEmployeesSection>
@@ -52,7 +53,7 @@ const HomePageEmployeesComponent = () => {
 					score.map((data) => (
 						<StyledLayoutForScoreOfEmployees key={data.key}>
 							<StyledScorePercentage>{data.scorePercentage}</StyledScorePercentage>
-							<StyledScoreDefinition>{data.scoreDefinition}</StyledScoreDefinition>
+							<StyledScoreDefinition>{t(`main.homepage.employeesSection.score.${data.scoreDefinition}`)}</StyledScoreDefinition>
 						</StyledLayoutForScoreOfEmployees>
 					))
 				}
@@ -66,7 +67,7 @@ const HomePageEmployeesComponent = () => {
 							<StyledImageOfMainEmployees src={main.imageSource} alt={main.name} cto={(main.position === "CTO") ? "true" : ""} />
 							<StyledTitleOfMainEmployees cto={(main.position === "CTO") ? "true" : ""} >
 								<StyledNameOfMainEmployees  cto={(main.position === "CTO") ? "true" : ""}>
-									{main.name}
+									{t(`main.homepage.employeesSection.mainEmployees.${main.name}`)}
 								</StyledNameOfMainEmployees>
 								<StyledPositionNameOfMainEmployees>{main.position}</StyledPositionNameOfMainEmployees>
 							</StyledTitleOfMainEmployees>
@@ -95,8 +96,8 @@ const HomePageEmployeesComponent = () => {
 
 							<StyledInfoAboutEmployee className={((active === general.name) && (read === true)) ?
 								"active employee-info" : "employee-info"}>
-								<StyledEmployeeNameOfInfoPart>{general.name}</StyledEmployeeNameOfInfoPart>
-								<StyledPositionOfGeneralEmployee>{general.position}</StyledPositionOfGeneralEmployee>
+								<StyledEmployeeNameOfInfoPart>{t(`main.homepage.employeesSection.generalEmployees.${general.name}.name`)}</StyledEmployeeNameOfInfoPart>
+								<StyledPositionOfGeneralEmployee>{t(`main.homepage.employeesSection.generalEmployees.${general.name}.position`)}</StyledPositionOfGeneralEmployee>
 							</StyledInfoAboutEmployee>
 						</StyledGeneralEmployeeBlock>
 					))

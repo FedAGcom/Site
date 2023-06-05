@@ -5,7 +5,6 @@ export const StyledListOfTechStack = styled.ul`
 	list-style-type: none;
 	display: flex;
 	position: relative;
-	top: 184px;
 	gap: 30px;
 	
 	@media only screen and (max-width: 600px) {

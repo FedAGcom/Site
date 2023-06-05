@@ -6,12 +6,14 @@ import {
 } from "./HomePageSliderSection.styles";
 
 import SliderComponent from "../slider/Slider.component";
+import {useTranslation} from "react-i18next";
 
 const HomePageSliderSectionComponent = () => {
+	const {t} = useTranslation()
 	return (
 		<StyledHomePageSliderSection>
 			<StyledHomePageSliderSectionHeadline>
-				What clients love about our solution
+				{t(`main.homepage.sliderSection.headline`)}
 			</StyledHomePageSliderSectionHeadline>
 			<SliderComponent />
 		</StyledHomePageSliderSection>

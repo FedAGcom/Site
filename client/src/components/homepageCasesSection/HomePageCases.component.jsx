@@ -11,23 +11,25 @@ import {
 
 import FilterButtonComponent from "../filterButton/fillterButton.component";
 import ListOfCasesComponent from "../listOfCases/ListOfCases.component";
+import {useTranslation} from "react-i18next";
 
 const HomePageCasesComponent = () => {
 	const navigate = useNavigate();
 	const handleClickEvent = () => {
 		navigate("/cases")
 	}
+	const { t } = useTranslation();
 	return (
 		<StyledHomePageCasesSection>
 
-			<StyledHomePageCasesHeadline>Cases</StyledHomePageCasesHeadline>
+			<StyledHomePageCasesHeadline>{t('main.homepage.casesSection.headline')}</StyledHomePageCasesHeadline>
 			<StyledHomePageCasesArrow
 				src={arrowBtn}
 				alt="button" onClick={handleClickEvent}/>
 
-			<FilterButtonComponent collection="cases" top="78px"/>
+			<FilterButtonComponent collection="cases" top="-18px"/>
 
-			<ListOfCasesComponent top="155px" routepage="homepage"/>
+			<ListOfCasesComponent top="13px" routepage="homepage"/>
 
 		</StyledHomePageCasesSection>
 	);

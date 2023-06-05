@@ -21,7 +21,7 @@ export const StyledButtonOfPreview = styled.img`
 `;
 
 export const StyledProjectTagsButtonSpan = styled.span`
-	width: ${({spanwidth}) => spanwidth};
+	min-width: ${({spanwidth}) => spanwidth};
   height: ${({ tag }) => tag ? "" : "27px"};
 
   font-weight: 400;
@@ -36,7 +36,7 @@ export const StyledProjectTagsButtonSpan = styled.span`
   flex-grow: 0;
 	
 	@media only screen and (max-width: 600px) {
-    width: ${({respspanwidth}) => respspanwidth};
+    min-width: ${({respspanwidth}) => respspanwidth};
 		height: ${({tag}) => tag ? "19px" : "27px"};
 		font-size: ${({tag}) => tag ? "14px" : "20px"};
     line-height: ${({tag}) => tag ? "19px" : "27px"};
@@ -44,8 +44,9 @@ export const StyledProjectTagsButtonSpan = styled.span`
 `;
 
 export const StyledProjectTagsButton = styled.button`
-  //padding: 10px 20px;
-  width: ${({ btnwidth }) => btnwidth};
+  padding: 0 20px;
+  // min-width: ${({ btnwidth }) => btnwidth};
+	min-width: fit-content;
   height: ${({tag}) => tag ? "39px" : "47px"};
   border-radius: 20px;
   border: 1px solid #AEAEAE;
@@ -56,7 +57,7 @@ export const StyledProjectTagsButton = styled.button`
   background: white;
 
   @media only screen and (max-width: 600px) {
-    width: ${({ respbtnwidth }) => respbtnwidth};
+    //min-width: ${({ respbtnwidth }) => respbtnwidth};
   }
 
   &.active {
@@ -89,20 +90,22 @@ export const StyledTechStackOfCase = styled.div`
   align-items: flex-start;
   padding: 0;
   gap: 5px;
-  width: 351px;
+  min-width: 351px;
+	overflow: hidden;
+	max-height: 89px;
 	position: relative;
   flex: none;
   order: 1;
   flex-grow: 0;
 	
 	@media only screen and (max-width: 600px) {
-    width: 298px;
+    min-width: 298px;
     height: 83px;
 	}
 `;
 
 export const StyledNameOfProject = styled.p`
-  width: ${({ namewidth, routepage }) => (routepage === "cases") ? "480px" : namewidth[0]};
+  min-width: ${({ namewidth, routepage }) => (routepage === "cases") ? "480px" : namewidth[0]};
   font-weight: 700;
   font-size: 30px;
   line-height: 41px;
@@ -113,7 +116,7 @@ export const StyledNameOfProject = styled.p`
 	position: relative;
 	
   @media only screen and (max-width: 600px) {
-    width: ${({ namewidth}) =>  namewidth[1]};
+    min-width: ${({ namewidth}) =>  namewidth[1]};
     font-size: 26px;
     line-height: 35px;
 	  &:nth-child(3) {
@@ -130,13 +133,13 @@ export const StyledAboutProjectPartOfCase = styled.div`
   gap: 10px;
 
   position: absolute;
-  width: ${({ routepage }) => (routepage === "cases") ? "480px" : "351px"};
+  min-width: ${({ routepage }) => (routepage === "cases") ? "480px" : "351px"};
   height: 140px;
   left: 30px;
   top: 359px;
 	
 	@media only screen and (max-width: 600px) {
-    width: 302px;
+    min-width: 302px;
     height: 128px;
     left: 15px;
     top: 239px;
@@ -222,9 +225,9 @@ export const StyledPreviewOfListElement = styled.li`
 `;
 
 export const StyledListOfCases = styled.ul`
-	position: absolute;
+	position: relative;
 	top: ${({ top }) => top}; // 155px
-	height: 643px;
+	min-height: 643px;
 	width: 88.542vw;
 	overflow: scroll;
 	flex-direction: row;
@@ -235,7 +238,7 @@ export const StyledListOfCases = styled.ul`
   }
 	
 	@media only screen and (max-width: 600px) {
-		height: 517px;
+		min-height: 517px;
 		width: 91.467vw	;
 	}
 `;

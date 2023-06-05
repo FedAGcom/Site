@@ -26,6 +26,7 @@ import {
 	selectEnterpriseCases
 } from "../../redux/cases/cases.selectors";
 import {switchCasesType} from "../../redux/cases/cases.action";
+import {useTranslation} from "react-i18next";
 
 
 const FilterButtonComponent = ({ collection, top }) => {
@@ -62,9 +63,10 @@ const FilterButtonComponent = ({ collection, top }) => {
 		}
 		setActive(btnName);
 	}
-
+	const {t} = useTranslation()
 	return (
 		<StyledFilterButtonDiv top={top}>
+
 			{
 				buttonCollection.map((data) => {
 					let dataCollection;
@@ -109,7 +111,11 @@ const FilterButtonComponent = ({ collection, top }) => {
               className={(active === data.name) ? "active" : ""}
               onClick={() => {handleEvent(dataCollection, data.name)}} >
 							<StyledFilterButtonSpan spanwidth={data.spanWidth}>
-								{data.name}
+								{
+									collection === "technologies"
+									? t(`main.homepage.technologiesSection.filterBtn.${data.name}`)
+									: t(`main.homepage.casesSection.filterBtn.${data.name}`)
+								}
 							</StyledFilterButtonSpan>
 						</StyledFilterButton>
 					);

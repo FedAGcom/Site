@@ -17,8 +17,11 @@ import {
 	rightBtnClicked,
 	leftBtnClicked
 } from "../../redux/slider/slider.actions";
+import {useTranslation} from "react-i18next";
 
 const SliderComponent = () => {
+	const {t} = useTranslation()
+
 	const current = useSelector(selectSliderCurrent);
 	const next = useSelector(selectSliderNext);
 	const previous = useSelector(selectSliderPrevious);
@@ -86,12 +89,12 @@ const SliderComponent = () => {
 							<div className={handleStatus(slide.key)} key={slide.key}>
 								<div className="slide-quote-div">
 									<img className="left-double-quotes" src={leftDoubleQuotes} alt="quotes"/>
-									<p className="slide-quote-p">{slide.quote}</p>
+									<p className="slide-quote-p">{t(`main.homepage.sliderSection.slides.${slide.caseName}.quote`)}</p>
 									<img className="right-double-quotes" src={rightDoubleQuotes} alt="quotes"/>
 								</div>
 								<div className="slide-customer-review">
 									<img className="slide-customer-image" src={slide.imageSource} alt={slide.clientName}/>
-									<p className="slide-customer-name">{slide.clientName}</p>
+									<p className="slide-customer-name">{t(`main.homepage.sliderSection.slides.${slide.caseName}.name`)}</p>
 									<p className="slide-customer-company">{slide.caseName}</p>
 								</div>
 							</div>

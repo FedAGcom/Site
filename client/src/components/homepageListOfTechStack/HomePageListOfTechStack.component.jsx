@@ -9,11 +9,14 @@ import {
 	StyledTechnologyIconOfTechStack,
 	StyledTechnologyTitleOfTechStack
 } from "./HomePageListOfTechStack.styles";
+import {useTranslation} from "react-i18next";
 
 const HomePageListOfTechStackComponent = () => {
 	const technologiesCollection = useSelector(selectTechCollection)
+	const { i18n } = useTranslation()
+	const isRussian = i18n.resolvedLanguage === "ru"
 	return (
-		<StyledListOfTechStack>
+		<StyledListOfTechStack russian={isRussian.toString()}>
 			{
 				technologiesCollection.map((data) => {
 					return (

@@ -5,20 +5,16 @@ export const StyledFilterButtonDiv = styled.div`
   flex-direction: row;
   width: 64.8%;
   gap: 15px;
-
-  position: absolute;
-  top: ${({top}) => top};
+  position: relative;
+	top: ${({top}) => top ? top : "0"};
 
   @media only screen and (max-width: 600px) {
     align-items: flex-start;
     padding: 0;
-
-    position: absolute;
-    width: 95.73%;
+    position: relative;
+    width: 99.73%;
     height: 49px;
-    left: 4.267vw;
     overflow: scroll;
-
     &::-webkit-scrollbar {
       display: none;
     }
@@ -31,7 +27,7 @@ export const StyledFilterButton = styled.button`
   align-items: flex-start;
   padding: 10px 20px;
   gap: ${({gap}) => gap};
-  width: ${({btnwidth}) => btnwidth};
+  min-width: ${({btnwidth}) => btnwidth};
   height: ${({tag}) => tag ? "39px" : "47px"};
   border-radius: 20px;
   border: 1px solid #AEAEAE;
@@ -40,10 +36,6 @@ export const StyledFilterButton = styled.button`
   flex-grow: 0;
   outline: none;
 	background: white;
-	
-	@media only screen and (max-width: 600px) {
-		
-	}
 	
 	&.active {
     animation-name: faded;
@@ -69,7 +61,7 @@ export const StyledFilterButton = styled.button`
 `;
 
 export const StyledFilterButtonSpan = styled.span`
-  width: ${({spanwidth}) => spanwidth};
+  min-width: ${({spanwidth}) => spanwidth};
   height: ${({ tag }) => tag ? "22px" : "27px"};
 
   font-weight: 400;
@@ -83,7 +75,7 @@ export const StyledFilterButtonSpan = styled.span`
   flex-grow: 0;
 	
 	@media only screen and (max-width: 600px) {
-    width: ${({spanwidth}) => spanwidth};
+    min-width: ${({spanwidth}) => spanwidth};
 
 		height: ${({tag}) => tag ? "19px" : "27px"};
 		font-size: ${({tag}) => tag ? "14px" : "20px"};

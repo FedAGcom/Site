@@ -18,19 +18,22 @@ import {
 import {selectAllServices} from "../../redux/services/services.selectors";
 
 import arrowLink from '../../assets/homepage/otherServices/arrow.svg';
+import {useTranslation} from "react-i18next";
 
 const HomePageOtherServicesComponent = () => {
+	const {t} = useTranslation()
 	const arrayToDisplay = useSelector(selectAllServices);
 	return (
 		<StyledHomePageOtherServicesSection>
 			<StyledHomePageOtherServicesHeadline>
-				Other services for IT developers
+				{t('main.homepage.otherServicesSection.headline')}
 			</StyledHomePageOtherServicesHeadline>
 			<StyledHomePageOtherServicesSpan className="desktop">
-				In the very near future, we plan to have 4 of them:
+				{t('main.homepage.otherServicesSection.paragraphDesktop')}
+
 			</StyledHomePageOtherServicesSpan>
 			<StyledHomePageOtherServicesSpan className="mobile">
-				Currently we have 4 of them:
+				{t('main.homepage.otherServicesSection.paragraphMobile')}
 			</StyledHomePageOtherServicesSpan>
 
 			<StyledHomePageOtherServicesList>
@@ -46,7 +49,7 @@ const HomePageOtherServicesComponent = () => {
 										<img src={arrowLink} alt="arrow"/>
 									</StyledHomePageOtherServicesLink>
 								</StyledHomePageOtherServicesText>
-								<StyledHomePageOtherServicesComingSoon status={data.status}/>
+								<StyledHomePageOtherServicesComingSoon status={data.status}><p>COMING SOON</p></StyledHomePageOtherServicesComingSoon>
 								<StyledHomePageOtherServicesLetter status={data.status} src={data.imageSource} alt="letters"/>
 							</StyledHomePageOtherServicesItem>
 						)

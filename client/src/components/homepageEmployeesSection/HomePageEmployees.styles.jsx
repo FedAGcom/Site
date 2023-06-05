@@ -164,21 +164,19 @@ export const StyledFrameOfGeneralEmployees = styled.div`
   align-items: flex-start;
   padding: 0;
   gap: 30px;
-
-  position: absolute;
+  position: relative;
   width: 1110px;
   height: 164px;
-  left: 165px;
-  top: 605px;
+	top: -360px;
 	
 	@media only screen and (max-width: 600px) {
+		top: 0;
+		margin-top: 30px;
     gap: 15px;
 		overflow: scroll;
 		scroll-behavior: smooth;
     width: 89.333vw;
     height: 303px;
-    left: 4.267vw;
-    top: 1499px;
 		
     &::-webkit-scrollbar {
       display: none;
@@ -263,13 +261,14 @@ export const StyledContainerForMainEmployees = styled.div`
 	flex-direction: row;
 	width: 730px;
 	height: 490px;
-	position: absolute;
-	top: 85px;
+	position: relative;
 	gap: 30px;
+	top: -390px;
 	
 	@media only screen and (max-width: 600px) {
+		top: 0;
+    margin-top: 62px;
 		width: 91.467vw;
-		top: 527px;
 		flex-direction: column;
 		height: 942px;
 	}
@@ -338,24 +337,21 @@ export const StyledScoreOfEmployeesSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
   gap: 20px;
 	
-  position: absolute;
+  position: relative;
   width: 315px;
   height: 390px;
-  left: 926px;
-  top: 85px;
+  left: 760px;
 	
 	@media only screen and (max-width: 600px) {
 		left: 0;
-		top: 75px;
-		padding: 0 4.267vw;
+		width: 95vw;
 	}
 `;
 
 export const StyledEmployeesSectionHeadline = styled.p`
-  position: absolute;
+  position: relative;
   width: 581px;
   height: 68px;
   font-weight: 700;
@@ -376,7 +372,6 @@ export const StyledEmployeesSectionHeadline = styled.p`
 		}
     width: 44.267vw;
     height: 55px;
-    left: 16px;
 		content: "About us";
     font-weight: 600;
     font-size: 40px;
@@ -392,18 +387,16 @@ export const StyledEmployeesSectionHeadline = styled.p`
 `;
 
 export const StyledEmployeesSection = styled.section`
-	height: 769px;
+	max-height: 769px;
 	width: 100vw;
-	position: absolute;
-	top: 3219px;
-	padding: 0 165px;
-	margin-top: 120px;
+	position: relative;
+	padding: 0 11.458vw;
+	margin: 120px 0;
 	
 	@media only screen and (max-width: 600px) {
 		width: 100vw;
-		height: 1663px;
-		top: 3348px;
-		margin-top: 80px;
+		min-height: 1663px;
+		margin: 80px 0;
 		padding: 0 4.267vw;
 	}
 `;

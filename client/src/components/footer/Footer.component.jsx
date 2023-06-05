@@ -1,7 +1,8 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 
 import logo from '../../assets/homepage/footerLogo.svg';
-// import british from '../../assets/homepage/british.png';
+import british from '../../assets/homepage/british.png';
 import russian from '../../assets/homepage/russian.png';
 
 import {
@@ -15,12 +16,21 @@ import {
 } from "./Footer.styles";
 
 const Footer = () => {
+	const {t, i18n} = useTranslation()
+	const handleLanguage = () => {
+		if (i18n.resolvedLanguage === 'en') {
+			i18n.changeLanguage('ru')
+		} else if (i18n.resolvedLanguage === 'ru') {
+			i18n.changeLanguage('en')
+		}
+	}
+
 	return (
 		<StyledFooter>
 			<StyledFooterMainPart>
 				<StyledListOfFooterSections>
 					<StyledElementOfFooterSection className="headline" headline="true">
-						Contact us
+						{t('main.footer.contactsList.headline')}
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
 						<a className="email-link" rel="noreferrer" href="mailto:ask.fedag@gmail.com?subject=The%20FedAG%20team" target="_blank">ask.fedag@gmail.com</a>
@@ -31,10 +41,10 @@ const Footer = () => {
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledFooterTranslateButton>
-							<span>English</span>
+						<StyledFooterTranslateButton onClick={handleLanguage}>
+							<span>{t('main.footer.contactsList.language')}</span>
 							<hr/>
-							<img src={russian} alt="country"/>
+							<img src={i18n.resolvedLanguage === "en" ? british : russian} alt="country"/>
 						</StyledFooterTranslateButton>
 					</StyledElementOfFooterSection>
 				</StyledListOfFooterSections>
@@ -42,69 +52,93 @@ const Footer = () => {
 
 				<StyledListOfFooterSections>
 					<StyledElementOfFooterSection className="headline" headline="true">
-						General
+						{t('main.footer.generalList.headline')}
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledNavLinkOfFooter to="/">Home</StyledNavLinkOfFooter>
+						<StyledNavLinkOfFooter to="/">
+							{t('main.footer.generalList.home')}
+						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledNavLinkOfFooter to="/contact-us">Contact Us</StyledNavLinkOfFooter>
+						<StyledNavLinkOfFooter to="/contact-us">
+							{t('main.footer.generalList.contact')}
+						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledNavLinkOfFooter to="/career">Career</StyledNavLinkOfFooter>
+						<StyledNavLinkOfFooter to="/career">
+							{t('main.footer.generalList.career')}
+						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledNavLinkOfFooter to="/cases">Cases</StyledNavLinkOfFooter>
+						<StyledNavLinkOfFooter to="/cases">
+							{t('main.footer.generalList.cases')}
+						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<StyledNavLinkOfFooter to="/terms-and-conditions">Terms and Conditions</StyledNavLinkOfFooter>
+						<StyledNavLinkOfFooter to="/terms-and-conditions">
+							{t('main.footer.generalList.termsAndCondition')}
+						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
 				</StyledListOfFooterSections>
 
 
 				<StyledListOfFooterSections>
 					<StyledElementOfFooterSection className="headline" headline="true">
-						Services
+						{t('main.footer.servicesList.headline')}
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a href="/">Recruitment System</a>
+						<a href="/">{t('main.footer.servicesList.recruitmentSystem')}</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a href="/">Internship System</a>
+						<a href="/">{t('main.footer.servicesList.internshipSystem')}</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a href="/">CRM Recruitment</a>
+						<a href="/">{t('main.footer.servicesList.crmRecruitment')}</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a href="/">LAB</a>
+						<a href="/">{t('main.footer.servicesList.lab')}</a>
 					</StyledElementOfFooterSection>
 				</StyledListOfFooterSections>
 
 
 				<StyledListOfFooterSections className="social-links">
 					<StyledElementOfFooterSection className="headline" headline="true">
-						Socials
+						{t('main.footer.socialLinksList.headline')}
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="https://www.instagram.com/fedag.web/" target="_blank">Instagram</a>
+						<a rel="noreferrer" href="https://www.instagram.com/fedag.web/" target="_blank">
+							{t('main.footer.socialLinksList.instagram')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="https://t.me/fedagEdu" target="_blank">Telegram</a>
+						<a rel="noreferrer" href="https://t.me/fedagEdu" target="_blank">
+							{t('main.footer.socialLinksList.telegram')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">WhatsApp</a>
+						<a rel="noreferrer" href="/" target="_blank">
+							{t('main.footer.socialLinksList.whatsApp')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">Viber</a>
+						<a rel="noreferrer" href="/" target="_blank">
+							{t('main.footer.socialLinksList.viber')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="https://www.linkedin.com/company/fedag-edu/" target="_blank">LinkedIn</a>
+						<a rel="noreferrer" href="https://www.linkedin.com/company/fedag-edu/" target="_blank">
+							{t('main.footer.socialLinksList.linkedIn')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection className="habr">
-						<a rel="noreferrer" href="/" target="_blank">Habr</a>
+						<a rel="noreferrer" href="/" target="_blank">
+							{t('main.footer.socialLinksList.habr')}
+						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">GitHub</a>
+						<a rel="noreferrer" href="/" target="_blank">
+							{t('main.footer.socialLinksList.gitHub')}
+						</a>
 					</StyledElementOfFooterSection>
 				</StyledListOfFooterSections>
 			</StyledFooterMainPart>

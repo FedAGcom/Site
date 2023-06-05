@@ -3,30 +3,30 @@ import React from 'react';
 import CustomButton from "../customButton/CustomButton.component";
 import {
 	StyledHeroTextOfMainSection,
-	StyledTextOfMainSection,
 	StyledFrameOfMainSection,
 	StyledHeadlineOfMainSection,
 	StyledParagraphOfMainSection
 } from "./HomePageHeroText.styles";
+import {useTranslation} from "react-i18next";
+
 const HomePageHeroTextComponent = () => {
+	const {t, i18n} = useTranslation()
+	const isRussian = i18n.resolvedLanguage === "ru"
 	return (
-		<StyledHeroTextOfMainSection>
-			<StyledTextOfMainSection>
-				<StyledFrameOfMainSection>
+		<StyledHeroTextOfMainSection russian={isRussian.toString()}>
+				<StyledFrameOfMainSection russian={isRussian.toString()}>
+					<StyledHeadlineOfMainSection russian={isRussian.toString()}>
+						{t('main.homepage.mainSection.headline')}
+					</StyledHeadlineOfMainSection>
 
-					<StyledHeadlineOfMainSection>Outsourcing solutions for your business</StyledHeadlineOfMainSection>
-
-					<StyledParagraphOfMainSection className="paragraph-text-section-frame">
-						Unlock Your Business Potential with Our Tailored Outsourcing Solutions
+					<StyledParagraphOfMainSection russian={isRussian.toString()} className="paragraph-text-section-frame">
+						{t('main.homepage.mainSection.paragraph')}
 					</StyledParagraphOfMainSection>
-
 				</StyledFrameOfMainSection>
-			</StyledTextOfMainSection>
 
-
-			<CustomButton  className="button-of-main-section">
-				Build a project
-			</CustomButton>
+				<CustomButton className="button-of-main-section">
+					{t('main.homepage.mainSection.buttonText')}
+				</CustomButton>
 		</StyledHeroTextOfMainSection>
 	);
 };

@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const SpinnerOverlay = styled.div`
-  height: 100%;
+  min-height: 100%;
 	z-index: 1;
   width: 100%;
   display: flex;
+	position: relative;
   justify-content: center;
+	top: ${({ top }) => top ? "50vh" : ""};
   align-items: center;
 `;
 

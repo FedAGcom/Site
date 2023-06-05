@@ -11,10 +11,13 @@ import ApplicationLeaveRequestComponent from "../../components/applicationLeaveR
 import HomePageOtherServicesComponent from "../../components/homepageOtherServices/HomePageOtherServices.component";
 
 import {StyledHomePage} from "./HomePage.styles";
+import {useTranslation} from "react-i18next";
 
 const HomePageComponent = () => {
+	const {i18n} = useTranslation()
+	const isRussian = i18n.resolvedLanguage === "ru"
 	return (
-		<StyledHomePage>
+		<StyledHomePage russian={isRussian.toString()}>
 			<HomePageMainSectionComponent />
 			<HomePageTechStackComponent />
 			<HomePageApproachComponent />

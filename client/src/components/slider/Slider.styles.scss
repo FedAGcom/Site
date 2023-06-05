@@ -1,13 +1,11 @@
 div {
   .slider-container {
-    top: 98px;
     position: relative;
     height: 402px;
     width: 1110px;
     display: flex;
     @media only screen and (max-width: 600px) {
-      width: 97.867vw;
-      top: 179px;
+      width: 97.466vw;
     }
 
     &.left {

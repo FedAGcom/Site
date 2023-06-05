@@ -12,6 +12,7 @@ import {
 
 import CustomButtonComponent from "../customButton/CustomButton.component";
 import Spinner from "../spinner/spinner.component";
+import {useTranslation} from "react-i18next";
 
 const ApplicationLeaveRequestComponent = () => {
 	const INITIAL_STATE = {
@@ -52,56 +53,62 @@ const ApplicationLeaveRequestComponent = () => {
 		}
 
 	}
+	const {t} = useTranslation()
 	return (
 		<StyledApplicationRequestContainer>
-			<StyledApplicationRequestHeadline>
-				Get in touch with FedAG today!
-			</StyledApplicationRequestHeadline>
 			{
 				isLoading
 					? <Spinner />
-					: <StyledApplicationRequestForm id="application-section" onSubmit={handleSubmit}>
+					:
+					<div>
+						<StyledApplicationRequestHeadline>
+							{t('main.homepage.requestSection.headline')}
+						</StyledApplicationRequestHeadline>
+						<StyledApplicationRequestForm id="application-section" onSubmit={handleSubmit}>
 							<StyledApplicationRequestListOfInputs>
 
 								<StyledApplicationRequestElementOfInputList naming="true">
 									<StyledApplicationRequestLabel>
-										First name:
+										{t('main.homepage.requestSection.inputs.firstName')}
 										<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" value={credentials.firstName} name="firstName" required={true}/>
 									</StyledApplicationRequestLabel>
 								</StyledApplicationRequestElementOfInputList>
 
 								<StyledApplicationRequestElementOfInputList naming="true">
 									<StyledApplicationRequestLabel>
-										Last name:
+										{t('main.homepage.requestSection.inputs.lastName')}
 										<StyledApplicationRequestInput onChange={handleInputChange} naming="true" type="text" value={credentials.lastName} name="lastName" required={true}/>
 									</StyledApplicationRequestLabel>
 								</StyledApplicationRequestElementOfInputList>
 
 								<StyledApplicationRequestElementOfInputList>
 									<StyledApplicationRequestLabel>
-										Company:
+										{t('main.homepage.requestSection.inputs.company')}
 										<StyledApplicationRequestInput onChange={handleInputChange} type="text" value={credentials.company} name="company" required={true}/>
 									</StyledApplicationRequestLabel>
 								</StyledApplicationRequestElementOfInputList>
 
 								<StyledApplicationRequestElementOfInputList>
 									<StyledApplicationRequestLabel>
-										Email:
+										{t('main.homepage.requestSection.inputs.email')}
 										<StyledApplicationRequestInput onChange={handleInputChange} type="email" value={credentials.email} name="email" required={true}/>
 									</StyledApplicationRequestLabel>
 								</StyledApplicationRequestElementOfInputList>
 
 								<StyledApplicationRequestElementOfInputList>
 									<StyledApplicationRequestLabel>
-										What is your project about?
+										{t('main.homepage.requestSection.inputs.projectInfo')}
 										<StyledApplicationRequestTextArea onChange={handleInputChange} value={credentials.projectInfo} name="projectInfo" required={true}/>
 									</StyledApplicationRequestLabel>
 								</StyledApplicationRequestElementOfInputList>
 
 							</StyledApplicationRequestListOfInputs>
 
-							<CustomButtonComponent resptop="670px" type="submit" top="451px" left="665px" children="Submit"/>
-					</StyledApplicationRequestForm>
+							<CustomButtonComponent resptop="556px" type="submit" top="312px" left="665px">
+								{t('main.homepage.requestSection.btnText')}
+							</CustomButtonComponent>
+						</StyledApplicationRequestForm>
+					</div>
 			}
 		</StyledApplicationRequestContainer>
 	);

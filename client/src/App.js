@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header.component';
@@ -12,22 +12,25 @@ import CasesComponent from "./pages/cases/Cases.component";
 
 import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
 import {GlobalStyle} from "./global.styles";
+import Spinner from "./components/spinner/spinner.component";
 
 function App() {
   return (
     <div className="app-wrapper">
       <GlobalStyle />
       <ErrorBoundary>
-        <Header />
-        <Routes>
-          <Route path='/' element={<HomePageComponent />} />
-          <Route path='/career' element={<CareerComponent/>} />
-          <Route path='/cases-study' element={<CasesStudyComponent />} />
-          <Route path="/contact-us" element={<ContactUsComponent />} />
-          <Route path="/technology" element={<TechnologyComponent />} />
-          <Route path="/cases" element={<CasesComponent />} />
-        </Routes>
-        <Footer />
+        <Suspense fallback={<Spinner top="true" />}>
+          <Header />
+          <Routes>
+            <Route path='/' element={<HomePageComponent />} />
+            <Route path='/career' element={<CareerComponent/>} />
+            <Route path='/cases-study' element={<CasesStudyComponent />} />
+            <Route path="/contact-us" element={<ContactUsComponent />} />
+            <Route path="/technology" element={<TechnologyComponent />} />
+            <Route path="/cases" element={<CasesComponent />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       </ErrorBoundary>
     </div>
   );

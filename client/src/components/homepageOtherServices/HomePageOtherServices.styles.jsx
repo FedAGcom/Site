@@ -1,25 +1,23 @@
 import styled from 'styled-components';
 
 export const StyledHomePageOtherServicesSection = styled.section`
-	position: absolute;
-	height: 401px;
+	position: relative;
+	min-height: 401px;
 	width: 88.542vw;
-	top: 6128px;
-	margin-top: 120px;
+	margin: 120px 0;
+	padding: 0 11.458vw;
 	
 	@media only screen and (max-width: 600px) {
-		margin-top: 80px;
-		height: 637px;
-		top: 7672px;
+		margin: 80px 0;
+		min-height: 637px;
 		width: 100vw;
+		padding: 0 4.267vw;
 	}
 `;
 export const StyledHomePageOtherServicesHeadline = styled.p`
   position: relative;
-  //width: 60.458vw;
-  height: 68px;	
+  min-height: 68px;	
 	top: 0;
-  left: 11.458vw;
   font-weight: 700;
   font-size: 50px;
   line-height: 68px;
@@ -27,11 +25,10 @@ export const StyledHomePageOtherServicesHeadline = styled.p`
 
   @media only screen and (max-width: 600px) {
 	  width: 91.467vw;
-  	left: 4.267vw;
     font-size: 40px;
     line-height: 55px;
 	  font-weight: 600;
-	  height: 110px;
+	  min-height: 110px;
   }
   @media only screen and (max-width: 340px) {
 		font-size: 33px;
@@ -47,9 +44,7 @@ export const StyledHomePageOtherServicesSpan = styled.span`
 	&.desktop {
     display: block;
     top: 10px;
-    //width: 31.042vw;
     height: 27px;
-    left: 11.458vw;
     line-height: 27px;
     color: #333333;
   }
@@ -64,8 +59,6 @@ export const StyledHomePageOtherServicesSpan = styled.span`
 		&.mobile {
 			display: block;
       width: 91.466vw;
-			top: 10px;
-			left: 4.257vw;
       height: 24px;
       font-family: 'Inter', sans-serif;
       line-height: 24px;
@@ -74,11 +67,11 @@ export const StyledHomePageOtherServicesSpan = styled.span`
 	}
 `;
 export const StyledHomePageOtherServicesList = styled.ul`
-	left: 11.458vw;
 	height: 266px;
 	position: relative;
-	top: 30px;
 	display: flex;
+  width: inherit;
+	top: 30px;
 	flex-direction: row;
 	gap: 65px;
 	overflow-x: scroll; 
@@ -87,7 +80,6 @@ export const StyledHomePageOtherServicesList = styled.ul`
   }
 	
 	@media only screen and (max-width: 600px) {
-		left: 4.267vw;
     height: 463px;
 		gap: 25px;
 		width: 91.466vw;
@@ -101,8 +93,8 @@ export const StyledHomePageOtherServicesItem = styled.li`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-  background: #F2F2F2;
-	max-width: 700px;
+  background: ${({status}) => status ? "#F2F2F2" : "#FCFCFC"};
+	max-width: 760px;
   gap: 30px;
 	pointer-events: ${({ status }) => status ? "auto" : "none"};
 	
@@ -115,22 +107,50 @@ export const StyledHomePageOtherServicesItem = styled.li`
 `;
 
 export const StyledHomePageOtherServicesComingSoon = styled.div`
-	&::after{
+	p {
+		//-webkit-text-stroke: 1px #B81034;
     display: ${({ status }) => (status) ? "none" : "block"};
-    content: "Coming Soon";
     position: relative;
     min-width: 445px;
     height: 73px;
     left: -304px;
     transform: rotate(-5deg);
 		
+		opacity: 1;
     font-family: 'Inter', 'Nunito Sans', sans-serif;
     font-weight: 700;
     font-size: 60px;
     line-height: 73px;
     color: #FFFFFF;
-    text-shadow: 0 0 10px rgba(184, 16, 52, 0.3);
-		@media only screen and (max-width: 600px) {
+		
+    //text-shadow: 0 0 2px rgba(184, 16, 52, 0.3);
+    text-shadow: 
+	    1px 1px 0 rgba(184, 16, 52, 0.3),
+      -1px 1px 0 rgba(184, 16, 52, 0.3),
+      1px -1px 0 rgba(184, 16, 52, 0.3),
+      -1px -1px 0 rgba(184, 16, 52, 0.3),
+      0px 1px 0 rgba(184, 16, 52, 0.3),
+      0px -1px 0 rgba(184, 16, 52, 0.3),
+      -1px 0px 0 rgba(184, 16, 52, 0.3),
+      1px 0px 0 rgba(184, 16, 52, 0.3),
+      2px 2px 0 rgba(184, 16, 52, 0.3),
+      -2px 2px 0 rgba(184, 16, 52, 0.3),
+      2px -2px 0 rgba(184, 16, 52, 0.3),
+      -2px -2px 0 rgba(184, 16, 52, 0.3),
+      0px 2px 0 rgba(184, 16, 52, 0.3),
+      0px -2px 0 rgba(184, 16, 52, 0.3),
+      -2px 0px 0 rgba(184, 16, 52, 0.3),
+      2px 0px 0 rgba(184, 16, 52, 0.3),
+      1px 2px 0 rgba(184, 16, 52, 0.3),
+      -1px 2px 0 rgba(184, 16, 52, 0.3),
+      1px -2px 0 rgba(184, 16, 52, 0.3),
+      -1px -2px 0 rgba(184, 16, 52, 0.3),
+      2px 1px 0 rgba(184, 16, 52, 0.3),
+      -2px 1px 0 rgba(184, 16, 52, 0.3),
+      2px -1px 0 rgba(184, 16, 52, 0.3),
+      -2px -1px 0 rgba(184, 16, 52, 0.3);
+		
+    @media only screen and (max-width: 600px) {
 			transform: rotate(-45deg) scale(0.8);
 			left: 4.5vw;
 			z-index: 1;
@@ -173,7 +193,6 @@ export const StyledHomePageOtherServicesLink = styled.a`
 
 export const StyledHomePageOtherServicesInfo = styled.p`
   height: 100px;
-	width: 92%;
 	position: relative;
 	top: 11px;
   font-size: 18px;
@@ -214,11 +233,11 @@ export const StyledHomePageOtherServicesHeading = styled.p`
 `;
 
 export const StyledHomePageOtherServicesLetter = styled.img`
-	width: 227px;
+	min-width: 227px;
 	height: 156px;
   position: relative;
-  left: ${({ status }) => (status !== "") ? "-59px" : "-182px"};
-  opacity: ${({status}) => status ? "1" : "0.5"};
+  left: ${({ status }) => (status !== "") ? "-7px" : "-452px"};
+  opacity: ${({status}) => status ? "1" : "0.3"};
 	
 	
 	@media only screen and (max-width: 600px) {

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 import {
 	StyledNavLink,
@@ -21,8 +22,6 @@ const HeaderNavigationMenuComponent = () => {
 		dispatch(toggleCartHidden())
 	}
 
-	// Необходимо для добавления класса начиная со второго рендера
-	// Требуются правки
 	const firstRender = useRef(true);
 	let classNameValue;
 	useEffect(() => {
@@ -39,7 +38,7 @@ const HeaderNavigationMenuComponent = () => {
 		classNameValue = "is-active";
 	}
 
-	// Компонент навигационного меню
+	const {t} = useTranslation()
 	return (
 		<StyledNav className={classNameValue}>
 
@@ -55,20 +54,20 @@ const HeaderNavigationMenuComponent = () => {
 
 			<StyledUnorderedList>
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink
-						to="/technology">Services
+					<StyledNavLink to="/technology">
+						{t('main.header.services')}
 					</StyledNavLink>
 				</StyledListElements>
 
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink
-						to="/cases">Cases
+					<StyledNavLink to="/cases">
+						{t('main.header.cases')}
 					</StyledNavLink>
 				</StyledListElements>
 
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink
-						to="/contact-us">Become a customer
+					<StyledNavLink to="/contact-us">
+						{t('main.header.becomeCustomer')}
 					</StyledNavLink>
 				</StyledListElements>
 			</StyledUnorderedList>

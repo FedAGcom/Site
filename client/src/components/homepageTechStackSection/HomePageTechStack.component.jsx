@@ -5,23 +5,24 @@ import {
 	StyledTechStackSection,
 } from "./HomePageTechStack.styles";
 
-// import HomePageFilterButtonsComponent from "../homepageFilterButton/HomePageFilterButton.component";
-
 import HomePageListOfTechStackComponent from "../homepageListOfTechStack/HomePageListOfTechStack.component";
 import FilterButtonComponent from "../filterButton/fillterButton.component";
+import {useTranslation} from "react-i18next";
 
 const HomePageTechStackComponent = () => {
+	const { t, i18n } = useTranslation()
+	const isRussian = i18n.resolvedLanguage === "ru"
 	return (
-		<StyledTechStackSection>
+		<StyledTechStackSection russian={isRussian.toString()}>
 			<StyledHeadlineOfTechStackSection>
-				Technology stack
+				{t('main.homepage.technologiesSection.headline')}
 			</StyledHeadlineOfTechStackSection>
 
-			<StyledParagraphOfTechStackSection>
-				If you have not found the necessary glasses, we are ready to quickly select a team or gain special knowledge for non-standard tasks.
+			<StyledParagraphOfTechStackSection russian={isRussian.toString()}>
+				{t('main.homepage.technologiesSection.paragraph')}
 			</StyledParagraphOfTechStackSection>
 
-			<FilterButtonComponent collection="technologies" top="192px" />
+			<FilterButtonComponent collection="technologies"/>
 
 			<HomePageListOfTechStackComponent />
 		</StyledTechStackSection>

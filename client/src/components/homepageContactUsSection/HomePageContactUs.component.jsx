@@ -6,46 +6,42 @@ import {
 	StyledContactUsOfHomePage, StyledContactUsParagraphOfHomePage
 } from "./HomePageContactUs.styles";
 import CallToComponent from "../callTo/CallTo.component";
+import {useTranslation} from "react-i18next";
 
 const HomePageContactUsComponent = () => {
 	const scroll = () => {
 		const section = document.querySelector( '#application-section' );
 		section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 	};
+	const {t} = useTranslation()
 	return (
 		<StyledContactUsOfHomePage>
+
 			<StyledContactUsElementOfHomePage small="true" >
 				<StyledContactUsIconOfHomePage phone="true" />
-
-				<StyledContactUsHeadlineOfHomePage small="true">Talk to us</StyledContactUsHeadlineOfHomePage>
-
+				<StyledContactUsHeadlineOfHomePage small="true">{t(`main.homepage.contactUsSection.phoneInfo.headline`)}</StyledContactUsHeadlineOfHomePage>
 				<StyledContactUsParagraphOfHomePage small="true">
-					Interested in cooperation with FedAG? Pick up the phone to chat with
-					a member of our sales team
+					{t(`main.homepage.contactUsSection.phoneInfo.paragraph`)}
 				</StyledContactUsParagraphOfHomePage>
-
 				<CallToComponent phone="+79112507289">
 					<StyledContactUsButtonOfHomePage  phone="true">
 					+7 (911) 250-72-89
 					</StyledContactUsButtonOfHomePage>
 				</CallToComponent>
-
-
 			</StyledContactUsElementOfHomePage>
 
 
 			<StyledContactUsElementOfHomePage>
 				<StyledContactUsIconOfHomePage />
 
-				<StyledContactUsHeadlineOfHomePage>Leave a request for a call</StyledContactUsHeadlineOfHomePage>
+				<StyledContactUsHeadlineOfHomePage>{t(`main.homepage.contactUsSection.emailInfo.headline`)}</StyledContactUsHeadlineOfHomePage>
 
 				<StyledContactUsParagraphOfHomePage>
-					Interested in cooperation with FedAG?
-					Leave a request for a call with our representative!
+					{t(`main.homepage.contactUsSection.emailInfo.paragraph`)}
 				</StyledContactUsParagraphOfHomePage>
 
 				<StyledContactUsButtonOfHomePage onClick={scroll}>
-					<span>Submit</span>
+					<span>{t(`main.homepage.contactUsSection.emailInfo.btn`)}</span>
 				</StyledContactUsButtonOfHomePage>
 			</StyledContactUsElementOfHomePage>
 		</StyledContactUsOfHomePage>

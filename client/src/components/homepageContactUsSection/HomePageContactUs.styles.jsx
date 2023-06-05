@@ -7,8 +7,6 @@ import backgroundVectorResponsive from '../../assets/homepage/background-vector2
 
 export const StyledContactUsButtonOfHomePage = styled.button`
 	position: relative;
-	top: 119px;
-	left: 95px;
 	height: 52px;
 	width: 350px;
 	border: 0;
@@ -19,8 +17,6 @@ export const StyledContactUsButtonOfHomePage = styled.button`
 	
 	@media only screen and (max-width: 600px) {
 		width: 83.467vw;
-		top: 94px;
-		left: 4.267vw;
 	}
 	
   &:hover {
@@ -55,18 +51,14 @@ export const StyledContactUsButtonOfHomePage = styled.button`
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height */
-
     text-align: center;
   }
 `;
 
 export const StyledContactUsParagraphOfHomePage = styled.p`
   position: relative;
-  width: 480px;
-  height: 50px;
-	left: 30px;
-	top: 84px;
+  max-width: 480px;
+  min-height: 50px;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -74,29 +66,23 @@ export const StyledContactUsParagraphOfHomePage = styled.p`
   color: #FFFFFF;
 	
 	@media only screen and (max-width: 600px) {
-    width: 85.467vw;
-    height: 75px;
-    left: 4.267vw;
-    top: 78px;
+    max-width: 85.467vw;
+    min-height: 75px;
 	}
 `;
 
 export const StyledContactUsHeadlineOfHomePage = styled.p`
   position: relative;
-  width: ${({ small }) => small ? "127px" : "326px"};
-  height: 38px;
-  left: ${({ small }) => small ? "207px" : "107px"};
-  top: ${({ small }) => small ? "71px" : "75px"};
+  min-width: ${({ small }) => small ? "127px" : "326px"};
+  min-height: 38px;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
   color: #FFFFFF;
 	
 	@media only screen and (max-width: 600px) {
-		height: ${({small}) => small ? "38px" : "76px"};
-    left: ${({ small }) => small ? "28.8vw" : "13vw"};
-    top: ${({ small }) => small ? "68px" : "68px"};
-    width: ${({ small }) => small ? "39.867vw" : "64.667vw"};
+		min-height: ${({small}) => small ? "38px" : "76px"};
+    min-width: ${({ small }) => small ? "39.867vw" : "64.667vw"};
 		text-align: center;
 	}
 `;
@@ -105,49 +91,53 @@ export const StyledContactUsIconOfHomePage = styled.div`
   position: relative;
   width: 101px;
   height: 101px;
-  left: 220px;
-  top: 50px;
+  //left: 220px;
+  //top: 50px;
 	background-image: url(${({ phone }) => phone ? phoneIcon : emailIcon});
   background-repeat: no-repeat;
 	@media only screen and (max-width: 600px){
-		left: 32.267vw;
+		//left: 32.267vw;
 	}
 `;
 
 export const StyledContactUsElementOfHomePage = styled.div`
-  width: 540px;
-  height: 410px;
+  min-width: 540px;
+  min-height: 410px;
   background: #272727;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	
 	
 	@media only screen and (max-width: 600px) {
-    width: 91.467vw;
-    height: ${({ small }) => small ? "410px" : "448px"};
+    min-width: 91.467vw;
+    min-height: ${({ small }) => small ? "410px" : "448px"};
 	}
 `;
-
 export const StyledContactUsOfHomePage = styled.section`
-  margin-top: 269px;
+  margin: 120px 0 120px 0;
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
-	position: absolute;
-	top: 4108px;
-	padding: 0 165px;
+	position: relative;
+	padding: 0 11.458vw;
 	width: 100vw;
-	height: 410px;
+	//max-height: 769px;
+	min-height: 410px;
   background-repeat: no-repeat;
 	background-image: url(${backgroundVector});
 	background-position: -33px 61px;
 	
 	@media only screen and (max-width: 600px) {
-		margin-top: 189px;
+		margin: 110px 0 80px 0;
 		flex-direction: column;
 		gap: 20px;
-		height: 878px;
-		padding: 0 16px;
-		top: 5091px;
+		min-height: 878px;
+		padding: 0 4.267vw;
     background-image: url(${backgroundVectorResponsive});
 		background-position: 1px 96px;
 	}

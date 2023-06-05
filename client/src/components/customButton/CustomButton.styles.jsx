@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledCustomButton = styled.button`
-  position: absolute;
+  position: relative;
   border: 0;
   height: 52px;
   width: 350px;
   left: ${({ left }) => left ? left : ""};
-  top: ${({ top }) => top ? top : "306px"};
+  top: ${({ top }) => top ? top : ""};
   color: white;
   background: #B81034;
   border-radius: 5px;
   @media only screen and (max-width: 600px) {
-    position: absolute;
+    position: relative;
 	  width: 91.467vw;
-    top: ${({ resptop }) => resptop ? resptop : "270px"};
+    top: ${({ resptop }) => resptop ? resptop : ""};
 	  left: ${({ resptop }) => resptop ? "4.267vw" : ""};
   }
 
@@ -42,8 +42,6 @@ export const StyledCustomButton = styled.button`
       }
     }
   }
-
-
   span {
     font-style: normal;
     font-weight: 600;

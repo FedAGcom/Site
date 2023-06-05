@@ -1,7 +1,7 @@
 import rsLetters from '../../assets/homepage/otherServices/recruitmentLetters.svg';
-import crmLetters from '../../assets/homepage/otherServices/recruitmentCRMLetters.png'
-import labLetters from '../../assets/homepage/otherServices/fedAGLab.Letters.png';
-import internLetters from '../../assets/homepage/otherServices/internshipSystemLetters.png';
+import crmLetters from '../../assets/homepage/otherServices/recruitmentCRMLetters.svg'
+import labLetters from '../../assets/homepage/otherServices/fedAGLab.Letters.svg';
+import internLetters from '../../assets/homepage/otherServices/internshipSystemLetters.svg';
 export const servicesList = {
 	"all": [
 		{

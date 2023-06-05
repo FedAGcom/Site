@@ -64,26 +64,23 @@ export const StyledApplicationRequestForm= styled.form`
   
 `;
 export const StyledApplicationRequestContainer = styled.section`
-  position: absolute;
-  width: 1110px;
+  position: relative;
+  width: 77vw;
   height: 583px;
-  left: 165px;
-  top: 5425px;
-	margin-top: 120px;
+	left: 11.458vw;
+	margin: 120px 0;
   background: #272727;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   @media only screen and (max-width: 600px) {
-    position: absolute;
     width: 100vw;
     height: 802px;
-	  margin-top: 80px;
-    left: 0;
-    top: 6790px;
+	  margin: 80px 0;
+	  left: 0;
   }
 `;
 export const StyledApplicationRequestHeadline = styled.p`
-  position: absolute;
+  position: relative;
   width: 515px;
   height: 136px;
   left: 95px;
@@ -94,7 +91,7 @@ export const StyledApplicationRequestHeadline = styled.p`
   line-height: 68px;
 	
 	@media only screen and (max-width: 600px) {
-    position: absolute;
+    position: relative;
     width: 91.467vw;
     height: 110px;
     left: 4.267vw;

@@ -5,25 +5,14 @@ import mainPhotoForMobileBadge from "../../assets/homepage/mainPhotoForMobileBad
 import logoIconOfFedag from '../../assets/homepage/logoIcon.svg'
 
 export const StyledMainSectionOfHomePage = styled.section`
-  position: absolute;
+  position: relative;
   width: 100vw;
-  height: 800px;
-  left: 0;
-  top: 79px;
-
+  min-height: 800px;
   background: #272727;
   border-radius: 0 0 50px 50px;
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
 
   @media only screen and (max-width: 600px) {
     height: 771px;
-    left: 0;
-    top: 57px;
-
     border-radius: 0 0 30px 30px;
   }
 `;
@@ -31,7 +20,7 @@ export const StyledMainSectionOfHomePage = styled.section`
 export const StyledPreviewImageOfMainSection = styled.div`
   position: absolute;
   width: 445px;
-  height: 498px;
+  min-height: 498px;
   left: 830px;
   top: 142px;
   border-radius: 20px;
@@ -41,7 +30,7 @@ export const StyledPreviewImageOfMainSection = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 94.133vw;
-    height: 305px;
+    min-height: 305px;
     left: -75px;
     top: 0;
 
