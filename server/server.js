@@ -2,20 +2,34 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require('path');
 
 const myEmail = 'muhammadk2103@gmail.com';
 const passOfMyEmail = "jqtsliqxepnxltww";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "25mb" }));
 app.use(bodyParser.urlencoded({ limit: "25mb" }));
+
 app.use((req, res, next) => {
 	res.setHeader("Access-Control-Allow-Origin", "*");
 	next();
 });
+
+if(process.env.NODE_ENV === 'production'){
+	app.use(express.static(path.join(
+		__dirname, 'client/build'
+	)));
+
+	app.get('*', function(req, res) {
+		res.sendFile(path.join
+			(__dirname, 'client/build', 'index.html')
+		);
+	});
+}
 
 function sendEmail(requestData) {
 	return new Promise((resolve, reject) => {
@@ -109,7 +123,9 @@ app.post("/", (req, res) => {
 		.catch((error) => res.status(500).send(error.message));
 });
 
+
 app.listen(PORT, () => {
 	console.log(`server is listening at https://localhost:${PORT} port`)
+	console.log(__dirname)
 })
 

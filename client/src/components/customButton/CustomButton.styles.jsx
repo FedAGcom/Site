@@ -4,7 +4,7 @@ export const StyledCustomButton = styled.button`
   position: relative;
   border: 0;
   height: 52px;
-  width: 350px;
+  width: ${({width}) => width ? width : "350px"};
   left: ${({ left }) => left ? left : ""};
   top: ${({ top }) => top ? top : ""};
   color: white;
@@ -48,5 +48,6 @@ export const StyledCustomButton = styled.button`
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+	  
   }
 `;

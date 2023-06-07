@@ -116,13 +116,13 @@ const Footer = () => {
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">
-							{t('main.footer.socialLinksList.whatsApp')}
+						<a rel="noreferrer" href="https://vc.ru/s/1723824-fedag" target="_blank">
+							{t('main.footer.socialLinksList.vc')}
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">
-							{t('main.footer.socialLinksList.viber')}
+						<a rel="noreferrer" href="https://www.behance.net/fedag" target="_blank">
+							{t('main.footer.socialLinksList.behance')}
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
@@ -131,12 +131,12 @@ const Footer = () => {
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection className="habr">
-						<a rel="noreferrer" href="/" target="_blank">
+						<a rel="noreferrer" href="https://freelance.habr.com/freelancers/fedag" target="_blank">
 							{t('main.footer.socialLinksList.habr')}
 						</a>
 					</StyledElementOfFooterSection>
 					<StyledElementOfFooterSection>
-						<a rel="noreferrer" href="/" target="_blank">
+						<a rel="noreferrer" href="https://github.com/FedAGcom" target="_blank">
 							{t('main.footer.socialLinksList.gitHub')}
 						</a>
 					</StyledElementOfFooterSection>

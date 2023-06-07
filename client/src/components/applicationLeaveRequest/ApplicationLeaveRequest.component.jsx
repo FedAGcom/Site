@@ -104,7 +104,7 @@ const ApplicationLeaveRequestComponent = () => {
 
 							</StyledApplicationRequestListOfInputs>
 
-							<CustomButtonComponent resptop="556px" type="submit" top="312px" left="665px">
+							<CustomButtonComponent submit="true" resptop="556px" type="submit" top="312px" left="665px">
 								{t('main.homepage.requestSection.btnText')}
 							</CustomButtonComponent>
 						</StyledApplicationRequestForm>

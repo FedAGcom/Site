@@ -2,6 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "18.12.1",
+    "npm": "9.1.3"
+  },
   "main": "server.js",
   "scripts": {
     "client": "cd ../client && yarn start",

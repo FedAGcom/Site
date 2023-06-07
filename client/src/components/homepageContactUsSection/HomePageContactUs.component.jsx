@@ -1,12 +1,16 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 
 import {
 	StyledContactUsButtonOfHomePage,
-	StyledContactUsElementOfHomePage, StyledContactUsHeadlineOfHomePage, StyledContactUsIconOfHomePage,
-	StyledContactUsOfHomePage, StyledContactUsParagraphOfHomePage
+	StyledContactUsElementOfHomePage,
+	StyledContactUsHeadlineOfHomePage,
+	StyledContactUsIconOfHomePage,
+	StyledContactUsOfHomePage,
+	StyledContactUsParagraphOfHomePage
 } from "./HomePageContactUs.styles";
+
 import CallToComponent from "../callTo/CallTo.component";
-import {useTranslation} from "react-i18next";
 
 const HomePageContactUsComponent = () => {
 	const scroll = () => {

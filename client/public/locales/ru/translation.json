@@ -171,6 +171,27 @@
         "paragraphMobile": "На данный момент у нас их 4:"
       }
     },
+    "contactUsPage": {
+      "headline": "Контакты",
+      "mainSection": {
+        "phone": "Телефон:",
+        "paragraph": "Мы доступны для связи в ",
+        "firstHeadline": "Позвоните или напишите нам",
+        "secondHeadline": "Или используйте быстрые ссылки, чтобы связаться с нами прямо сейчас!"
+      },
+      "requestSection": {
+        "headline": "Оставьте нам заявку",
+        "paragraph": "И мы ответим вам в течение 24 часов!",
+        "inputs": {
+          "firstName": "Имя:",
+          "lastName": "Фамилия:",
+          "company": "Компания:",
+          "email": "Email:",
+          "projectInfo": "О чем ваш проект? "
+        },
+        "btnText": "Оставить заявку"
+      }
+    },
     "footer": {
       "contactsList": {
         "headline": "Контакты",
@@ -195,8 +216,8 @@
         "headline": "Соц сети",
         "instagram": "Instagram",
         "telegram": "Telegram",
-        "whatsApp": "WhatsApp",
-        "viber": "Viber",
+        "vc": "Vc.ru",
+        "behance": "Behance",
         "linkedIn": "LinkedIn",
         "habr": "Habr",
         "gitHub": "GitHub"

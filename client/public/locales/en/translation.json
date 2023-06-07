@@ -172,6 +172,27 @@
       }
 
     },
+    "contactUsPage": {
+      "headline": "Contact Us",
+      "mainSection": {
+        "phone": "Phone:",
+        "paragraph": "We are available for communication via ",
+        "firstHeadline": "Call or email us whenever you are ready",
+        "secondHeadline": "Or use fast links to get it touch with us right now!"
+      },
+      "requestSection": {
+        "headline": "Leave us a request",
+        "paragraph": "And we will answer you back within 24 hours!",
+        "inputs": {
+          "firstName": "First name:",
+          "lastName": "Last name:",
+          "company": "Company:",
+          "email": "Email:",
+          "projectInfo": "How can we help you? "
+        },
+        "btnText": "Send"
+      }
+    },
     "footer": {
       "contactsList": {
         "headline": "Contact us",
@@ -196,8 +217,8 @@
         "headline": "Socials",
         "instagram": "Instagram",
         "telegram": "Telegram",
-        "whatsApp": "WhatsApp",
-        "viber": "Viber",
+        "vc": "Vc.ru",
+        "behance": "Behance",
         "linkedIn": "LinkedIn",
         "habr": "Habr",
         "gitHub": "GitHub"

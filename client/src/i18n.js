@@ -9,10 +9,11 @@ i18n
 	.use(initReactI18next)
 	.init({
 		debug: true,
-		fallbackLng: 'en',
+		fallbackLng: false,
 		detection: {
 			order: ['queryString', 'cookie'],
-			cache: ['cookie']
+			caches: ['localStorage', 'cookie'],
+			excludeCacheFor: ['cimode']
 		},
 		interpolation: {
 			escapeValue: false
