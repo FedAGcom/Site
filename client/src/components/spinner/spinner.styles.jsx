@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const SpinnerOverlay = styled.div`
-  min-height: 100%;
+  min-height: ${({ height }) => height ? height : "100%"};
 	z-index: 1;
-  width: 100%;
+  width: ${({ width }) => width ? width : "100%"};
   display: flex;
 	position: relative;
   justify-content: center;

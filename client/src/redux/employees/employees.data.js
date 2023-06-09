@@ -71,5 +71,17 @@ export const employeesList = {
 			"position": "developer",
 			"imageSource": person5
 		},
+	],
+	"openPositions": [
+		{
+			"title": `Junior Backend <mark>PHP</mark> Developer`,
+			"index": "1",
+			"key": "firstOpenPosition"
+		},
+		{
+			"title": `Middle <mark>Python</mark> Developer`,
+			"index": "2",
+			"key": "secondOpenPosition"
+		}
 	]
 }

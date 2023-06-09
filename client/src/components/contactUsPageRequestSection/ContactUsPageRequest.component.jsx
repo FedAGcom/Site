@@ -17,7 +17,7 @@ import {
 	StyledContactUsPageRequestSectionInput,
 	StyledContactUsPageRequestSectionTextArea
 } from "./ContactUsPageRequestSection.styles";
-import CustomButtonComponent from "../customButton/CustomButton.component";
+import CustomButton from "../customButton/CustomButton.component";
 
 const ContactUsPageRequestSectionComponent = () => {
 	const {t} = useTranslation()
@@ -26,7 +26,7 @@ const ContactUsPageRequestSectionComponent = () => {
 		"lastName": "",
 		"company": "",
 		"email": "",
-		"projectInfo": ""
+		"message": ""
 	}
 	const [credentials, setCredentials] = useState(INITIAL_STATE);
 	const [isLoading, setIsLoading] = useState(false);
@@ -36,19 +36,19 @@ const ContactUsPageRequestSectionComponent = () => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		if (
-			(credentials.projectInfo !== "") &&
+			(credentials.message !== "") &&
 			(credentials.firstName !== "") &&
 			(credentials.lastName !== "") &&
 			(credentials.company !== "") &&
 			(credentials.email !== "")
 		) {
 			setIsLoading(true)
-			axios.post("/", {
+			axios.post("/contact-us", {
 				firstName: credentials.firstName,
 				lastName: credentials.lastName,
 				company: credentials.company,
 				email: credentials.email,
-				projectInfo: credentials.projectInfo
+				message: credentials.message
 			})
 				.then(() => setTimeout(() => {
 					setCredentials(INITIAL_STATE)
@@ -105,13 +105,13 @@ const ContactUsPageRequestSectionComponent = () => {
 						<StyledContactUsPageRequestSectionElementOfInputList>
 							<StyledContactUsPageRequestSectionLabel>
 								{t('main.contactUsPage.requestSection.inputs.projectInfo')}
-								<StyledContactUsPageRequestSectionTextArea onChange={handleInputChange} value={credentials.projectInfo} name="projectInfo" required={true}/>
+								<StyledContactUsPageRequestSectionTextArea onChange={handleInputChange} value={credentials.message} name="message" required={true}/>
 							</StyledContactUsPageRequestSectionLabel>
 						</StyledContactUsPageRequestSectionElementOfInputList>
 
-						<CustomButtonComponent submit="true" width="255px" type="submit" top="0" left="0">
+						<CustomButton submit="true" width="255px" type="submit" top="0" left="0">
 							{t('main.contactUsPage.requestSection.btnText')}
-						</CustomButtonComponent>
+						</CustomButton>
 					</StyledContactUsPageRequestSectionListOfInputs>
 				</StyledContactUsPageRequestSectionForm>
 			}

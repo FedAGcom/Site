@@ -16,3 +16,8 @@ export const selectScoreEmployees = createSelector(
 	[selectEmployees],
 	employees => employees.score
 );
+
+export const selectOpenPositions = createSelector(
+	[selectEmployees],
+	employees => employees.openPositions
+);

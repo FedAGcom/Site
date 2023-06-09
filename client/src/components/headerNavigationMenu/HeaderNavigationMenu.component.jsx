@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 
@@ -22,26 +22,18 @@ const HeaderNavigationMenuComponent = () => {
 		dispatch(toggleCartHidden())
 	}
 
-	const firstRender = useRef(true);
 	let classNameValue;
-	useEffect(() => {
-		if (firstRender.current) {
-			firstRender.current = false;
-		}
-	});
-
-	if (firstRender.current && hidden) {
-		classNameValue = "";
-	} else if (firstRender.current || hidden) {
+	if (hidden) {
 		classNameValue = "is-hidden";
 	} else {
 		classNameValue = "is-active";
 	}
 
 	const {t} = useTranslation()
+	const xPos = window.innerWidth <= 600;
+
 	return (
 		<StyledNav className={classNameValue}>
-
 			<StyledHeaderCallTo>
 				<CallToComponent phone="+79112507289">
 					+7 (911) 250-72-89
@@ -54,19 +46,19 @@ const HeaderNavigationMenuComponent = () => {
 
 			<StyledUnorderedList>
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink to="/technology">
+					<StyledNavLink to="/technology" className={xPos ? "disabled" : ""}>
 						{t('main.header.services')}
 					</StyledNavLink>
 				</StyledListElements>
 
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink to="/cases">
+					<StyledNavLink to="/cases" className={xPos ? "disabled" : ""}>
 						{t('main.header.cases')}
 					</StyledNavLink>
 				</StyledListElements>
 
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink to="/contact-us">
+					<StyledNavLink to="/contact-us" className={xPos ? "disabled" : ""}>
 						{t('main.header.becomeCustomer')}
 					</StyledNavLink>
 				</StyledListElements>

@@ -24,7 +24,7 @@ const HomePageHeroTextComponent = () => {
 					</StyledParagraphOfMainSection>
 				</StyledFrameOfMainSection>
 
-				<CustomButton className="button-of-main-section">
+				<CustomButton className="button-of-main-section" scrollTo="application-section">
 					{t('main.homepage.mainSection.buttonText')}
 				</CustomButton>
 		</StyledHeroTextOfMainSection>

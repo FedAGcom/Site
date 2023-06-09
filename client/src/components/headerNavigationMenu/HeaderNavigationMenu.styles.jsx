@@ -16,14 +16,13 @@ const sameListStyles = `
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  //position: absolute;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
   text-decoration: none;
   color: #FFFFFF;
-	&:hover {
+	&:not(.disabled):hover {
 		border-bottom: 1px solid white;
 		padding-bottom: 3px;
     transition-duration: 0.5s;
@@ -51,8 +50,10 @@ export const StyledNav = styled.nav`
   @media only screen and (max-width: 600px) {
     display: none;
     background-color: #272727;
+	  border-bottom-left-radius: 20px;
+	  border-bottom: 3px solid #B81034;
     width: 80vw;
-    height: 100vh;
+    height: 50vh;
     z-index: 3;
     position: absolute;
     top: 57px;
@@ -62,7 +63,7 @@ export const StyledNav = styled.nav`
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column-reverse;
-
+		
     &.is-active {
 	    display: flex;
       -webkit-animation: ease-in-out;
@@ -81,20 +82,27 @@ export const StyledNav = styled.nav`
 	
     @-webkit-keyframes run {
       0% {
-        left: 100vw;
+        transform: scale(0, 0);
       }
+	    20%	{
+        transform: scale(0, 1);
+		    
+	    }
       100% {
-        left: 20vw;
+        transform: scale(1, 1);
       }
     }
   	@-webkit-keyframes close {
 	    0% {
+        transform: scale(1, 1);
 		    visibility: visible;
-        left: 20vw;
 	    }
+      80%	{
+        transform: scaleX(0);
+      }
 	    100% {
-		    visibility: visible;
-	      left: 100vw;
+		    visibility: hidden;
+        transform: scale(0, 0);
       }
 	  }
 `;

@@ -9,6 +9,7 @@ export const StyledHeader = styled.header`
 	background-color: #272727;
   height: 80px;
   width: 100%;
+	
   @media only screen and (max-width: 600px) {
     width: 100%;
 	  z-index: 3;

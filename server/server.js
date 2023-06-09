@@ -21,17 +21,18 @@ app.use((req, res, next) => {
 
 if(process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(
-		__dirname, 'client/build'
+		__dirname, '../client/build'
 	)));
 
 	app.get('*', function(req, res) {
 		res.sendFile(path.join
-			(__dirname, 'client/build', 'index.html')
+			(__dirname, '../client/build', 'index.html')
 		);
 	});
 }
 
 function sendEmail(requestData) {
+
 	return new Promise((resolve, reject) => {
 		let transporter = nodemailer.createTransport({
 			host: "smtp.gmail.com",
@@ -42,6 +43,7 @@ function sendEmail(requestData) {
 				pass: passOfMyEmail,
 			},
 		});
+
 		const mail_configs = {
 			from: myEmail,
 			to: requestData.email,
@@ -93,10 +95,6 @@ function sendEmail(requestData) {
 				              <td style="font-weight: bold; padding-bottom: 10px;">Email:</td>
 				              <td>${requestData.email}</td>
 				            </tr>
-				            <tr>
-				              <td style="font-weight: bold; padding-bottom: 10px;">Project Info:</td>
-				              <td>${requestData.projectInfo}</td>
-				            </tr>
 				          </table>
 				        </td>
 				      </tr>
@@ -117,15 +115,23 @@ function sendEmail(requestData) {
 }
 
 app.post("/", (req, res) => {
-	console.log(req.body)
 	sendEmail(req.body)
 		.then((response) => res.send(response.message))
 		.catch((error) => res.status(500).send(error.message));
 });
 
+app.post('/contact-us', (req, res) => {
+	sendEmail(req.body)
+		.then((response) => res.send(response.message))
+		.catch((error) => res.status(500).send(error.message));
+});
+
+app.post('/career', (req, res) => {
+	sendEmail(req.body)
+		.then((response) => res.send(response.message))
+		.catch((error) => res.status(500).send(error.message));
+})
 
 app.listen(PORT, () => {
 	console.log(`server is listening at https://localhost:${PORT} port`)
-	console.log(__dirname)
-})
-
+});

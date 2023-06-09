@@ -193,6 +193,45 @@
         "btnText": "Send"
       }
     },
+    "careerPage": {
+      "heroText": {
+        "headline": "Career",
+        "paragraph": "We are always looking for talented, motivated individuals who share our passion for delivering innovative solutions that meet the needs of our clients.",
+        "btnText": "Find out!"
+      },
+      "mainSection": {
+        "headline": "Who we look for",
+        "paragraphFirst": "We are always looking for talented, motivated individuals who share our passion for delivering innovative solutions that meet the needs of our clients.",
+        "paragraphSecond": "Our ideal candidate is a creative problem-solver with a strong technical background and a proven track record of delivering high-quality software on time and within budget. You should have experience in developing software using modern programming languages and technologies, and be able to work effectively as part of a team.",
+        "infoBlock": {
+          "question": "Are you the person we are looking for?",
+          "answer": "If you have a passion for technology and a commitment to excellence, we would love to hear from you!"
+        }
+      },
+      "positionsSection": {
+        "headline": "Open positions",
+        "positions": {
+          "firstOpenPosition": {
+            "experience": "+1 year real experience.",
+            "paragraphFirst": "Experience with Symfony and a PHP framework e.g. Laravel, Zend or Yii desirable.",
+            "paragraphSecond": "Ability to work independently and in a team, reliability and sense of responsibility."
+          },
+          "secondOpenPosition": {
+            "experience": "+3 year experience.",
+            "paragraphFirst": "Experience with Symfony and a PHP framework e.g. Laravel, Zend or Yii desirable.",
+            "paragraphSecond": "Ability to work independently and in a team, reliability and sense of responsibility."
+          },
+          "lastPosition": {
+            "headline": "Ooops",
+            "paragraph": "New positions are coming soon! Want to learn about then as soon as we post it? <a href='/' target='_blank'><mark>Leave your email</mark></a> and we will immediately write you about position!"
+          }
+        },
+        "email": {
+          "title": "I want to be notified about new positions:",
+          "btnText": "Submit"
+        }
+      }
+    },
     "footer": {
       "contactsList": {
         "headline": "Contact us",

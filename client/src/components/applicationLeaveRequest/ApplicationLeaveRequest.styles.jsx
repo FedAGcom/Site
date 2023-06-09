@@ -36,7 +36,7 @@ export const StyledApplicationRequestLabel = styled.label`
 `;
 
 export const StyledApplicationRequestInput = styled.input`
-  height: 40px;
+  height: ${({height}) => height ? height : "40px"};
 	padding: 10px 10px;
   width: ${({ naming }) => naming === "true" ? "160px" : "350px"};
 	
@@ -63,6 +63,7 @@ export const StyledApplicationRequestTextArea = styled.textarea`
 export const StyledApplicationRequestForm= styled.form`
   
 `;
+
 export const StyledApplicationRequestContainer = styled.section`
   position: relative;
   width: 77vw;
@@ -100,7 +101,7 @@ export const StyledApplicationRequestHeadline = styled.p`
     font-size: 40px;
     line-height: 55px;
 	}
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 341px) {
     top: 60px;
 	  font-size: 35px;
 	  line-height: 50px;
