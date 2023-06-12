@@ -1,17 +1,12 @@
-# dependencies
 /node_modules
 /.pnp
 .pnp.js
 ../server/node_modules
-# tool for development
 .idea
+.env
 node_modules
-# testing
 client/coverage
-
-# production
 client/build
-# misc
 .DS_Store
 .env.local
 .env.development.local

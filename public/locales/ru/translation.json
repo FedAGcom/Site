@@ -1,0 +1,267 @@
+{
+  "main": {
+    "header": {
+      "services": "Сервисы",
+      "cases": "Кейсы",
+      "becomeCustomer": "Стать клиентом"
+    },
+    "homepage": {
+      "mainSection": {
+        "headline": "Аутсорс решения для вашего бизнеса",
+        "paragraph": "Раскройте свой бизнес-потенциал с помощью наших индивидуальных аутсорс решений",
+        "buttonText": "Создать проект",
+        "revenueIncrease": "Увеличение доходов",
+        "conversionIncrease": "Увеличение конверсии"
+      },
+      "technologiesSection": {
+        "headline": "Технологический стек",
+        "paragraph": "Если вы не нашли нужные очки, мы готовы быстро подобрать команду или получить специальные знания для нестандартных задач.",
+        "filterBtn": {
+          "Popular": "Популярные",
+          "Frontend": "Frontend",
+          "Backend": "Backend",
+          "DevOps": "DevOps"
+        }
+      },
+      "ourApproachSection": {
+        "headline": "Наш подход",
+        "infoBlocks": {
+          "bigInfoBlock": {
+            "headline": "Ориентирование на построение прочных партнерских отношений",
+            "paragraph": "Мы не торопимся, чтобы понять ваши уникальные бизнес-потребности и цели, и тесно сотрудничаем с вами для разработки индивидуальных решений, которые приносят реальные результаты. Наши методологии управления проектами предназначены для обеспечения своевременной доставки и четкой коммуникации на протяжении всего процесса."
+          },
+          "smallInfoBlocks": {
+            "firstInfoBlock": {
+              "headline": "Преданная команда",
+              "paragraph": "Команда состоит из высококвалифицированных и опытных специалистов, которые являются экспертами в своих областях."
+            },
+            "secondInfoBlock": {
+              "headline": "Cost efficiency",
+              "paragraph": "Мы предлагаем гибкие варианты ценообразования, адаптированные к уникальным потребностям и бюджету каждого клиента."
+            },
+            "thirdInfoBlock": {
+              "headline": "Гарантия качества",
+              "paragraph": "Предоставленные эксперты тщательно проверяются и проходят постоянное обучение, чтобы быть в курсе последних отраслевых тенденций и передового опыта."
+            }
+          }
+        }
+      },
+      "casesSection": {
+        "headline": "Кейсы",
+        "filterBtn": {
+          "All": "Все",
+          "Marketplace": "Маркетплейсы",
+          "Enterprise": "Предприятия",
+          "Corporate website": "Корпоративные сайты",
+          "Health and care": "Здравоохранение",
+          "Gaming": "Игры"
+        },
+        "cases": {
+          "Telegram bot application": {
+            "headline": "Telegram Web App",
+            "tags": {
+              "Mobile development": "Мобильная разработка",
+              "Java": "Java",
+              "Kotlin": "Kotlin",
+              "Social media bot": "Бот в социальных сетях",
+              "SQL": "SQL"
+            }
+          },
+          "Personal account": {
+            "headline": "SKKOD",
+            "tags": {
+              "Information technologies": "Информационные технологии",
+              "JavaScript": "JavaScript",
+              "SQL": "SQL",
+              "Health and care": "Здравоохранение"
+            }
+          },
+          "Online playground platform": {
+            "headline": "CSR",
+            "tags": {
+              "Gaming": "Игры",
+              "TypeScript": "TypeScript",
+              "Enterprise": "Предприятия",
+              "Angular": "Angular",
+              "Java": "Java"
+            }
+          }
+        }
+      },
+      "employeesSection": {
+        "headlineDesktop": "Кто работает с вами",
+        "headlineMobile": "О нас",
+        "score": {
+          "Average Increased Conversion": "Среднее повышение конверсии",
+          "Average Increased Revenue": "Среднее увеличение дохода"
+        },
+        "mainEmployees": {
+          "Fedor": "Фёдор",
+          "Alexander": "Александр"
+        },
+        "generalEmployees": {
+          "Gleb Makarenko": {
+            "name": "Глеб Макаренко",
+            "position": "Project manager (3+ лет)"
+          },
+          "person1": {
+            "name": "Персона 1",
+            "position": "Разработчик"
+          },
+          "person2": {
+            "name": "Персона 2",
+            "position": "Разработчик"
+          },
+          "person3": {
+            "name": "Персона 3",
+            "position": "Разработчик"
+          },
+          "person4": {
+            "name": "Персона 4",
+            "position": "Разработчик"
+          },
+          "person5": {
+            "name": "Персона 5",
+            "position": "Разработчик"
+          }
+        }
+      },
+      "contactUsSection": {
+        "phoneInfo": {
+          "headline": "Свяжитесь с нами",
+          "paragraph": "Заинтересованы в сотрудничестве с FedAG? Воспользуйтесь номером телефона и свяжитесь с нашим представителем!"
+        },
+        "emailInfo": {
+          "btn": "Оставить заявку",
+          "headline": "Оставьте заявку на звонок",
+          "paragraph": "Заинтересованы в сотрудничестве с FedAG? Оставьте заявку на звонок с нашим представителем!"
+        }
+      },
+      "sliderSection": {
+        "headline": "Что клиентам нравится в наших решениях",
+        "slides": {
+          "SKKOD Clinic": {
+            "name": "Виктор A.",
+            "quote": "Эффективность решений и скорость работы команды оставили приятное впечатление. Мы не ожидали таких показателей."
+          },
+          "LuckyCase.ru": {
+            "name": "Павел П.",
+            "quote": "Никто не брался за наш проект, потому что боялись доверить нам своих специалистов и считали нас маленькой компанией. Но FEDAG поверила в нас и сделала все правильно!"
+          },
+          "CO.Transfers": {
+            "name": "Максим Н.",
+            "quote": "Были сжатые сроки и сложная задача. Мы долго искали специалистов, и только у FEDAG были нужные люди. Рекомендуемые!"
+          }
+        }
+      },
+      "requestSection": {
+        "headline": "Свяжитесь с FedAG сегодня!",
+        "inputs": {
+          "firstName": "Имя:",
+          "lastName": "Фамилия:",
+          "company": "Компания:",
+          "email": "Email:",
+          "projectInfo": "О чем ваш проект? "
+        },
+        "btnText": "Оставить заявку"
+      },
+      "otherServicesSection": {
+        "headline": "Другие услуги для ИТ-разработчиков",
+        "paragraphDesktop": "В самом ближайшем будущем мы планируем, что их будет 4:",
+        "paragraphMobile": "На данный момент у нас их 4:"
+      }
+    },
+    "contactUsPage": {
+      "headline": "Контакты",
+      "mainSection": {
+        "phone": "Телефон:",
+        "paragraph": "Мы доступны для связи в ",
+        "firstHeadline": "Позвоните или напишите нам",
+        "secondHeadline": "Или используйте быстрые ссылки, чтобы связаться с нами прямо сейчас!"
+      },
+      "requestSection": {
+        "headline": "Оставьте нам заявку",
+        "paragraph": "И мы ответим вам в течение 24 часов!",
+        "inputs": {
+          "firstName": "Имя:",
+          "lastName": "Фамилия:",
+          "company": "Компания:",
+          "email": "Email:",
+          "projectInfo": "О чем ваш проект? "
+        },
+        "btnText": "Оставить заявку"
+      }
+    },
+    "careerPage": {
+      "heroText": {
+        "headline": "Карьера",
+        "paragraph": "Присоединяйтесь к динамичной и инновационной команде, занимающейся предоставлением исключительных программных решений для наших клиентов!",
+        "btnText": "Найти вакансию"
+      },
+      "mainSection": {
+        "headline": "Кого мы ищем",
+        "paragraphFirst": "Мы всегда ищем талантливых, целеустремленных людей, которые разделяют нашу страсть к разработке инновационных решений, отвечающих потребностям наших клиентов.",
+        "paragraphSecond": "Наш идеальный кандидат — это творческий специалист по решению проблем с сильным техническим опытом и подтвержденным опытом предоставления высококачественного программного обеспечения в срок и в рамках бюджета. Вы должны иметь опыт разработки программного обеспечения с использованием современных языков программирования и технологий, а также уметь эффективно работать в команде.",
+        "infoBlock": {
+          "question": "Вы тот человек, которого мы ищем?",
+          "answer": "Если у вас есть страсть к технологиям и стремление к совершенству, мы будем рады услышать от вас!"
+        }
+      },
+      "positionsSection": {
+        "headline": "Открытые позиции",
+        "positions": {
+          "firstOpenPosition": {
+            "experience": "+1 год опыта.",
+            "paragraphFirst": "Опыт работы с Symfony и PHP-фреймворком. Желательно Laravel, Zend или Yii.",
+            "paragraphSecond": "Умение работать самостоятельно и в команде, надежность и чувство ответственности."
+          },
+          "secondOpenPosition": {
+            "experience": "+3 года опыта.",
+            "paragraphFirst": "Опыт работы с Symfony и PHP-фреймворком. Желательно Laravel, Zend или Yii.",
+            "paragraphSecond": "Умение работать самостоятельно и в команде, надежность и чувство ответственности."
+          },
+          "lastPosition": {
+            "headline": "Упссс....",
+            "paragraph": "Скоро будут новые позиции! Хотите узнать об этом, как только мы опубликуем его? <a href='#leave-email-career'><mark>Оставьте свой email</mark></a> и мы сразу же напишем вам о вакансии!"
+          }
+        },
+        "email": {
+          "title": "Я хочу получать уведомления о новых вакансиях:",
+          "btnText": "Подписаться"
+        }
+      }
+
+    },
+    "footer": {
+      "contactsList": {
+        "headline": "Контакты",
+        "language": "Русский"
+      },
+      "generalList": {
+        "headline": "Общее",
+        "home": "Главная",
+        "career": "Карьера",
+        "contact": "Контакты",
+        "cases": "Кейсы",
+        "termsAndCondition": "Положения"
+      },
+      "servicesList": {
+        "headline": "Сервисы",
+        "recruitmentSystem": "Recruitment System",
+        "internshipSystem": "Internship System",
+        "crmRecruitment": "CRM Recruitment",
+        "lab": "LAB"
+      },
+      "socialLinksList": {
+        "headline": "Соц сети",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "vc": "Vc.ru",
+        "behance": "Behance",
+        "linkedIn": "LinkedIn",
+        "habr": "Habr",
+        "gitHub": "GitHub"
+      }
+    }
+  }
+}
