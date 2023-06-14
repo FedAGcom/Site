@@ -1,7 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
 
-import logo from '../../assets/homepage/footerLogo.svg';
+import logo from '../../assets/footerLogo.svg';
 import british from '../../assets/homepage/british.png';
 import russian from '../../assets/homepage/russian.png';
 

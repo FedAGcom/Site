@@ -45,7 +45,6 @@ export const StyledProjectTagsButtonSpan = styled.span`
 
 export const StyledProjectTagsButton = styled.button`
   padding: 0 20px;
-  // min-width: ${({ btnwidth }) => btnwidth};
 	min-width: fit-content;
   height: ${({tag}) => tag ? "39px" : "47px"};
   border-radius: 20px;
@@ -56,9 +55,6 @@ export const StyledProjectTagsButton = styled.button`
   outline: none;
   background: white;
 
-  @media only screen and (max-width: 600px) {
-    //min-width: ${({ respbtnwidth }) => respbtnwidth};
-  }
 
   &.active {
     animation-name: faded;
@@ -90,7 +86,7 @@ export const StyledTechStackOfCase = styled.div`
   align-items: flex-start;
   padding: 0;
   gap: 5px;
-  min-width: 351px;
+  width: 351px;
 	overflow: hidden;
 	max-height: 89px;
 	position: relative;
@@ -99,7 +95,7 @@ export const StyledTechStackOfCase = styled.div`
   flex-grow: 0;
 	
 	@media only screen and (max-width: 600px) {
-    min-width: 298px;
+    width: 79.465vw;
     height: 83px;
 	}
 `;
@@ -139,7 +135,7 @@ export const StyledAboutProjectPartOfCase = styled.div`
   top: 359px;
 	
 	@media only screen and (max-width: 600px) {
-    min-width: 302px;
+    min-width: 80.532vw;
     height: 128px;
     left: 15px;
     top: 239px;
@@ -153,7 +149,7 @@ export const StyledPreviewImageOfListElement = styled.img`
 	object-fit: cover;
 	
 	@media only screen and (max-width: 600px) {
-    width: 342px;
+    width: 91vw;
 		height: 218px;
     border-radius: 29px;
 	}
@@ -215,7 +211,7 @@ export const StyledPreviewOfListElement = styled.li`
 	}
 	
 	@media only screen and (max-width: 600px){
-    width: 343px;
+    min-width: 91.465vw;
     height: 482px;
     border-radius: 30px;
 		&:last-child {
@@ -226,20 +222,20 @@ export const StyledPreviewOfListElement = styled.li`
 
 export const StyledListOfCases = styled.ul`
 	position: relative;
-	top: ${({ top }) => top}; // 155px
+	top: ${({ top }) => top};
 	min-height: 643px;
 	width: 88.542vw;
 	overflow: scroll;
 	flex-direction: row;
+	flex-wrap: ${({ routepage }) => routepage === "cases" ? "wrap" : "nowrap"};
   display: flex;
 	gap: 31px;
   &::-webkit-scrollbar {
     display: none;
   }
-	
 	@media only screen and (max-width: 600px) {
 		min-height: 517px;
-		width: 91.467vw	;
+		width: 91.467vw;
 	}
 `;
 

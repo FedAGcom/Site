@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
+
+import {switchCasesType} from "../../redux/cases/cases.action";
+import {switchTechnologiesType} from "../../redux/technologies/technologies.actions";
 
 import {
 	StyledFilterButtonDiv,
@@ -14,7 +18,6 @@ import {
 	selectPopularTechnologies,
 	selectTechnologiesButtons
 } from "../../redux/technologies/technologies.selectors";
-import {switchTechnologiesType} from "../../redux/technologies/technologies.actions";
 
 import {
 	selectCasesButton,
@@ -25,8 +28,6 @@ import {
 	selectMarketplaceCases,
 	selectEnterpriseCases
 } from "../../redux/cases/cases.selectors";
-import {switchCasesType} from "../../redux/cases/cases.action";
-import {useTranslation} from "react-i18next";
 
 
 const FilterButtonComponent = ({ collection, top }) => {
@@ -45,6 +46,7 @@ const FilterButtonComponent = ({ collection, top }) => {
 	let buttonCollection;
 	const techButtons = useSelector(selectTechnologiesButtons);
 	const casesButtons = useSelector(selectCasesButton);
+
 	if (collection === "technologies") {
 		buttonCollection = techButtons;
 	} else if (collection === "cases") {

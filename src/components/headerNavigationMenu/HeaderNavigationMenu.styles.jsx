@@ -10,9 +10,6 @@ const sameListStyles = `
 	line-height: 25px;
 	text-decoration: none;
 	color: #FFFFFF;
-	@media only screen and (max-width: 500px) {
-	  // position: static;
-  }
 `;
 
 export const StyledNavLink = styled(NavLink)`

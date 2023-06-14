@@ -1,12 +1,5 @@
-import makarenkoGleb from "../../assets/employees/gleb.png";
-import fedor from "../../assets/employees/fedor.png";
-import alexander from "../../assets/employees/alexander.png";
-import person1 from "../../assets/employees/person1.png";
-import person2 from "../../assets/employees/person2.png";
-import person3 from "../../assets/employees/person3.png";
-import person4 from "../../assets/employees/person4.png";
-import person5 from "../../assets/employees/person5.png";
-
+import alexander from '../../assets/employees/alexander.png'
+import fedor from '../../assets/employees/fedor.png'
 export const employeesList = {
 	"score": [
 		{
@@ -38,39 +31,23 @@ export const employeesList = {
 		{
 			"key": "glebmakarenko",
 			"name": "Gleb Makarenko",
-			"position": "Project manager (3+ years)",
-			"imageSource": makarenkoGleb
 		},
 		{
-			"key": "person1",
-			"name": "person1",
-			"position": "developer",
-			"imageSource": person1
+			"key": "georgiigrigorchuk",
+			"name": "Georgii Grigorchuk",
 		},
 		{
-			"key": "person2",
-			"name": "person2",
-			"position": "developer",
-			"imageSource": person2
+			"key": "andreypshenichny",
+			"name": "Andrey Pshenichny",
 		},
 		{
-			"key": "person3",
-			"name": "person3",
-			"position": "developer",
-			"imageSource": person3
+			"key": "arseniigrigorchuk",
+			"name": "Arsenii Grigorchuk",
 		},
 		{
-			"key": "person4",
-			"name": "person4",
-			"position": "developer",
-			"imageSource": person4
-		},
-		{
-			"key": "person5",
-			"name": "person5",
-			"position": "developer",
-			"imageSource": person5
-		},
+			"key": "vladislavkulyakin",
+			"name": "Vladislav Kulyakin",
+		}
 	],
 	"openPositions": [
 		{

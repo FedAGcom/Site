@@ -17,14 +17,14 @@ import {
 
 import {selectAllServices} from "../../redux/services/services.selectors";
 
-import arrowLink from '../../assets/homepage/otherServices/arrow.svg';
+import arrowLink from '../../assets/arrow.svg';
 import {useTranslation} from "react-i18next";
 
 const HomePageOtherServicesComponent = () => {
 	const {t} = useTranslation()
 	const arrayToDisplay = useSelector(selectAllServices);
 	return (
-		<StyledHomePageOtherServicesSection>
+		<StyledHomePageOtherServicesSection id="services-section">
 			<StyledHomePageOtherServicesHeadline>
 				{t('main.homepage.otherServicesSection.headline')}
 			</StyledHomePageOtherServicesHeadline>

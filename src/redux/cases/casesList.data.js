@@ -12,33 +12,23 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Mobile development",
-					"key": "allTBMobileDevelopmentTag",
-					"tagBtnWidth": ["188px", "169px"],
-					"tagSpanWidth": ["148px", "129px"]
+					"key": "allTBMobileDevelopmentTag"
 				},
 				{
 					"tagName": "Java",
-					"key": "allTBJavaTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"],
+					"key": "allTBJavaTag"
 				},
 				{
 					"tagName": "Kotlin",
-					"key": "allTBKotlinTag",
-					"tagBtnWidth": ["82px", "77px"],
-					"tagSpanWidth": ["42px", "37px"]
+					"key": "allTBKotlinTag"
 				},
 				{
 					"tagName": "Social media bot",
-					"key": "allTBSocialMediaBotTag",
-					"tagBtnWidth": ["159px", "144px"],
-					"tagSpanWidth": ["119px", "104px"]
+					"key": "allTBSocialMediaBotTag"
 				},
 				{
 					"tagName": "SQL",
-					"key": "AllTBSqlTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "AllTBSqlTag"
 				}
 			],
 			"navTo": "/telegram-bot"
@@ -51,27 +41,19 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Information technologies",
-					"key": "allPACInformationTechnologyTag",
-					"tagBtnWidth": ["207px", "186px"],
-					"tagSpanWidth": ["167px", "146px"]
+					"key": "allPACInformationTechnologyTag"
 				},
 				{
 					"tagName": "JavaScript",
-					"key": "allPACJavaScriptTag",
-					"tagBtnWidth": ["112px", "103px"],
-					"tagSpanWidth": ["72px", "63px"]
+					"key": "allPACJavaScriptTag"
 				},
 				{
 					"tagName": "SQL",
-					"key": "allPACSqlTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "allPACSqlTag"
 				},
 				{
 					"tagName": "Health and care",
-					"key": "allPACHealthAndCareTag",
-					"tagBtnWidth": ["154px", "140px"],
-					"tagSpanWidth": ["114px", "100px"]
+					"key": "allPACHealthAndCareTag"
 				}
 			],
 			"navTo": "/personal-account"
@@ -84,33 +66,23 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Gaming",
-					"key": "allOPCGamingTag",
-					"tagBtnWidth": ["96px", "89px"],
-					"tagSpanWidth": ["56px", "49px"]
+					"key": "allOPCGamingTag"
 				},
 				{
 					"tagName": "TypeScript",
-					"key": "allOPCTypeScriptTag",
-					"tagBtnWidth": ["115px", "105px"],
-					"tagSpanWidth": ["75px", "65px"]
+					"key": "allOPCTypeScriptTag"
 				},
 				{
 					"tagName": "Enterprise",
-					"key": "allOPCEnterpriseTag",
-					"tagBtnWidth": ["114px", "105px"],
-					"tagSpanWidth": ["74px", "65px"]
+					"key": "allOPCEnterpriseTag"
 				},
 				{
 					"tagName": "Angular",
-					"key": "allOPCAngularTag",
-					"tagBtnWidth": ["109px", "91px"],
-					"tagSpanWidth": ["59px", "51px"]
+					"key": "allOPCAngularTag"
 				},
 				{
 					"tagName": "Java",
-					"key": "allOPCJavaTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "allOPCJavaTag"
 				}
 			],
 			"navTo": "/online-playground"
@@ -127,33 +99,23 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Gaming",
-					"key": "enterpriseOPCGamingTag",
-					"tagBtnWidth": ["96px", "89px"],
-					"tagSpanWidth": ["56px", "49px"]
+					"key": "enterpriseOPCGamingTag"
 				},
 				{
 					"tagName": "TypeScript",
-					"key": "enterpriseOPCTypeScriptTag",
-					"tagBtnWidth": ["115px", "105px"],
-					"tagSpanWidth": ["75px", "65px"]
+					"key": "enterpriseOPCTypeScriptTag"
 				},
 				{
 					"tagName": "Enterprise",
-					"key": "enterpriseOPCEnterpriseTag",
-					"tagBtnWidth": ["114px", "105px"],
-					"tagSpanWidth": ["74px", "65px"]
+					"key": "enterpriseOPCEnterpriseTag"
 				},
 				{
 					"tagName": "Angular",
-					"key": "enterpriseOPCAngularTag",
-					"tagBtnWidth": ["109px", "91px"],
-					"tagSpanWidth": ["59px", "51px"]
+					"key": "enterpriseOPCAngularTag"
 				},
 				{
 					"tagName": "Java",
-					"key": "enterpriseOPCJavaTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "enterpriseOPCJavaTag"
 				}
 			],
 			"navTo": "/online-playground"
@@ -169,27 +131,19 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Information technologies",
-					"key": "healthCarePACInformationTechnologyTag",
-					"tagBtnWidth": ["207px", "186px"],
-					"tagSpanWidth": ["167px", "146px"]
+					"key": "healthCarePACInformationTechnologyTag"
 				},
 				{
 					"tagName": "JavaScript",
-					"key": "healthCarePACJavaScriptTag",
-					"tagBtnWidth": ["112px", "103px"],
-					"tagSpanWidth": ["72px", "63px"]
+					"key": "healthCarePACJavaScriptTag"
 				},
 				{
 					"tagName": "SQL",
-					"key": "healthCarePACSqlTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "healthCarePACSqlTag"
 				},
 				{
 					"tagName": "Health and care",
-					"key": "healthCarePACHealthAndCareTag",
-					"tagBtnWidth": ["154px", "140px"],
-					"tagSpanWidth": ["114px", "100px"]
+					"key": "healthCarePACHealthAndCareTag"
 				}
 			],
 			"navTo": "/personal-account"
@@ -204,33 +158,23 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Gaming",
-					"key": "gamingOPCGamingTag",
-					"tagBtnWidth": ["96px", "89px"],
-					"tagSpanWidth": ["56px", "49px"]
+					"key": "gamingOPCGamingTag"
 				},
 				{
 					"tagName": "TypeScript",
-					"key": "gamingOPCTypeScriptTag",
-					"tagBtnWidth": ["115px", "105px"],
-					"tagSpanWidth": ["75px", "65px"]
+					"key": "gamingOPCTypeScriptTag"
 				},
 				{
 					"tagName": "Enterprise",
-					"key": "gamingOPCEnterpriseTag",
-					"tagBtnWidth": ["114px", "105px"],
-					"tagSpanWidth": ["74px", "65px"]
+					"key": "gamingOPCEnterpriseTag"
 				},
 				{
 					"tagName": "Angular",
-					"key": "gamingOPCAngularTag",
-					"tagBtnWidth": ["109px", "91px"],
-					"tagSpanWidth": ["59px", "51px"]
+					"key": "gamingOPCAngularTag"
 				},
 				{
 					"tagName": "Java",
-					"key": "gamingOPCJavaTag",
-					"tagBtnWidth": ["71px", "67px"],
-					"tagSpanWidth": ["31px", "27px"]
+					"key": "gamingOPCJavaTag"
 				}
 			],
 			"navTo": "/online-playground"

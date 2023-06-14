@@ -102,27 +102,23 @@
         "generalEmployees": {
           "Gleb Makarenko": {
             "name": "Глеб Макаренко",
-            "position": "Project manager (3+ лет)"
+            "position": "Lead Backend (3+ года)"
           },
-          "person1": {
-            "name": "Персона 1",
-            "position": "Разработчик"
+          "Georgii Grigorchuk": {
+            "name": "Георгий Григорчук",
+            "position": "Lead UI/UX дизайнер (2+ года)"
           },
-          "person2": {
-            "name": "Персона 2",
-            "position": "Разработчик"
+          "Andrey Pshenichny": {
+            "name": "Андрей Пшеничный",
+            "position": "Lead Frontend (2+ года)"
           },
-          "person3": {
-            "name": "Персона 3",
-            "position": "Разработчик"
+          "Arsenii Grigorchuk": {
+            "name": "Арсений Григорчук",
+            "position": "Java разработчик (2+ года)"
           },
-          "person4": {
-            "name": "Персона 4",
-            "position": "Разработчик"
-          },
-          "person5": {
-            "name": "Персона 5",
-            "position": "Разработчик"
+          "Vladislav Kulyakin": {
+            "name": "Владислав Кулякин",
+            "position": "Java разработчик (2+ года)"
           }
         }
       },
@@ -231,6 +227,10 @@
         }
       }
 
+    },
+    "casesPage": {
+      "btnText": "Назад",
+      "headline": "Кейсы"
     },
     "footer": {
       "contactsList": {

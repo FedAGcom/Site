@@ -14,8 +14,8 @@ import {StyledHomePage} from "./HomePage.styles";
 import {useTranslation} from "react-i18next";
 
 const HomePageComponent = () => {
-	const {i18n} = useTranslation()
-	const isRussian = i18n.resolvedLanguage === "ru"
+	const {i18n} = useTranslation();
+	const isRussian = i18n.resolvedLanguage === "ru";
 	return (
 		<StyledHomePage id="homepage" russian={isRussian.toString()}>
 			<HomePageMainSectionComponent />

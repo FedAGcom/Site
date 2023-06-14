@@ -109,7 +109,7 @@ const ContactUsPageRequestSectionComponent = () => {
 							</StyledContactUsPageRequestSectionLabel>
 						</StyledContactUsPageRequestSectionElementOfInputList>
 
-						<CustomButton submit="true" width="255px" mobileWidth="86.333vw" type="submit" top="0" left="0">
+						<CustomButton submit="true" width="255px" mobilewidth="86.333vw" type="submit" top="0" left="0">
 							{t('main.contactUsPage.requestSection.btnText')}
 						</CustomButton>
 					</StyledContactUsPageRequestSectionListOfInputs>

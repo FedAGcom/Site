@@ -23,12 +23,13 @@ import {useTranslation} from "react-i18next";
 
 const ListOfCasesComponent = ({ top, routepage }) => {
 	const navigate = useNavigate();
+	const {t} = useTranslation();
 
 	const casesCollections = useSelector(selectCasesCollection);
 	const mainButton = useSelector(selectCasesMainButton);
-	const {t} = useTranslation()
+
 	return (
-		<StyledListOfCases top={top}>
+		<StyledListOfCases routepage={routepage} top={top}>
 			{
 				casesCollections.map((data) => {
 					return (
@@ -46,14 +47,10 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 										data.tags.map((tag) => (
 											<StyledProjectTagsButton
 												className="btnTags"
-												btnwidth={tag.tagBtnWidth[0]}
-												respbtnwidth={tag.tagBtnWidth[1]}
 												key={tag.key}
 												tag="true">
 
 												<StyledProjectTagsButtonSpan
-													spanwidth={tag.tagSpanWidth[0]}
-													respspanwidth={tag.tagSpanWidth[1]}
 													tag="true">
 													{t(`main.homepage.casesSection.cases.${data.name}.tags.${tag.tagName}`)}
 												</StyledProjectTagsButtonSpan>

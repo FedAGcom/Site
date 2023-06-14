@@ -12,7 +12,7 @@ export const StyledCustomButton = styled.button`
   border-radius: 5px;
   @media only screen and (max-width: 600px) {
     position: relative;
-	  width: ${({mobileWidth}) => mobileWidth ? mobileWidth : "91.467vw"};
+	  width: ${({mobilewidth}) => mobilewidth ? mobilewidth : "91.467vw"};
     top: ${({ resptop }) => resptop ? resptop : ""};
 	  left: ${({ resptop }) => resptop ? "4.267vw" : ""};
   }

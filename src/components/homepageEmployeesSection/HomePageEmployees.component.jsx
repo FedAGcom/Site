@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 import {
 	selectGeneralEmployees,
@@ -19,7 +20,6 @@ import {
 	StyledScorePercentage, StyledTitleOfMainEmployees,
 	StyledContainerForMainEmployees, StyledDivForMainEmployee,
 } from "./HomePageEmployees.styles";
-import {useTranslation} from "react-i18next";
 
 const HomePageEmployeesComponent = () => {
 	const [active, setActive] = useState("");

@@ -1,7 +1,8 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
-import arrowBtn from '../../assets/Arrow.svg';
+import arrowBtn from '../../assets/cases_arrow.svg';
 
 import {
 	StyledHomePageCasesArrow,
@@ -11,7 +12,6 @@ import {
 
 import FilterButtonComponent from "../filterButton/fillterButton.component";
 import ListOfCasesComponent from "../listOfCases/ListOfCases.component";
-import {useTranslation} from "react-i18next";
 
 const HomePageCasesComponent = () => {
 	const navigate = useNavigate();

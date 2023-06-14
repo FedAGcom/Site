@@ -104,25 +104,21 @@
             "name": "Gleb Makarenko",
             "position": "Project manager (3+ years)"
           },
-          "person1": {
-            "name": "person1",
-            "position": "developer"
+          "Georgii Grigorchuk": {
+            "name": "Georgii Grigorchuk",
+            "position": "Lead UI/UX designer (2+ years)"
           },
-          "person2": {
-            "name": "person2",
-            "position": "developer"
+          "Andrey Pshenichny": {
+            "name": "Andrey Pshenichny",
+            "position": "Lead Frontend (2+ years)"
           },
-          "person3": {
-            "name": "person3",
-            "position": "developer"
+          "Arsenii Grigorchuk": {
+            "name": "Arsenii Grigorchuk",
+            "position": "Java Developer (2+ years)"
           },
-          "person4": {
-            "name": "person4",
-            "position": "developer"
-          },
-          "person5": {
-            "name": "person5",
-            "position": "developer"
+          "Vladislav Kulyakin": {
+            "name": "Vladislav Kulyakin",
+            "position": "Java Developer (2+ years)"
           }
         }
       },
@@ -231,6 +227,10 @@
           "btnText": "Submit"
         }
       }
+    },
+    "casesPage": {
+      "btnText": "Back",
+      "headline": "Cases"
     },
     "footer": {
       "contactsList": {

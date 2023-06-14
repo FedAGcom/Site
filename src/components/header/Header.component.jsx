@@ -7,6 +7,7 @@ import NavigationButtonComponent from "../headerNavigationButton/HeaderNavigatio
 import {StyledHeader} from "./Header.styles";
 
 const Header = () => {
+
   return(
     <StyledHeader id="header">
       <HeaderLogoComponent />

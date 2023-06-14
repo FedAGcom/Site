@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-import makarenkoGleb from "../../assets/employees/gleb.png";
+import gleb from "../../assets/employees/gleb.png";
 import fedor from "../../assets/employees/fedor.png";
 import alexander from "../../assets/employees/alexander.png";
-import person1 from "../../assets/employees/person1.png";
-import person2 from "../../assets/employees/person2.png";
-import person3 from "../../assets/employees/person3.png";
-import person4 from "../../assets/employees/person4.png";
-import person5 from "../../assets/employees/person5.png";
+import georgii from "../../assets/employees/goergii.png";
+import vladislav from "../../assets/employees/vladislav.png";
+import andrey from "../../assets/employees/andrey.png";
+import arsenii from "../../assets/employees/arsenii.png";
 
 const setBackgroundImage = (name) => {
 	switch(name) {
@@ -16,17 +15,15 @@ const setBackgroundImage = (name) => {
 		case "Fedor":
 			return fedor
 		case "Gleb Makarenko":
-			return makarenkoGleb
-		case "person1":
-			return person1
-		case "person2":
-			return person2
-		case "person3":
-			return person3
-		case "person4":
-			return person4
-		case "person5":
-			return person5
+			return gleb
+		case "Georgii Grigorchuk":
+			return georgii
+		case "Andrey Pshenichny":
+			return andrey
+		case "Arsenii Grigorchuk":
+			return arsenii
+		case "Vladislav Kulyakin":
+			return vladislav
 
 		default:
 			return ""
