@@ -1,25 +1,5 @@
 import styled from "styled-components";
 
-import hoverArrowBtn from "../../assets/button_arrow2.svg";
-import defaultArrowBtn from "../../assets/button_arrow1.svg";
-import hoveredDefaultBtn from "../../assets/button_arrow3.svg";
-import clickedDefaultBtn from "../../assets/button_arrow4.svg";
-
-export const StyledButtonOfPreview = styled.img`
-	width: 65px;
-	height: 65px;
-	position: absolute;
-	bottom: 40px;
-	left: 30px;
-	content: url(${defaultArrowBtn});
-	border-radius: 50%;
-
-	@media only screen and (max-width: 600px) {
-		left: 15px;
-		bottom: 30px;
-	}
-`;
-
 export const StyledProjectTagsButtonSpan = styled.span`
 	min-width: ${({spanwidth}) => spanwidth};
   height: ${({ tag }) => tag ? "" : "27px"};
@@ -85,7 +65,7 @@ export const StyledTechStackOfCase = styled.div`
 	flex-wrap: wrap;
   align-items: flex-start;
   padding: 0;
-  gap: 5px;
+  gap: 6px;
   width: 351px;
 	overflow: hidden;
 	max-height: 89px;
@@ -164,6 +144,17 @@ export const StyledPreviewOfListElement = styled.li`
   background: #FFFFFF;
   border: 1px solid #AEAEAE;
   border-radius: 50px;
+	.link-btn-svg {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    border-radius: 50%;
+
+    @media only screen and (max-width: 600px) {
+      left: 15px;
+      bottom: 30px;
+    }
+	}
 	
 	&:hover {
 		background: #272727;
@@ -178,36 +169,19 @@ export const StyledPreviewOfListElement = styled.li`
 				color: white;
 			}
 		}
-		.button-arrow {
-      animation-timing-function: ease-out;
-      animation-duration: 500ms;
-			animation-name: faded;
-      content: url(${hoverArrowBtn});
-			
-      &:hover {
-        content: url(${hoveredDefaultBtn});
-      }
+		
+    .link-btn-svg {
+      svg {
+        circle {
+          fill: #B81034;
+          stroke: #B81034;
+        }
 
-      &:active {
-        content: url(${clickedDefaultBtn});
-        animation-name: faded;
-        animation-delay: 200ms;
-        animation-timing-function: ease-out;
-        animation-duration: 150ms;
-      }
-
-      @-webkit-keyframes faded {
-        1% {
-          transform: translateY(1px);
-        }
-        50% {
-          transform: translateY(2px);
-        }
-        100% {
-          transform: translateY(0px);
+        path {
+          fill: white;
         }
       }
-		}
+    }
 	}
 	
 	@media only screen and (max-width: 600px){

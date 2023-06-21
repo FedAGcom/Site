@@ -3,7 +3,6 @@ import {useTranslation} from "react-i18next";
 
 import emailIcon from '../../assets/contactUsPage/emailPhone.svg';
 import phoneIcon from '../../assets/contactUsPage/phoneIcon.svg';
-import arrowBtn from '../../assets/button_arrow1.svg';
 
 import {
 	StyledContactUsPageMainSection,
@@ -15,6 +14,8 @@ import {
 	StyledContactUsPageMainSectionBlock,
 	StyledContactUsPageMainSectionParagraph
 } from "./ContactUsPageMainPart.styles";
+
+import LinkButtonComponent from "../linkButton/LinkButton.component";
 
 const ContactUsPageMainSectionComponent = () => {
 	const {t} = useTranslation()
@@ -50,9 +51,8 @@ const ContactUsPageMainSectionComponent = () => {
 						{t('main.contactUsPage.mainSection.paragraph')}
 						Telegram
 					</StyledContactUsPageMainSectionParagraph>
-					<a href="https://t.me/fedagEdu" target="_blank" rel="noreferrer">
-						<img src={arrowBtn} alt="arrow" />
-					</a>
+					<LinkButtonComponent path="https://t.me/fedagEdu" color="#B81034" bgcolor="white"/>
+
 				</StyledContactUsPageMainSectionBlock>
 
 				<StyledContactUsPageMainSectionBlock>
@@ -60,9 +60,7 @@ const ContactUsPageMainSectionComponent = () => {
 						{t('main.contactUsPage.mainSection.paragraph')}
 						Email
 					</StyledContactUsPageMainSectionParagraph>
-					<a href="mailto:ask.fedag@gmail.com" target="_blank" rel="noreferrer">
-						<img src={arrowBtn} alt="arrow"/>
-					</a>
+					<LinkButtonComponent path="mailto:ask.fedag@gmail.com" color="#B81034" bgcolor="white"/>
 				</StyledContactUsPageMainSectionBlock>
 
 				<StyledContactUsPageMainSectionBlock>
@@ -70,9 +68,7 @@ const ContactUsPageMainSectionComponent = () => {
 						{t('main.contactUsPage.mainSection.paragraph')}
 						Behance
 					</StyledContactUsPageMainSectionParagraph>
-					<a href="https://www.behance.net/fedag/" target="_blank" rel="noreferrer">
-						<img src={arrowBtn} alt="arrow"/>
-					</a>
+					<LinkButtonComponent path="https://www.behance.net/fedag/" color="#B81034" bgcolor="white"/>
 				</StyledContactUsPageMainSectionBlock>
 
 				<StyledContactUsPageMainSectionBlock>
@@ -80,9 +76,7 @@ const ContactUsPageMainSectionComponent = () => {
 						{t('main.contactUsPage.mainSection.paragraph')}
 						LinkedIn
 					</StyledContactUsPageMainSectionParagraph>
-					<a href="https://www.linkedin.com/company/fedag-edu/" target="_blank" rel="noreferrer">
-						<img src={arrowBtn} alt="arrow"/>
-					</a>
+					<LinkButtonComponent path="https://www.linkedin.com/company/fedag-edu/" color="#B81034" bgcolor="white"/>
 				</StyledContactUsPageMainSectionBlock>
 			</StyledContactUsPageMainSectionListOfBlocks>
 		</StyledContactUsPageMainSection>

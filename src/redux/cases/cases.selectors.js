@@ -46,3 +46,9 @@ export const selectCasesCollection = createSelector(
 	[selectCases],
 	cases => cases.collection
 );
+
+export const selectCollection = caseUrlParam =>
+	createSelector(
+		[selectAllCases],
+		allCases => allCases ? allCases[caseUrlParam] : null
+	);

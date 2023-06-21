@@ -51,6 +51,7 @@ export const StyledNavLinkOfFooter = styled(NavLink)`
     transition-delay: 0s, 2s;
     transition-timing-function: ease;
   }
+	
 `;
 
 export const StyledElementOfFooterSection = styled.li`
@@ -80,6 +81,9 @@ export const StyledElementOfFooterSection = styled.li`
     &:not(.headline) {
 	    font-size: 0.85rem;
     }
+  }
+  &.disabled-link {
+    pointer-events: none;
   }
 `;
 

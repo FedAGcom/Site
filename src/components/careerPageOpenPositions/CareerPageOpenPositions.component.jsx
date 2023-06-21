@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
 import {useSelector} from "react-redux";
 
-import arrowBtn from '../../assets/button_arrow1.svg';
 import logoType from '../../assets/career/logo.png'
 import {selectOpenPositions} from "../../redux/employees/employees.selectors";
 
@@ -17,6 +16,7 @@ import {StyledApplicationRequestInput} from "../applicationLeaveRequest/Applicat
 import axios from "axios";
 import Spinner from "../spinner/spinner.component";
 import CustomButtonComponent from "../customButton/CustomButton.component";
+import LinkButtonComponent from "../linkButton/LinkButton.component";
 
 const CareerPageOpenPositionsComponent = () => {
 	const INITIAL_STATE = {"email": ""}
@@ -67,7 +67,7 @@ const CareerPageOpenPositionsComponent = () => {
 										{t(`main.careerPage.positionsSection.positions.${position.key}.paragraphSecond`)}
 									</div>
 								</div>
-								<img onClick={() => {}} src={arrowBtn} alt="arrow-btn" className="career-btn-image"/>
+								<LinkButtonComponent path='https://career.habr.com/companies/fedag' bgcolor="white" color="red" />
 							</StyledCareerPageOpenPositionsBlock>
 						)
 					})

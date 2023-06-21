@@ -7,11 +7,12 @@ export const casesListData = {
 		{
 			"key": "telegramBotCase",
 			"imgSource": telegramBot,
+			"url": "telegram-bot",
 			"name": "Telegram bot application",
 			"nameWidth": ["348px", "302px"],
 			"tags": [
 				{
-					"tagName": "Mobile development",
+					"categoryName": "Mobile development",
 					"key": "allTBMobileDevelopmentTag"
 				},
 				{
@@ -23,7 +24,7 @@ export const casesListData = {
 					"key": "allTBKotlinTag"
 				},
 				{
-					"tagName": "Social media bot",
+					"categoryName": "Social media bot",
 					"key": "allTBSocialMediaBotTag"
 				},
 				{
@@ -36,6 +37,7 @@ export const casesListData = {
 		{
 			"key": "personalAccountCase",
 			"imgSource": personalAccount,
+			"url": "personal-account",
 			"name": "Personal account",
 			"nameWidth": ["239px", "207px"],
 			"tags": [
@@ -52,7 +54,7 @@ export const casesListData = {
 					"key": "allPACSqlTag"
 				},
 				{
-					"tagName": "Health and care",
+					"categoryName": "Health and care",
 					"key": "allPACHealthAndCareTag"
 				}
 			],
@@ -61,11 +63,12 @@ export const casesListData = {
 		{
 			"key": "onlinePlaygroundCase",
 			"imgSource": onlinePlayground,
+			"url": "online-playground",
 			"name": "Online playground platform",
 			"nameWidth": ["389px", "312px"],
 			"tags": [
 				{
-					"tagName": "Gaming",
+					"categoryName": "Gaming",
 					"key": "allOPCGamingTag"
 				},
 				{
@@ -73,7 +76,7 @@ export const casesListData = {
 					"key": "allOPCTypeScriptTag"
 				},
 				{
-					"tagName": "Enterprise",
+					"categoryName": "Enterprise",
 					"key": "allOPCEnterpriseTag"
 				},
 				{
@@ -94,11 +97,12 @@ export const casesListData = {
 		{
 			"key": "onlinePlaygroundCase",
 			"imgSource": onlinePlayground,
+			"url": "online-playground",
 			"name": "Online playground platform",
 			"nameWidth": ["389px", "312px"],
 			"tags": [
 				{
-					"tagName": "Gaming",
+					"categoryName": "Gaming",
 					"key": "enterpriseOPCGamingTag"
 				},
 				{
@@ -106,7 +110,7 @@ export const casesListData = {
 					"key": "enterpriseOPCTypeScriptTag"
 				},
 				{
-					"tagName": "Enterprise",
+					"categoryName": "Enterprise",
 					"key": "enterpriseOPCEnterpriseTag"
 				},
 				{
@@ -126,6 +130,7 @@ export const casesListData = {
 		{
 			"key": "personalAccountCase",
 			"imgSource": personalAccount,
+			"url": "personal-account",
 			"name": "Personal account",
 			"nameWidth": ["239px", "207px"],
 			"tags": [
@@ -142,7 +147,7 @@ export const casesListData = {
 					"key": "healthCarePACSqlTag"
 				},
 				{
-					"tagName": "Health and care",
+					"categoryName": "Health and care",
 					"key": "healthCarePACHealthAndCareTag"
 				}
 			],
@@ -153,11 +158,12 @@ export const casesListData = {
 		{
 			"key": "onlinePlaygroundCase",
 			"imgSource": onlinePlayground,
+			"url": "online-playground",
 			"name": "Online playground platform",
 			"nameWidth": ["389px", "312px"],
 			"tags": [
 				{
-					"tagName": "Gaming",
+					"categoryName": "Gaming",
 					"key": "gamingOPCGamingTag"
 				},
 				{
@@ -165,7 +171,7 @@ export const casesListData = {
 					"key": "gamingOPCTypeScriptTag"
 				},
 				{
-					"tagName": "Enterprise",
+					"categoryName": "Enterprise",
 					"key": "gamingOPCEnterpriseTag"
 				},
 				{

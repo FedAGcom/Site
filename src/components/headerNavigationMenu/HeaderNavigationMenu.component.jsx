@@ -34,9 +34,10 @@ const HeaderNavigationMenuComponent = () => {
 	// плавный скролл до элемента /#services-section в homepage
 	const scrollToServices = () => {
 		setTimeout(() => {
-			const section = document.querySelector(`#services-section`);
+			let section = document.querySelector(`#services-section`);
+			console.log(section)
 			section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-		}, 10)
+		}, 1000)
 	};
 
 	return (
@@ -49,7 +50,7 @@ const HeaderNavigationMenuComponent = () => {
 			<StyledNavigationLine />
 			<StyledUnorderedList>
 				<StyledListElements onClick={handleEvent}>
-					<StyledNavLink onClick={scrollToServices} to="/" className={xPos ? "disabled" : ""}>
+					<StyledNavLink onClick={scrollToServices} to='/' className={xPos ? "disabled" : ""}>
 						{t('main.header.services')}
 					</StyledNavLink>
 				</StyledListElements>

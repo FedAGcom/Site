@@ -17,7 +17,7 @@ import {
 
 import {selectAllServices} from "../../redux/services/services.selectors";
 
-import arrowLink from '../../assets/arrow.svg';
+import arrowLink from '../../assets/arrow_to_right.svg';
 import {useTranslation} from "react-i18next";
 
 const HomePageOtherServicesComponent = () => {

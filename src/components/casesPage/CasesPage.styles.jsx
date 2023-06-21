@@ -7,7 +7,7 @@ export const StyledCasesPage = styled.div`
 	}
 `;
 
-export const StyledCasesPageLinkToBack = styled.div`
+export const StyledLinkToBack = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: row;

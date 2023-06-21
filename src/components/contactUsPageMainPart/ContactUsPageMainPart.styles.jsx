@@ -109,6 +109,25 @@ export const StyledContactUsPageMainSectionBlock = styled.div`
   @media only screen and (max-width: 374px) {
 	  padding: 13.333vw;
   }
+	
+	&:hover {
+		background-color: #333333;
+    .link-btn-svg {
+	    svg {
+        circle {
+          fill: #B81034;
+          stroke: #B81034;
+        }
+
+        path {
+          fill: white;
+        }
+      }
+		}
+		p {
+			color: white;
+		}
+	}
 `;
 
 export const StyledContactUsPageMainSectionParagraph = styled.p`

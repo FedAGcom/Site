@@ -3,7 +3,6 @@ import {useSelector} from "react-redux";
 
 import {
 	StyledAboutProjectPartOfCase,
-	StyledButtonOfPreview,
 	StyledListOfCases,
 	StyledNameOfProject,
 	StyledPreviewImageOfListElement,
@@ -14,20 +13,16 @@ import {
 } from "./ListOfCases.styles";
 
 import {
-	selectCasesCollection,
-	selectCasesMainButton
+	selectCasesCollection
 } from "../../redux/cases/cases.selectors";
-import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import LinkButtonComponent from "../linkButton/LinkButton.component";
 
 
 const ListOfCasesComponent = ({ top, routepage }) => {
-	const navigate = useNavigate();
 	const {t} = useTranslation();
 
 	const casesCollections = useSelector(selectCasesCollection);
-	const mainButton = useSelector(selectCasesMainButton);
-
 	return (
 		<StyledListOfCases routepage={routepage} top={top}>
 			{
@@ -52,7 +47,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 
 												<StyledProjectTagsButtonSpan
 													tag="true">
-													{t(`main.homepage.casesSection.cases.${data.name}.tags.${tag.tagName}`)}
+													{t(`main.homepage.casesSection.cases.${data.name}.tags.${tag.tagName || tag.categoryName}`)}
 												</StyledProjectTagsButtonSpan>
 
 											</StyledProjectTagsButton>
@@ -62,9 +57,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 
 							</StyledAboutProjectPartOfCase>
 
-							<StyledButtonOfPreview className="button-arrow" alt={mainButton.name}
-								onClick={() => {navigate(`/cases-study${data.navTo}`)}}/>
-
+							<LinkButtonComponent target="_self" path={`/cases${data.navTo}`} bgcolor="white" color="#B81034"/>
 						</StyledPreviewOfListElement>
 					)
 				})

@@ -19,8 +19,10 @@ const Footer = () => {
 	const {t, i18n} = useTranslation()
 
 	const scrollToHeader = () => {
-		const section = document.querySelector(`#header`);
-		section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+		setTimeout(() => {
+			const section = document.querySelector(`#header`);
+			section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+		}, 10)
 	};
 	const handleLanguage = () => {
 		if (i18n.resolvedLanguage === 'en') {
@@ -79,7 +81,7 @@ const Footer = () => {
 							{t('main.footer.generalList.cases')}
 						</StyledNavLinkOfFooter>
 					</StyledElementOfFooterSection>
-					<StyledElementOfFooterSection>
+					<StyledElementOfFooterSection className="disabled-link">
 						<StyledNavLinkOfFooter to="/terms-and-conditions" onClick={scrollToHeader}>
 							{t('main.footer.generalList.termsAndCondition')}
 						</StyledNavLinkOfFooter>

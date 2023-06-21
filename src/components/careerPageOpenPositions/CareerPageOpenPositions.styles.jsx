@@ -98,15 +98,29 @@ export const StyledCareerPageOpenPositionsBlock = styled.div`
       line-height: 22px;
 		}
 	}
-	.career-btn-image {
-		width: 65px;
-		height: 65px;
-	}
 	@media only screen and (max-width: 600px) {
     &.big-position-block, &.small-position-block {
       width: 91.2vw;
       height: 414px;
       margin: 0 4.267vw;
+    }
+	}
+	&:hover {
+		background-color: #272727;
+		div {
+			color: white;
+		}
+    .link-btn-svg, .hovered {
+      svg {
+        circle {
+          fill: #B81034;
+          stroke: #B81034;
+        }
+
+        path {
+          fill: white;
+        }
+      }
     }
 	}
 `;
