@@ -56,8 +56,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 								</StyledTechStackOfCase>
 
 							</StyledAboutProjectPartOfCase>
-
-							<LinkButtonComponent target="_self" path={`/cases${data.navTo}`} bgcolor="white" color="#B81034"/>
+							
 						</StyledPreviewOfListElement>
 					)
 				})

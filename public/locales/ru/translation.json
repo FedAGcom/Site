@@ -235,6 +235,9 @@
     "footer": {
       "contactsList": {
         "headline": "Контакты",
+        "company": "ООО ФЕДАГ",
+        "taxPayer": "ИНН",
+        "stateRegistr": "ОГРН",
         "language": "Русский"
       },
       "generalList": {
