@@ -9,7 +9,8 @@ import {
 	StyledPreviewOfListElement,
 	StyledTechStackOfCase,
 	StyledProjectTagsButton,
-	StyledProjectTagsButtonSpan
+	StyledProjectTagsButtonSpan,
+	StyledArrowButton
 } from "./ListOfCases.styles";
 
 import {
@@ -17,6 +18,8 @@ import {
 } from "../../redux/cases/cases.selectors";
 import {useTranslation} from "react-i18next";
 import LinkButtonComponent from "../linkButton/LinkButton.component";
+
+import ArrowSVG from "./ArrowSVG.component";
 
 
 const ListOfCasesComponent = ({ top, routepage }) => {
@@ -54,7 +57,9 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 										))
 									}
 								</StyledTechStackOfCase>
-
+								{/* <StyledArrowButton src="../../assets/Button_Arrow.png"></StyledArrowButton> */}
+								<ArrowSVG></ArrowSVG>
+								
 							</StyledAboutProjectPartOfCase>
 							
 						</StyledPreviewOfListElement>

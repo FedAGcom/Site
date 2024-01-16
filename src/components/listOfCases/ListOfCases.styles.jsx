@@ -67,11 +67,11 @@ export const StyledTechStackOfCase = styled.div`
   padding: 0;
   gap: 6px;
   width: 351px;
-	overflow: hidden;
+  // overflow: hidden;
 	max-height: 89px;
 	position: relative;
   flex: none;
-  order: 1;
+  // order: 1;
   flex-grow: 0;
 	
 	@media only screen and (max-width: 600px) {
@@ -110,20 +110,28 @@ export const StyledAboutProjectPartOfCase = styled.div`
 
   position: absolute;
   min-width: ${({ routepage }) => (routepage === "cases") ? "480px" : "351px"};
-  height: 140px;
+  min-height: 140px;
   left: 30px;
   top: 359px;
 	
 	@media only screen and (max-width: 600px) {
     min-width: 80.532vw;
-    height: 128px;
+    min-height: 128px;
     left: 15px;
     top: 239px;
 	}
 `;
 
+export const StyledArrowButton = styled.img`
+  min-width: 65px;
+  min-height: 65px;
+  margin-top: 40px;
+  object-fit: cover;
+  justify-self: flex-end;
+`
+
 export const StyledPreviewImageOfListElement = styled.img`
-  width: ${({ routepage }) => (routepage === "cases") ? "538px" : "443px"};
+  max-width: ${({ routepage }) => (routepage === "cases") ? "538px" : "443px"};
   height: 328px;
   border-radius: 49px;
 	object-fit: cover;
@@ -169,6 +177,9 @@ export const StyledPreviewOfListElement = styled.li`
 				color: white;
 			}
 		}
+    .svgCircle{
+      fill: #272727
+    }
 		
     .link-btn-svg {
       svg {

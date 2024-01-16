@@ -57,33 +57,49 @@
           "Gaming": "Игры"
         },
         "cases": {
-          "Telegram bot application": {
-            "headline": "Telegram Web App",
+          "X-GPT": {
+            "headline": "X-GPT",
             "tags": {
-              "Mobile development": "Мобильная разработка",
-              "Java": "Java",
-              "Kotlin": "Kotlin",
-              "Social media bot": "Бот в социальных сетях",
-              "SQL": "SQL"
+              "Information technologies": "Информационные технологии",
+              "Python": "Python",
+              "React.js": "React.js",
+              "Education": "Обучение",
+              "FastAPI": "FastAPI"
             }
           },
           "Personal account": {
             "headline": "SKKOD",
             "tags": {
               "Information technologies": "Информационные технологии",
-              "JavaScript": "JavaScript",
-              "SQL": "SQL",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
               "Health and care": "Здравоохранение"
             }
           },
-          "Online playground platform": {
-            "headline": "CSR",
+          "RS": {
+            "headline": "RS",
             "tags": {
-              "Gaming": "Игры",
-              "TypeScript": "TypeScript",
-              "Enterprise": "Предприятия",
-              "Angular": "Angular",
-              "Java": "Java"
+              "Information technologies": "Информационные технологии",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Health and care": "Здравоохранение"
+            }
+          },
+          "Interactive tables for museum": {
+            "headline": "Интерактивные столы для музея",
+            "tags": {
+              "Science and education": "Наука и образование",
+              "C#": "C#",
+              "History": "История",
+              "Unity": "Unity"
+            }
+          },
+          "Telegram Web App for transfers": {
+            "headline": "Telegram Web App для трансферов",
+            "tags": {
+              "Transport": "Транспорт",
+              "FastAPI": "FastAPI",
+              "Aiogram": "Aiogram"
             }
           }
         }
