@@ -67,7 +67,7 @@ export const casesListData = {
 			"imgSource": rsImg,
 			"url": "rs",
 			"name": "RS",
-			"nameWidth": ["389px", "312px"],
+			"nameWidth": ["389px", "80px"],
 			"tags": [
 				{
 					"tagName": "Information technologies",
@@ -94,7 +94,7 @@ export const casesListData = {
 			"imgSource": museumImg,
 			"url": "interactive-tables",
 			"name": "Interactive tables for museum",
-			"nameWidth": ["389px", "312px"],
+			"nameWidth": ["499px", "312px"],
 			"tags": [
 				{
 					"categoryName": "Science and education",
@@ -121,7 +121,7 @@ export const casesListData = {
 			"imgSource": telegramWebIMG,
 			"url": "telegram-web-app",
 			"name": "Telegram Web App for transfers",
-			"nameWidth": ["389px", "312px"],
+			"nameWidth": ["350px", "312px"],
 			"tags": [
 				{
 					"categoryName": "Transport",
@@ -175,7 +175,7 @@ export const casesListData = {
 			"imgSource": rsImg,
 			"url": "rs",
 			"name": "RS",
-			"nameWidth": ["389px", "312px"],
+			"nameWidth": ["389px", "80px"],
 			"tags": [
 				{
 					"tagName": "Information technologies",
