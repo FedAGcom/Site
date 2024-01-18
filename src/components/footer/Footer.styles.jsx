@@ -159,6 +159,7 @@ export const StyledFooter = styled.footer`
     padding: 60px 4.267vw;
     height: 654px;
     margin-top: -646px;
+    margin-top: 46px;
     border-radius: 25px 25px 0 0;
   }
 `;

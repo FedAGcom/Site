@@ -57,35 +57,52 @@
           "Gaming": "Gaming"
         },
         "cases": {
-          "Telegram bot application": {
-            "headline": "Telegram bot application",
+          "X-GPT": {
+            "headline": "X-GPT",
             "tags": {
-              "Mobile development": "Mobile development",
-              "Java": "Java",
-              "Kotlin": "Kotlin",
-              "Social media bot": "Social media bot",
-              "SQL": "SQL"
+              "Information technologies": "Information technologies",
+              "Python": "Python",
+              "React.js": "React.js",
+              "Education": "Education",
+              "FastAPI": "FastAPI"
             }
           },
           "Personal account": {
             "headline": "Personal account",
             "tags": {
               "Information technologies": "Information technologies",
-              "JavaScript": "JavaScript",
-              "SQL": "SQL",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
               "Health and care": "Health and care"
             }
           },
-          "Online playground platform": {
-            "headline": "Online playground platform",
+          "RS": {
+            "headline": "RS",
             "tags": {
-              "Gaming": "Gaming",
-              "TypeScript": "TypeScript",
-              "Enterprise": "Enterprise",
-              "Angular": "Angular",
-              "Java": "Java"
+              "Information technologies": "Information technologies",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Health and care": "Health and care"
+            }
+          },
+          "Interactive tables for museum": {
+            "headline": "Interactive tables for museum",
+            "tags": {
+              "Science and education": "Science and education",
+              "C#": "C#",
+              "History": "History",
+              "Unity": "Unity"
+            }
+          },
+          "Telegram Web App for transfers": {
+            "headline": "Telegram Web App for transfers",
+            "tags": {
+              "Transport": "Transport",
+              "FastAPI": "FastAPI",
+              "Aiogram": "Aiogram"
             }
           }
+
         }
       },
       "employeesSection": {
