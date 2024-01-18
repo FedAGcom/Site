@@ -55,7 +55,6 @@ const ListOfCasesComponent = ({ top, routepage }) => {
               </StyledTechStackOfCase>
               <LinkButtonComponent
                 onClick={()=>navigate(`/cases${data.navTo}`)}
-                target='_self'
                 bgcolor={'white'}
                 color={'#B81034'}></LinkButtonComponent>
             </StyledAboutProjectPartOfCase>

@@ -43,7 +43,7 @@ export const ContactWithUs = styled.div`
 		padding: 10% 5% 0 5%;
 	}
 `;
-export const FormApplication = styled.div`
+export const FormApplication = styled.form`
 	.name__wrapper {
 		display: flex;
 		flex-direction: row;
