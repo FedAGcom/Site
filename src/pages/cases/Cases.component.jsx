@@ -13,7 +13,7 @@ const CasesComponent = () => {
 			<Routes>
 				<Route path="/" element={<CasesPage />} />
 				<Route path='/:caseId' element={<CasesStudyPage />} />
-				<Route path='/gpt' element={<CasesXGPTPage/>}/>
+				<Route path='/X-GPT' element={<CasesXGPTPage/>}/>
 			</Routes>
 		</Suspense>
 	)
