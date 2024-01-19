@@ -26,6 +26,7 @@ export const StyledFilterButton = styled.button`
   flex-direction: row;
   align-items: flex-start;
   padding: 10px 20px;
+  cursor:pointer;
   gap: ${({gap}) => gap};
   min-width: ${({btnwidth}) => btnwidth};
   height: ${({tag}) => tag ? "39px" : "47px"};

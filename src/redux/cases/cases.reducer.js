@@ -4,7 +4,8 @@ import {casesListData} from "./casesList.data";
 
 const INITIAL_STATE = {
 	...casesListData,
-	collection: casesListData.all
+	collection: casesListData.all,
+	collectionSingle: casesListData.SingleCaseAll
 }
 
 const casesReducer = (state = INITIAL_STATE, action) => {

@@ -11,15 +11,18 @@ import {
 	CaseHeroText,
 	CaseWrapper,
 } from "./CaseHero.styles";
-import GptLogo from "../../../assets/cases/xgpt/gptLogo.png";
+// import GptLogo from "../../../assets/cases/xgpt/gptLogo.png";
 import CasePageBadge from "../casePageElements/CasePageBadge";
 import CasePageParagraph from "../casePageElements/CasePageParagraph";
+import { useTranslation } from "react-i18next";
 
-function CaseHero() {
+function CaseHero(props) {
+	console.log(props.case);
 	const navigate = useNavigate();
 	const handleClick = () => {
 		navigate(-1);
 	};
+	const { t } = useTranslation()
 	return (
 		<Separator>
 			<StyledLinkToBack onClick={handleClick}>
@@ -27,18 +30,22 @@ function CaseHero() {
 					src={arrowToLeft}
 					alt="arrow-to-back"
 				/>
-				<p>Back</p>
+				<p>{t(`main.homepage.singleCase.${props.case.name}.btnBack`)}</p>
 			</StyledLinkToBack>
 			<CaseWrapper>
 				<CaseHeroText>
-					<h1>X-GPT</h1>
+					<h1>{t(`main.homepage.singleCase.${props.case.name}.heroHeader`)}</h1>
 					<CasePageParagraph>
-						Веб-приложение для создания академических работ.
+					{t(`main.homepage.singleCase.${props.case.name}.heroParagraph`)}
 					</CasePageParagraph>
-					<CasePageBadge color={"#AEAEAE"}>Обучение</CasePageBadge>
+					{props.case.heroBadge.map((el)=>{
+						return <CasePageBadge color={"#AEAEAE"}>{t(`main.homepage.singleCase.${props.case.name}.badge.${el}`)}</CasePageBadge>
+						}
+						)
+					}
 				</CaseHeroText>
 				<CaseHeroImgWrapper>
-					<CaseHeroImg src={GptLogo} />
+					<CaseHeroImg src={props.case.heroImg} />
 				</CaseHeroImgWrapper>
 			</CaseWrapper>
 		</Separator>

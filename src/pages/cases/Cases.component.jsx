@@ -2,7 +2,7 @@ import React, {Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
 
 import CasesPage from "../../components/casesPage/CasesPage.component";
-import CasesStudyPage from "../../components/casesStudyPage/CasesStudyPage.component";
+import SKKODPage from "../../components/SKKODPage/SKKODPage.component";
 import Spinner from "../../components/spinner/spinner.component";
 import CasesXGPTPage from "../../components/casesXGPTPage/CasesXGPTPage";
 
@@ -12,8 +12,8 @@ const CasesComponent = () => {
 		<Suspense fallback={<Spinner top="true" />} >
 			<Routes>
 				<Route path="/" element={<CasesPage />} />
-				<Route path='/:caseId' element={<CasesStudyPage />} />
-				<Route path='/X-GPT' element={<CasesXGPTPage/>}/>
+				{/* <Route path='/skkod' element={<SKKODPage />} /> */}
+				<Route path='/:caseName' element={<CasesXGPTPage/>}/>
 			</Routes>
 		</Suspense>
 	)

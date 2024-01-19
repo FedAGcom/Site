@@ -12,7 +12,8 @@ export const StyledLinkToBack = styled.div`
 	display: flex;
 	flex-direction: row;
 	gap: 5px;
-	
+	cursor:pointer;
+	width:fit-content;
 	p {
     width: 36px;
     height: 22px;
