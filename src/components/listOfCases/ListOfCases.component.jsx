@@ -15,10 +15,11 @@ import {
 import { selectCasesCollection } from '../../redux/cases/cases.selectors';
 import { useTranslation } from 'react-i18next';
 import LinkButtonComponent from '../linkButton/LinkButton.component.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const ListOfCasesComponent = ({ top, routepage }) => {
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
   const casesCollections = useSelector(selectCasesCollection);
   return (
     <StyledListOfCases
@@ -53,6 +54,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
                 ))}
               </StyledTechStackOfCase>
               <LinkButtonComponent
+                onClick={()=>navigate(`/cases${data.navTo}`)}
                 bgcolor={'white'}
                 color={'#B81034'}></LinkButtonComponent>
             </StyledAboutProjectPartOfCase>

@@ -146,7 +146,7 @@ export const StyledFooter = styled.footer`
   clear: both;
   position: relative;
   height: 360px;
-  margin-top: -360px;
+  // margin-top: -360px;
   background: #272727;
   border-radius: 50px 50px 0 0;
   padding: 60px 11.458vw;
@@ -158,8 +158,7 @@ export const StyledFooter = styled.footer`
   @media only screen and (max-width: 600px) {
     padding: 60px 4.267vw;
     height: 654px;
-    margin-top: -646px;
-    margin-top: 46px;
+    // margin-top: -646px;
     border-radius: 25px 25px 0 0;
   }
 `;
