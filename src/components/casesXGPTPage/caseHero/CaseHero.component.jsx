@@ -17,7 +17,7 @@ import CasePageParagraph from "../casePageElements/CasePageParagraph";
 import { useTranslation } from "react-i18next";
 
 function CaseHero(props) {
-	console.log(props.case);
+
 	const navigate = useNavigate();
 	const handleClick = () => {
 		navigate(-1);
@@ -39,7 +39,7 @@ function CaseHero(props) {
 					{t(`main.homepage.singleCase.${props.case.name}.heroParagraph`)}
 					</CasePageParagraph>
 					{props.case.heroBadge.map((el)=>{
-						return <CasePageBadge color={"#AEAEAE"}>{t(`main.homepage.singleCase.${props.case.name}.badge.${el}`)}</CasePageBadge>
+						return <CasePageBadge key={el} color={"#AEAEAE"}>{t(`main.homepage.singleCase.${props.case.name}.badge.${el}`)}</CasePageBadge>
 						}
 						)
 					}

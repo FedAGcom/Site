@@ -12,8 +12,10 @@ import {
 } from "./CaseApplication.styles";
 import CasePageHeader from "../casePageElements/CasePageHeader";
 import Spinner from "../../spinner/spinner.component";
+import { useTranslation } from "react-i18next";
 
 function ModifiedApplication() {
+	const {t} = useTranslation()
 	const INITIAL_STATE = {
 		firstName: "",
 		lastName: "",
@@ -61,15 +63,15 @@ function ModifiedApplication() {
 			) : (
 				<ModifiedApplicationMain id="application-section">
 					<ContactWithUs>
-						<h1>Свяжитесь с нами, чтобы обсудить ваш собственный проект</h1>
+						<h1>{t(`main.homepage.requestSection.headlineDesk`)}</h1>
 						<CasePageHeader show="mob">
-							Свяжитесь с FedAG сегодня!
+						{t(`main.homepage.requestSection.headline`)}
 						</CasePageHeader>
 					</ContactWithUs>
 					<FormApplication onSubmit={handleSubmit}>
 						<div class="name__wrapper">
 							<ApplicationLabel>
-								Имя:
+							{t(`main.homepage.requestSection.inputs.firstName`)}
 								<ApplicationInput
 									onChange={handleInputChange}
 									naming="true"
@@ -80,7 +82,7 @@ function ModifiedApplication() {
 								/>
 							</ApplicationLabel>
 							<ApplicationLabel>
-								Фамилия:
+							{t(`main.homepage.requestSection.inputs.lastName`)}
 								<ApplicationInput
 									onChange={handleInputChange}
 									naming="true"
@@ -92,7 +94,7 @@ function ModifiedApplication() {
 							</ApplicationLabel>
 						</div>
 						<ApplicationLabel>
-							Компания:
+						{t(`main.homepage.requestSection.inputs.company`)}
 							<ApplicationInput
 								onChange={handleInputChange}
 								type="text"
@@ -102,7 +104,7 @@ function ModifiedApplication() {
 							/>
 						</ApplicationLabel>
 						<ApplicationLabel>
-							Email:
+						{t(`main.homepage.requestSection.inputs.email`)}
 							<ApplicationInput
 								onChange={handleInputChange}
 								type="email"
@@ -112,7 +114,7 @@ function ModifiedApplication() {
 							/>
 						</ApplicationLabel>
 						<ApplicationLabel>
-							О чем ваш проект?:
+						{t(`main.homepage.requestSection.inputs.projectInfo`)}
 							<ApplicationTextarea
 								onChange={handleInputChange}
 								value={credentials.projectInfo}
@@ -120,7 +122,7 @@ function ModifiedApplication() {
 								required={true}
 							/>
 						</ApplicationLabel>
-						<ApplicationButton>Оставить заявку</ApplicationButton>
+						<ApplicationButton>{t(`main.homepage.requestSection.btnText`)}</ApplicationButton>
 					</FormApplication>
 				</ModifiedApplicationMain>
 			)}

@@ -11,6 +11,8 @@ const gptFuncImgSmallL = require("../../assets/cases/xgpt/gptSpeed.png")
 const gptFuncImgSmallR = require("../../assets/cases/xgpt/gptOriginal.png")
 const gptFuncImgR = require("../../assets/cases/xgpt/gptLogin.png")
 
+const skkodFeedbackImg = require("")
+
 export const casesListData = {
 	"all": [
 		{
@@ -150,30 +152,34 @@ export const casesListData = {
 	"SingleCaseAll":{
 		"x-gpt":{
 			"name":"x-gpt",
-			"heroHeader":"gptHeroHeader",
-			"heroParagraph": "gptHeroParagraph",
 			"heroBadge":["education"],
 			"heroImg": gptHeroImg,
-			"sumHeaderDesk": "gptSumHDesk",
-			"sumHeaderMob": "gptSumHMob",
-			"sumHeaderP": "gptSumHP",
-			"sumGridTime":"gptTime",
-			"sumGridTimeSpent": "gptTimeSpent",
-			"sumGridMoney": "gptMoney",
-			"sumGridMoneySpent": "gptMoneySpent",
-			"sumTech":"gptTech",
 			"sumTechStack": ["Python", "FastAPI", "React.js"],
 			"sumImg":gptSumImg,
-			"taskHeader":"gptTaskHeader",
-			"taskParagraph":"gptTaskParagraph",
-			"funcHeader":"gptFuncHeader",
 			"funcList":["registration", "edit", "generate", "fill"],
+			"client": false,
+			"clientFeedback": false,
+			"resultList": false,
 			"funcImgLeft":gptFuncImgL,
 			"funcImgSmallL": gptFuncImgSmallL,
 			"funcImgSmallR": gptFuncImgSmallR,
 			"funcImgRight": gptFuncImgR,
-			"resHeader": "gptResHeader",
-			"resParagraph":"gptResParagraph"
+		},
+		"skkod":{
+			"name":"skkod",
+			"heroBadge":["health and care"],
+			"heroImg": gptHeroImg,
+			"sumTechStack": ["Java Spring", "React.js"],
+			"sumImg":gptSumImg,
+			"funcList":["registration", "post", "appointment", "adminPanel", "load", "calendar", "pay", "info"],
+			"client": true,
+			"clientFeedback": true,
+			"resultList": [],
+			"funcImgLeft":gptFuncImgL,
+			"funcImgSmallL": gptFuncImgSmallL,
+			"funcImgSmallR": gptFuncImgSmallR,
+			"funcImgRight": gptFuncImgR,
+			"feedbackImg":skkodFeedbackImg,
 		}
 	},
 	"marketplace": [],

@@ -11,7 +11,12 @@ import CaseCases from "./caseCases/CaseCases.component";
 import { Navigate, useParams } from "react-router-dom";
 import { selectCollectionSingle } from "../../redux/cases/cases.selectors";
 import { useSelector } from "react-redux";
+import CaseClient from "./caseClient/CaseClient.component";
+import CaseClientFeedback from "./caseClientFeedback/CaseClientFeedback.component";
 // import { useNavigate } from "react-router-dom";
+
+
+
 
 function CasesXGPTPage() {
 	const {caseName} = useParams()
@@ -29,13 +34,15 @@ function CasesXGPTPage() {
 		<Suspense fallback={<Spinner top="true" />}>
 			<Limit>
 				<CaseHero case={currentCase} />
-				<CaseSummary />
-				<CaseTask />
-				<CaseFunctions />
-				<CaseResult />
+				{currentCase.client ? <CaseClient case={currentCase}/> : null}
+				<CaseSummary case={currentCase}/>
+				<CaseTask case={currentCase} />
+				<CaseFunctions case={currentCase}  />
+				<CaseResult case={currentCase} />
+				{currentCase.clientFeedback ? <CaseClientFeedback case={currentCase}/> : null} 
 			</Limit>
 			<ModifiedApplication />
-			<CaseCases />
+			<CaseCases case={currentCase} />
 		</Suspense>
 	);
 }

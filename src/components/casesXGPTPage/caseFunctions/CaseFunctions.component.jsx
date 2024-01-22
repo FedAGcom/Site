@@ -12,66 +12,51 @@ import ImgDetail from "../../../assets/cases/xgpt/gptDetails.png";
 import ImgSpeed from "../../../assets/cases/xgpt/gptSpeed.png";
 import ImgOrigin from "../../../assets/cases/xgpt/gptOriginal.png";
 import ImgLogin from "../../../assets/cases/xgpt/gptLogin.png";
+import { useTranslation } from "react-i18next";
 
-function CaseFunctions() {
+function CaseFunctions(props) {
+	const {t} = useTranslation()
+	const currentCase = props.case
 	return (
 		<Separator>
 			<CaseFunctionsMain>
-				<CasePageHeader>Функционал</CasePageHeader>
+				<CasePageHeader>{t(`main.homepage.singleCase.${currentCase.name}.funcHeader`)}</CasePageHeader>
 				<CaseFunctionsList>
-					<li>
-						<img
-							src={liArrow}
-							alt=">"
-						/>
-						<CasePageParagraph>
-							Регистрация/вход в личный кабинет
-						</CasePageParagraph>
-					</li>
-					<li>
-						<img
-							src={liArrow}
-							alt=">"
-						/>
-						<CasePageParagraph>Просмотр и редактирование</CasePageParagraph>
-					</li>
-					<li>
-						<img
-							src={liArrow}
-							alt=">"
-						/>
-						<CasePageParagraph>
-							Генерация работы с помощью GPT-технологии
-						</CasePageParagraph>
-					</li>
-					<li>
-						<img
-							src={liArrow}
-							alt=">"
-						/>
-						<CasePageParagraph>Заполнение формы с работой</CasePageParagraph>
-					</li>
+					{currentCase.funcList.map((el)=>{
+						return (
+						<li key={el}>
+							<img
+								src={liArrow}
+								alt=">"
+							/>
+							<CasePageParagraph>
+							{t(`main.homepage.singleCase.${currentCase.name}.funcList.${el}`)}
+							</CasePageParagraph>
+						</li>
+
+						)
+					})}
 				</CaseFunctionsList>
 				<CaseFunctionsImgs>
 					<div class="leftColumn">
 						<img
-							src={ImgDetail}
+							src={currentCase.funcImgLeft}
 							alt="pic"
 						/>
 					</div>
 					<div class="rightColumn">
 						<div class="upperWrap">
 							<img
-								src={ImgOrigin}
+								src={currentCase.funcImgSmallL}
 								alt="pic"
 							/>
 							<img
-								src={ImgSpeed}
+								src={currentCase.funcImgSmallR}
 								alt="pic"
 							/>
 						</div>
 						<img
-							src={ImgLogin}
+							src={currentCase.funcImgRight}
 							alt="pic"
 						/>
 					</div>
