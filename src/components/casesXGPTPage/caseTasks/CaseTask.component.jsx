@@ -3,18 +3,19 @@ import { Separator } from "../casePageElements/limits.styles";
 import { CaseTaskMain } from "./CaseTask.styles";
 import CasePageParagraph from "../casePageElements/CasePageParagraph";
 import CasePageHeader from "../casePageElements/CasePageHeader";
+import { useTranslation } from "react-i18next";
 
-function CaseTask() {
+function CaseTask(props) {
+
+	const {t} = useTranslation()
+	const currentCase = props.case
+
 	return (
 		<Separator>
 			<CaseTaskMain>
-				<CasePageHeader>Реализация задач</CasePageHeader>
+				<CasePageHeader>{t(`main.homepage.singleCase.${currentCase.name}.taskHeader`)}</CasePageHeader>
 				<CasePageParagraph>
-					В начале разработки проведено исследование предметной области,
-					определены требования. Была использована методология Agile для гибкой
-					разработки. Интеграция с ChatGPT4 API была выполнена с применением
-					асинхронных запросов. Взаимодействие между FastAPI и React
-					обеспечивает быструю и отзывчивую работу приложения.
+				{t(`main.homepage.singleCase.${currentCase.name}.taskParagraph`)}
 				</CasePageParagraph>
 			</CaseTaskMain>
 		</Separator>

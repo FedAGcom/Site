@@ -11,42 +11,49 @@ import CasePageBadge from "../casePageElements/CasePageBadge";
 import MobImg from "../../../assets/cases/xgpt/gptMob.png";
 import CasePageParagraph from "../casePageElements/CasePageParagraph";
 import CasePageHeader from "../casePageElements/CasePageHeader";
-export function CaseSummary() {
+import { useTranslation } from "react-i18next";
+export function CaseSummary(props) {
+	const { t } = useTranslation()
+
+	const currentCase = props.case
+
 	return (
 		<CaseSummaryMain>
 			<Separator>
 				<CaseSummaryWrapper>
 					<CaseSummaryText>
 						<CasePageHeader show="desk">
-							Краткое описание проекта
+						{t(`main.homepage.singleCase.${currentCase.name}.sumHDesk`)}
 						</CasePageHeader>
-						<CasePageHeader show="mob">Описание проекта</CasePageHeader>
+						<CasePageHeader show="mob">{t(`main.homepage.singleCase.${currentCase.name}.sumHMob`)}</CasePageHeader>
 						<CasePageParagraph>
-							Веб-приложение X-GPT разработано с целью упростить процесс
-							создания академических работ.
+						{t(`main.homepage.singleCase.${currentCase.name}.sumHP`)}
 						</CasePageParagraph>
 					</CaseSummaryText>
 					<CaseSummaryGrid>
 						<div class="block">
-							<h3>Время разработки</h3>
-							<h3 class="block__red">1 месяц</h3>
+							<h3>{t(`main.homepage.singleCase.${currentCase.name}.time`)}</h3>
+							<h3 class="block__red">{t(`main.homepage.singleCase.${props.case.name}.timeSpent`)}</h3>
 						</div>
 						<div class="block">
-							<h3>Бюджет</h3>
-							<h3 class="block__red">300.000 ₽</h3>
+							<h3>{t(`main.homepage.singleCase.${currentCase.name}.money`)}</h3>
+							<h3 class="block__red">{t(`main.homepage.singleCase.${currentCase.name}.moneySpent`)}</h3>
 						</div>
 						<div class="block">
-							<h3>Используемые технологии</h3>
+							<h3>{t(`main.homepage.singleCase.${currentCase.name}.tech`)}</h3>
 							<div class="badge__wrapper">
-								<CasePageBadge color={"#B81034"}>Python</CasePageBadge>
+								{currentCase.sumTechStack.map((el)=>{
+								return <CasePageBadge key={el} color={"#B81034"}>{t(`main.homepage.singleCase.${currentCase.name}.techStack.${el}`)}</CasePageBadge>
+								})}
+								{/* <CasePageBadge color={"#B81034"}>Python</CasePageBadge>
 								<CasePageBadge color={"#B81034"}>FastAPI</CasePageBadge>
-								<CasePageBadge color={"#B81034"}>React.js</CasePageBadge>
+								<CasePageBadge color={"#B81034"}>React.js</CasePageBadge> */}
 							</div>
 						</div>
 					</CaseSummaryGrid>
 					<CapeSummaryImg>
 						<img
-							src={MobImg}
+							src={currentCase.sumImg}
 							alt="Summary"
 						/>
 					</CapeSummaryImg>

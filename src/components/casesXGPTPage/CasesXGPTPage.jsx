@@ -8,19 +8,41 @@ import CaseFunctions from "./caseFunctions/CaseFunctions.component";
 import CaseResult from "./caseResult/CaseResult.component";
 import ModifiedApplication from "./caseApplication/CaseApplication.component";
 import CaseCases from "./caseCases/CaseCases.component";
+import { Navigate, useParams } from "react-router-dom";
+import { selectCollectionSingle } from "../../redux/cases/cases.selectors";
+import { useSelector } from "react-redux";
+import CaseClient from "./caseClient/CaseClient.component";
+import CaseClientFeedback from "./caseClientFeedback/CaseClientFeedback.component";
+// import { useNavigate } from "react-router-dom";
+
+
+
 
 function CasesXGPTPage() {
+	const {caseName} = useParams()
+	const casesCollections = useSelector(selectCollectionSingle);
+	const currentCase = casesCollections[caseName]
+	if(!currentCase){
+			console.log(caseName)
+			console.log(currentCase);
+			console.log("redirect");
+		return <Navigate to={"/cases"}/>
+		
+	}
+	
 	return (
 		<Suspense fallback={<Spinner top="true" />}>
 			<Limit>
-				<CaseHero />
-				<CaseSummary />
-				<CaseTask />
-				<CaseFunctions />
-				<CaseResult />
+				<CaseHero case={currentCase} />
+				{currentCase.client ? <CaseClient case={currentCase}/> : null}
+				<CaseSummary case={currentCase}/>
+				<CaseTask case={currentCase} />
+				<CaseFunctions case={currentCase}  />
+				<CaseResult case={currentCase} />
+				{currentCase.clientFeedback ? <CaseClientFeedback case={currentCase}/> : null} 
 			</Limit>
 			<ModifiedApplication />
-			<CaseCases />
+			<CaseCases case={currentCase} />
 		</Suspense>
 	);
 }

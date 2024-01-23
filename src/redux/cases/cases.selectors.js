@@ -52,3 +52,8 @@ export const selectCollection = caseUrlParam =>
 		[selectAllCases],
 		allCases => allCases ? allCases[caseUrlParam] : null
 	);
+
+export const selectCollectionSingle = createSelector(
+	[selectCases],
+	cases => cases.collectionSingle
+);

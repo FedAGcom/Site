@@ -202,7 +202,7 @@ export const StyledListOfCases = styled.ul`
   position: relative;
   top: ${({ top }) => top};
   min-height: 643px;
-  width: 88.542vw;
+  // width: 88.542vw;
   overflow: scroll;
   flex-direction: row;
   flex-wrap: ${({ routepage }) => (routepage === 'cases' ? 'wrap' : 'nowrap')};

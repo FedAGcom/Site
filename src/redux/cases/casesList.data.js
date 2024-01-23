@@ -4,6 +4,15 @@ const rsImg = require("../../assets/cases/rs.png")
 const museumImg = require("../../assets/cases/museum.png")
 const telegramWebIMG = require("../../assets/cases/telegramWeb.png")
 
+const gptHeroImg = require("../../assets/cases/xgpt/gptLogo.png")
+const gptSumImg = require("../../assets/cases/xgpt/gptMob.png")
+const gptFuncImgL = require("../../assets/cases/xgpt/gptDetails.png")
+const gptFuncImgSmallL = require("../../assets/cases/xgpt/gptSpeed.png")
+const gptFuncImgSmallR = require("../../assets/cases/xgpt/gptOriginal.png")
+const gptFuncImgR = require("../../assets/cases/xgpt/gptLogin.png")
+
+const skkodFeedbackImg = require("../../assets/cases/personal-account/customer.png")
+
 export const casesListData = {
 	"all": [
 		{
@@ -34,7 +43,7 @@ export const casesListData = {
 					"key": "AllXCEducationTag"
 				}
 			],
-			"navTo": "/X-GPT"
+			"navTo": "/x-gpt"
 		},
 		{
 			"key": "personalAccountCase",
@@ -60,7 +69,7 @@ export const casesListData = {
 					"key": "allPACHealthAndCareTag"
 				}
 			],
-			"navTo": "/personal-account"
+			"navTo": "/skkod"
 		},
 		{
 			"key": "RSCase",
@@ -136,10 +145,43 @@ export const casesListData = {
 					"key": "allTWACAiogramTag"
 				}
 			],
-			"navTo": "/rs"
+			"navTo": "/telegram-app"
 
 		}
 	],
+	"SingleCaseAll":{
+		"x-gpt":{
+			"name":"x-gpt",
+			"heroBadge":["education"],
+			"heroImg": gptHeroImg,
+			"sumTechStack": ["Python", "FastAPI", "React.js"],
+			"sumImg":gptSumImg,
+			"funcList":["registration", "edit", "generate", "fill"],
+			"client": false,
+			"clientFeedback": false,
+			"resultList": false,
+			"funcImgLeft":gptFuncImgL,
+			"funcImgSmallL": gptFuncImgSmallL,
+			"funcImgSmallR": gptFuncImgSmallR,
+			"funcImgRight": gptFuncImgR,
+		},
+		"skkod":{
+			"name":"skkod",
+			"heroBadge":["health and care"],
+			"heroImg": gptHeroImg,
+			"sumTechStack": ["Java Spring", "React.js"],
+			"sumImg":gptSumImg,
+			"funcList":["registration", "post", "appointment", "adminPanel", "load", "calendar", "pay", "info"],
+			"client": true,
+			"clientFeedback": true,
+			"resultList": [],
+			"funcImgLeft":gptFuncImgL,
+			"funcImgSmallL": gptFuncImgSmallL,
+			"funcImgSmallR": gptFuncImgSmallR,
+			"funcImgRight": gptFuncImgR,
+			"feedbackImg":skkodFeedbackImg,
+		}
+	},
 	"marketplace": [],
 	"enterprise": [],
 	"corporate_website": [],
@@ -168,7 +210,7 @@ export const casesListData = {
 					"key": "allPACHealthAndCareTag"
 				}
 			],
-			"navTo": "/personal-account"
+			"navTo": "/skkod"
 		},
 		{
 			"key": "RSCase",

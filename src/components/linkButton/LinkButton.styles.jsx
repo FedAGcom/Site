@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledLinkButton = styled.a`
   width: fit-content;
+  cursor:pointer;
   &.link-btn-svg:hover {
     svg {
       circle {
