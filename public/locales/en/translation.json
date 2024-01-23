@@ -105,6 +105,92 @@
 
         }
       },
+      "singleCase":{
+        "x-gpt":{
+            "btnBack":"back",
+            "heroHeader":"X-GPT",
+            "heroParagraph":"Web application for creating academic papers.",
+            "badge": {  
+              "education": "Education"
+              },
+             "sumHDesk": "Brief description of the project",
+             "sumHMob": "Description of the project",
+            "sumHP": "The X-GPT web application is designed to simplify the process of creating academic papers.",
+            "time" : "Development time",
+             "timeSpent": "1 month",
+            "money": "Budget",
+             "moneySpent": "300.000 ₽",
+            "tech":"Technologies used",
+            "techStack": {
+                "Python":"Python", 
+                "FastAPI":"FastAPI", 
+                "React.js":"React.js"
+              },
+            "taskHeader":"Implementation of the tasks",
+            "taskParagraph":"At the beginning of development, a study of the subject area was carried out and requirements were determined. Agile methodology for flexible development was used. Integration with ChatGPT4 API was done using asynchronous requests. The interaction between FastAPI and React ensures a fast and responsive application.",
+            "funcHeader":"Functional",
+            "funcList":{
+              "registration":"Registration/login to your personal account", 
+              "edit": "View and edit", 
+              "generate":"Generating work using GPT technology",
+               "fill":"Filling out the work form"
+              },
+            "resHeader":"Result",
+            "resParagraph":"X-GPT has successfully improved the academic writing process by providing users with convenience, high-quality texts and reduced writing time. The resulting product is evaluated by the customer and is actively used for educational purposes.",
+            "caseHeader":"Similar cases"
+        },
+        "skkod":{
+            "btnBack":"back",
+            "heroHeader":"Personal account",
+            "heroParagraph":"Personal account for clients of a private oncology clinic.",
+            "badge": {  
+              "health and care": "Health and care"
+              },
+             "client": "Client",
+             "clientName" : "«Oncology clinic SKKOD»",
+             "clientAbout" : "Private oncology clinic in Stavropol, Stavropol Territory. It has been in existence for 20 years and helps 2,000 patients annually.",
+             "sumHDesk": "Brief description of the project",
+             "sumHMob": "Description of the project",
+            "sumHP": "Personal account for clients of a private oncology clinic. Through the office you can sign up for a medical service, pay for the service, receive an online consultation and receive test results electronically.",
+            "time" : "Development time",
+             "timeSpent": "6 month",
+            "money": "Budget",
+             "moneySpent": "720.000 ₽",
+            "tech":"Technologies used",
+            "techStack": {
+                "Java Spring":"Java Spring", 
+                "React.js":"React.js"
+              },
+            "taskHeader":"Implementation of the tasks",
+            "taskParagraph":"Our work was aimed at creating an intuitive and functional personal account. We developed a design that ensures ease of use, prototyped functionality, and created a user journey, paying special attention to integration with the clinic’s internal database.",
+            "funcHeader":"Functional",
+            "funcList":{
+              "registration":"User login and registration", 
+              "post":"Possibility of posting news for users", 
+              "appointment":"Sign up for a medical service",
+               "adminPanel":"Panel for the administrator and other clinic employees",
+               "load":"Loading/unloading honey. analyzes",
+               "calendar":"Calendar of appointments with detailed information about admission",
+               "pay":"Online payment for services",
+               "info":"User account information window"
+              },
+            "resHeader":"Result",
+            "resParagraph":"As a result of our work, a wide range of functions was implemented, including user login and registration, the ability to publish news, registration for medical services and telemedicine consultations, as well as convenient loading and unloading of medical tests.",
+            "resList": {
+              "design" : "Personal account design developed",
+              "prototype": "Prototyping done",
+              "avatar" : "User avatar created",
+              "user-way" : "User path created",
+              "inner-base" : "Linked to the internal database of the clinic",
+              "online-pay": "online payment integrated"
+            },
+            "feedback": "Customer Feedback",
+            "feedbackName":"«Oncology clinic SKKOD»",
+            "feedbackText": "It was a pleasure working with this team! They listened carefully to our requests and offered not only effective, but also innovative solutions for creating a personal account. The resulting functionality exceeded our expectations, providing ease of use for our clients. We recommend this team as experienced professionals who are ready to meet the client’s needs.",
+            "caseHeader":"Similar cases"
+        }
+
+      },
       "employeesSection": {
         "headlineDesktop": "Who are working for you",
         "headlineMobile": "About us",

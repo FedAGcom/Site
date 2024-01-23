@@ -21,12 +21,13 @@ align-self: center;
 max-width: 264px
 
 `
-export const ClientFeedbackImg = styled.h3`
+export const ClientFeedbackImg = styled.img`
  width:68px;
  height:68px;
-//  border-radius: 50%;
+ border-radius: 50%;
+ object-fit: cover;
 
- box-shadow: 0px 2px 21px 0px #2D2D2D47;
+//  box-shadow: 0px 2px 21px 0px #2D2D2D47;
 `
 export const ClientAboutContainer = styled.div`
     display: flex;

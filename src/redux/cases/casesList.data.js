@@ -11,6 +11,13 @@ const gptFuncImgSmallL = require("../../assets/cases/xgpt/gptSpeed.png")
 const gptFuncImgSmallR = require("../../assets/cases/xgpt/gptOriginal.png")
 const gptFuncImgR = require("../../assets/cases/xgpt/gptLogin.png")
 
+const skkodHeroImg = require("../../assets/cases/personal-account/preview.png")
+const skkodSumImg = require("../../assets/cases/personal-account/overview.png")
+const skkodFuncImgL = require("../../assets/cases/personal-account/first-functionality.png")
+const skkodFuncImgSmallL = require("../../assets/cases/personal-account/first-small-functionality.png")
+const skkodFuncImgSmallR = require("../../assets/cases/personal-account/second-small-functionality.png")
+const skkodFuncImgR = require("../../assets/cases/personal-account/second-functionality.png")
+
 const skkodFeedbackImg = require("../../assets/cases/personal-account/customer.png")
 
 export const casesListData = {
@@ -168,17 +175,33 @@ export const casesListData = {
 		"skkod":{
 			"name":"skkod",
 			"heroBadge":["health and care"],
-			"heroImg": gptHeroImg,
+			"heroImg": skkodHeroImg,
 			"sumTechStack": ["Java Spring", "React.js"],
-			"sumImg":gptSumImg,
+			"sumImg":skkodSumImg,
 			"funcList":["registration", "post", "appointment", "adminPanel", "load", "calendar", "pay", "info"],
 			"client": true,
 			"clientFeedback": true,
-			"resultList": [],
-			"funcImgLeft":gptFuncImgL,
-			"funcImgSmallL": gptFuncImgSmallL,
-			"funcImgSmallR": gptFuncImgSmallR,
-			"funcImgRight": gptFuncImgR,
+			"resultList": ["design", "prototype", "avatar", "user-way","inner-base", "online-pay"],
+			"funcImgLeft":skkodFuncImgL,
+			"funcImgSmallL": skkodFuncImgSmallL,
+			"funcImgSmallR": skkodFuncImgSmallR,
+			"funcImgRight": skkodFuncImgR,
+			"feedbackImg":skkodFeedbackImg,
+		},
+		"rs":{
+			"name":"rs",
+			"heroBadge":["work", "staff"],
+			"heroImg": skkodHeroImg,
+			"sumTechStack": ["Java Spring", "React.js"],
+			"sumImg":skkodSumImg,
+			"funcList":["registration", "post", "appointment", "adminPanel", "load", "calendar", "pay", "info"],
+			"client": true,
+			"clientFeedback": true,
+			"resultList": ["design", "prototype", "avatar", "user-way","inner-base", "online-pay"],
+			"funcImgLeft":skkodFuncImgL,
+			"funcImgSmallL": skkodFuncImgSmallL,
+			"funcImgSmallR": skkodFuncImgSmallR,
+			"funcImgRight": skkodFuncImgR,
 			"feedbackImg":skkodFeedbackImg,
 		}
 	},
