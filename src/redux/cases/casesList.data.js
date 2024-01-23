@@ -11,7 +11,7 @@ const gptFuncImgSmallL = require("../../assets/cases/xgpt/gptSpeed.png")
 const gptFuncImgSmallR = require("../../assets/cases/xgpt/gptOriginal.png")
 const gptFuncImgR = require("../../assets/cases/xgpt/gptLogin.png")
 
-const skkodFeedbackImg = require("")
+const skkodFeedbackImg = require("../../assets/cases/personal-account/customer.png")
 
 export const casesListData = {
 	"all": [

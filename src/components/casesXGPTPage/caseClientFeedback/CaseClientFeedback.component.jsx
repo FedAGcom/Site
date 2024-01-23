@@ -15,7 +15,7 @@ const CaseClientFeedback = (props) => {
     </CasePageHeader>
     <ClientFeedbackMain>
         <ClientAboutContainer>
-            <ClientFeedbackImg src="currentCase.feedbackImg" alt="logo" />
+            <ClientFeedbackImg src={currentCase.feedbackImg} alt="logo" />
             <ClientFeedbackH>    {t(`main.homepage.singleCase.${currentCase.name}.feedbackName`)}</ClientFeedbackH>
         </ClientAboutContainer>
         <ClientFeedbackP>    {t(`main.homepage.singleCase.${currentCase.name}.feedbackText`)}</ClientFeedbackP>

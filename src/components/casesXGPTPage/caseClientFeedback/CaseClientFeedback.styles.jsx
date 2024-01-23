@@ -18,12 +18,13 @@ font-weight: 400;
 font-size: 24px;
 line-height: 32.74px;
 align-self: center;
+max-width: 264px
 
 `
 export const ClientFeedbackImg = styled.h3`
  width:68px;
  height:68px;
- border-radius: 50%;
+//  border-radius: 50%;
 
  box-shadow: 0px 2px 21px 0px #2D2D2D47;
 `
