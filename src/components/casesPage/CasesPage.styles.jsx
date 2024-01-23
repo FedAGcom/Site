@@ -29,9 +29,12 @@ export const StyledCasesPageMain = styled.main`
 	padding: 100px 11.456vw 120px 11.456vw;
 	display: flex;
 	flex-direction: column;
-	
 	@media only screen and (max-width: 600px) {
 		padding: 80px 4.267vw 80px 4.267vw;
+		ul{
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 `;
 
