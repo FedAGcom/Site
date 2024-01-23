@@ -34,7 +34,7 @@ const CasesPage = () => {
 					{t('main.casesPage.headline')}
 				</StyledCasesPageHeadline>
 				<FilterButtonComponent collection="cases"/>
-				<ListOfCasesComponent top="51px" routepage="cases"/>
+				<ListOfCasesComponent routepage="cases"/>
 			</StyledCasesPageMain>
 		</StyledCasesPage>
 	);

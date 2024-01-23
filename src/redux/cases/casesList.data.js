@@ -1,38 +1,49 @@
-const telegramBot = require("../../assets/cases/preview1.png")
-const personalAccount = require("../../assets/cases/preview2.png")
-const onlinePlayground = require("../../assets/cases/preview3.png")
+const xGpt = require("../../assets/cases/x-gpt.png")
+const personalAccount = require("../../assets/cases/persAccount.png")
+const rsImg = require("../../assets/cases/rs.png")
+const museumImg = require("../../assets/cases/museum.png")
+const telegramWebIMG = require("../../assets/cases/telegramWeb.png")
+
+const gptHeroImg = require("../../assets/cases/xgpt/gptLogo.png")
+const gptSumImg = require("../../assets/cases/xgpt/gptMob.png")
+const gptFuncImgL = require("../../assets/cases/xgpt/gptDetails.png")
+const gptFuncImgSmallL = require("../../assets/cases/xgpt/gptSpeed.png")
+const gptFuncImgSmallR = require("../../assets/cases/xgpt/gptOriginal.png")
+const gptFuncImgR = require("../../assets/cases/xgpt/gptLogin.png")
+
+const skkodFeedbackImg = require("../../assets/cases/personal-account/customer.png")
 
 export const casesListData = {
 	"all": [
 		{
-			"key": "telegramBotCase",
-			"imgSource": telegramBot,
-			"url": "telegram-bot",
-			"name": "Telegram bot application",
-			"nameWidth": ["348px", "302px"],
+			"key": "X-GPTCase",
+			"imgSource": xGpt,
+			"url": "X-GPT",
+			"name": "X-GPT",
+			"nameWidth": ["408px", "80px"],
 			"tags": [
 				{
-					"categoryName": "Mobile development",
-					"key": "allTBMobileDevelopmentTag"
+					"tagName": "Information technologies",
+					"key": "allXCInformationTechnologyTag"
 				},
 				{
-					"tagName": "Java",
-					"key": "allTBJavaTag"
+					"tagName": "Python",
+					"key": "allXCPythonTag"
 				},
 				{
-					"tagName": "Kotlin",
-					"key": "allTBKotlinTag"
+					"tagName": "FastAPI",
+					"key": "allXCFastAPITag"
 				},
 				{
-					"categoryName": "Social media bot",
-					"key": "allTBSocialMediaBotTag"
+					"tagName": "React.js",
+					"key": "allXCReactTag"
 				},
 				{
-					"tagName": "SQL",
-					"key": "AllTBSqlTag"
+					"categoryName": "Education",
+					"key": "AllXCEducationTag"
 				}
 			],
-			"navTo": "/telegram-bot"
+			"navTo": "/x-gpt"
 		},
 		{
 			"key": "personalAccountCase",
@@ -46,85 +57,133 @@ export const casesListData = {
 					"key": "allPACInformationTechnologyTag"
 				},
 				{
-					"tagName": "JavaScript",
-					"key": "allPACJavaScriptTag"
+					"tagName": "Java Spring",
+					"key": "allPACJavaSpringTag"
 				},
 				{
-					"tagName": "SQL",
-					"key": "allPACSqlTag"
+					"tagName": "React.js",
+					"key": "allPACReact.jsTag"
 				},
 				{
 					"categoryName": "Health and care",
 					"key": "allPACHealthAndCareTag"
 				}
 			],
-			"navTo": "/personal-account"
+			"navTo": "/skkod"
 		},
 		{
-			"key": "onlinePlaygroundCase",
-			"imgSource": onlinePlayground,
-			"url": "online-playground",
-			"name": "Online playground platform",
-			"nameWidth": ["389px", "312px"],
+			"key": "RSCase",
+			"imgSource": rsImg,
+			"url": "rs",
+			"name": "RS",
+			"nameWidth": ["389px", "80px"],
 			"tags": [
 				{
-					"categoryName": "Gaming",
-					"key": "allOPCGamingTag"
+					"tagName": "Information technologies",
+					"key": "allRSCInformationTechnologyTag"
 				},
 				{
-					"tagName": "TypeScript",
-					"key": "allOPCTypeScriptTag"
+					"tagName": "Java Spring",
+					"key": "allRSCJavaSpringTag"
 				},
 				{
-					"categoryName": "Enterprise",
-					"key": "allOPCEnterpriseTag"
+					"tagName": "React.js",
+					"key": "allRSCReact.jsTag"
 				},
 				{
-					"tagName": "Angular",
-					"key": "allOPCAngularTag"
-				},
-				{
-					"tagName": "Java",
-					"key": "allOPCJavaTag"
+					"categoryName": "Health and care",
+					"key": "allRSCHealthAndCareTag"
 				}
 			],
-			"navTo": "/online-playground"
+			"navTo": "/rs"
+
+		},
+		{
+			"key": "InteractiveTablesForMuseumCase",
+			"imgSource": museumImg,
+			"url": "interactive-tables",
+			"name": "Interactive tables for museum",
+			"nameWidth": ["499px", "312px"],
+			"tags": [
+				{
+					"categoryName": "Science and education",
+					"key": "allITMCScinceAndEducationTag"
+				},
+				{
+					"tagName": "C#",
+					"key": "allITMCC#Tag"
+				},
+				{
+					"tagName": "History",
+					"key": "allITMCHistoryTag"
+				},
+				{
+					"tagName": "Unity",
+					"key": "allITMCUnityTag"
+				}
+			],
+			"navTo": "/itm"
+
+		},
+		{
+			"key": "TelegramWebAppCase",
+			"imgSource": telegramWebIMG,
+			"url": "telegram-web-app",
+			"name": "Telegram Web App for transfers",
+			"nameWidth": ["350px", "312px"],
+			"tags": [
+				{
+					"categoryName": "Transport",
+					"key": "allTWACTransportTag"
+				},
+				{
+					"tagName": "FastAPI",
+					"key": "allTWACFastAPITag"
+				},
+				{
+					"tagName": "Aiogram",
+					"key": "allTWACAiogramTag"
+				}
+			],
+			"navTo": "/telegram-app"
 
 		}
 	],
-	"marketplace": [],
-	"enterprise": [
-		{
-			"key": "onlinePlaygroundCase",
-			"imgSource": onlinePlayground,
-			"url": "online-playground",
-			"name": "Online playground platform",
-			"nameWidth": ["389px", "312px"],
-			"tags": [
-				{
-					"categoryName": "Gaming",
-					"key": "enterpriseOPCGamingTag"
-				},
-				{
-					"tagName": "TypeScript",
-					"key": "enterpriseOPCTypeScriptTag"
-				},
-				{
-					"categoryName": "Enterprise",
-					"key": "enterpriseOPCEnterpriseTag"
-				},
-				{
-					"tagName": "Angular",
-					"key": "enterpriseOPCAngularTag"
-				},
-				{
-					"tagName": "Java",
-					"key": "enterpriseOPCJavaTag"
-				}
-			],
-			"navTo": "/online-playground"
+	"SingleCaseAll":{
+		"x-gpt":{
+			"name":"x-gpt",
+			"heroBadge":["education"],
+			"heroImg": gptHeroImg,
+			"sumTechStack": ["Python", "FastAPI", "React.js"],
+			"sumImg":gptSumImg,
+			"funcList":["registration", "edit", "generate", "fill"],
+			"client": false,
+			"clientFeedback": false,
+			"resultList": false,
+			"funcImgLeft":gptFuncImgL,
+			"funcImgSmallL": gptFuncImgSmallL,
+			"funcImgSmallR": gptFuncImgSmallR,
+			"funcImgRight": gptFuncImgR,
+		},
+		"skkod":{
+			"name":"skkod",
+			"heroBadge":["health and care"],
+			"heroImg": gptHeroImg,
+			"sumTechStack": ["Java Spring", "React.js"],
+			"sumImg":gptSumImg,
+			"funcList":["registration", "post", "appointment", "adminPanel", "load", "calendar", "pay", "info"],
+			"client": true,
+			"clientFeedback": true,
+			"resultList": [],
+			"funcImgLeft":gptFuncImgL,
+			"funcImgSmallL": gptFuncImgSmallL,
+			"funcImgSmallR": gptFuncImgSmallR,
+			"funcImgRight": gptFuncImgR,
+			"feedbackImg":skkodFeedbackImg,
 		}
-	],
+	},
+	"marketplace": [],
+	"enterprise": [],
 	"corporate_website": [],
 	"health_and_care": [
 		{
@@ -136,57 +195,52 @@ export const casesListData = {
 			"tags": [
 				{
 					"tagName": "Information technologies",
-					"key": "healthCarePACInformationTechnologyTag"
+					"key": "allPACInformationTechnologyTag"
 				},
 				{
-					"tagName": "JavaScript",
-					"key": "healthCarePACJavaScriptTag"
+					"tagName": "Java Spring",
+					"key": "allPACJavaSpringTag"
 				},
 				{
-					"tagName": "SQL",
-					"key": "healthCarePACSqlTag"
+					"tagName": "React.js",
+					"key": "allPACReact.jsTag"
 				},
 				{
 					"categoryName": "Health and care",
-					"key": "healthCarePACHealthAndCareTag"
+					"key": "allPACHealthAndCareTag"
 				}
 			],
-			"navTo": "/personal-account"
-		}
-	],
-	"gaming": [
+			"navTo": "/skkod"
+		},
 		{
-			"key": "onlinePlaygroundCase",
-			"imgSource": onlinePlayground,
-			"url": "online-playground",
-			"name": "Online playground platform",
-			"nameWidth": ["389px", "312px"],
+			"key": "RSCase",
+			"imgSource": rsImg,
+			"url": "rs",
+			"name": "RS",
+			"nameWidth": ["389px", "80px"],
 			"tags": [
 				{
-					"categoryName": "Gaming",
-					"key": "gamingOPCGamingTag"
+					"tagName": "Information technologies",
+					"key": "allRSCInformationTechnologyTag"
 				},
 				{
-					"tagName": "TypeScript",
-					"key": "gamingOPCTypeScriptTag"
+					"tagName": "Java Spring",
+					"key": "allRSCJavaSpringTag"
 				},
 				{
-					"categoryName": "Enterprise",
-					"key": "gamingOPCEnterpriseTag"
+					"tagName": "React.js",
+					"key": "allRSCReact.jsTag"
 				},
 				{
-					"tagName": "Angular",
-					"key": "gamingOPCAngularTag"
-				},
-				{
-					"tagName": "Java",
-					"key": "gamingOPCJavaTag"
+					"categoryName": "Health and care",
+					"key": "allRSCHealthAndCareTag"
 				}
 			],
-			"navTo": "/online-playground"
-		}
-	],
+			"navTo": "/rs"
 
+		},
+	],
+	
 	"mainButton": {
 		"name": "mainButton"
 	},
@@ -221,12 +275,6 @@ export const casesListData = {
 			"btnWidth": "182px",
 			"spanWidth": "142px",
 			"key": "healthAndCareBtn"
-		},
-		{
-			"name": "Gaming",
-			"btnWidth": "110px",
-			"spanWidth": "70px",
-			"key": "gamingBtn"
 		}
 	]
 }
