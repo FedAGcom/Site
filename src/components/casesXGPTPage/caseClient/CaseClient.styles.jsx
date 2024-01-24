@@ -29,4 +29,7 @@ export const CaseClientP = styled.p`
 	font-weight: 400;
 	color: #333333;
     max-width: 475px;
+    @media (max-width: 900px) {
+		font-size: 18px;
+	}
 `
