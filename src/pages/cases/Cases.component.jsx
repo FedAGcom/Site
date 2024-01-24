@@ -10,7 +10,7 @@ const CasesComponent = () => {
 	return (
 		<Suspense fallback={<Spinner top="true" />} >
 			<Routes>
-				<Route path="/" element={<CasesPage />} />
+				<Route path="/" element={<CasesPage top="50px" />} />
 				<Route path='/:caseName' element={<SingleCasePage/>}/>
 			</Routes>
 		</Suspense>

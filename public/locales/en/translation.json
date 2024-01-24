@@ -188,7 +188,119 @@
             "feedbackName":"«Oncology clinic SKKOD»",
             "feedbackText": "It was a pleasure working with this team! They listened carefully to our requests and offered not only effective, but also innovative solutions for creating a personal account. The resulting functionality exceeded our expectations, providing ease of use for our clients. We recommend this team as experienced professionals who are ready to meet the client’s needs.",
             "caseHeader":"Similar cases"
-        }
+        },
+        "rs":{
+          "btnBack":"back",
+          "heroHeader":"RS",
+          "heroParagraph":"Web application for personnel selection.",
+          "badge": {  
+            "work": "Work",
+            "staff":"Staff"
+            },
+          "sumHDesk": "Brief description of the project",
+          "sumHMob": "Description of the project",
+          "sumHP": "Innovative service for effective personnel selection. Designed to streamline and simplify interaction with interns and key specialists, the service provides access to employee profiles and implements a specialized testing system. The new tool will significantly improve work efficiency, providing transparency and comfort in the team formation process.",
+          "time" : "Development time",
+          "timeSpent": "6 month",
+          "money": "Budget",
+          "moneySpent": "720.000 ₽",
+          "tech":"Technologies used",
+          "techStack": {
+              "Java Spring":"Java Spring", 
+              "React.js":"React.js"
+            },
+          "taskHeader":"Implementation of the tasks",
+          "taskParagraph":"Our goal was to create an intuitive and effective recruitment service. We developed a design that ensures ease of use, prototyped functionality and optimized the user journey. Particular attention was paid to integration with the internal database to ensure fast and accurate selection of candidates. Our work is aimed at creating an innovative tool for effective personnel management.",
+          "funcHeader":"Functional",
+          "funcList":{
+            "registration":"User login and registration", 
+            "testCreate":"Ability to create tests",
+            "test":"Possibility of taking tests",
+            "testAuto":"Automated code tasks in testing",
+            "profile":"Possibility of filling out a profile",
+            "interview":"Opportunity to schedule an interview",
+            "adminPage":"Admin panel with the ability to moderate user profiles",
+            "info":"User account information window"
+            },
+          "resHeader":"Result",
+          "resParagraph":"The developed project is a set of innovative functions, including detailed employee profiles, an effective testing system and convenient personnel selection. This comprehensive functionality increases productivity, transparency and comfort in personnel management, making selection and interaction processes more efficient and innovative.",
+          "caseHeader":"Similar cases"
+      },
+      "museum":{
+        "btnBack":"back",
+        "heroHeader":"Interactive tables for the museum",
+        "heroParagraph":"Tender from the State Museum in Stavropol for the development of design and software for interactive tables. ",
+        "badge": {  
+          "Science and education": "Science and education"
+          },
+        "client": "Client",
+        "clientName" : "Museum 'Memory'",
+        "clientAbout" : "The Memory Museum is located in the basement of the Central Department Store building a few steps from the main square of the city of Stavropol - the Square of Fallen Fighters.",
+        "sumHDesk": "Brief description of the project",
+        "sumHMob": "Description of the project",
+        "sumHP": "The project - interactive tables for the museum, became a source of fascinating immersion in history and culture. We created information landing pages rich in audio and video materials, which allowed visitors to immerse themselves in the fascinating world of exhibitions. In addition, our quizzes based on this information have become a unique way to test and deepen knowledge, making a museum visit an unforgettable experience.",
+        "time" : "Development time",
+        "timeSpent": "6 month",
+        "money": "Budget",
+        "moneySpent": "360.000 ₽",
+        "tech":"Technologies used",
+        "techStack": {
+            "C#":"C#", 
+            "Unity":"Unity"
+          },
+        "taskHeader":"Implementation of the tasks",
+        "taskParagraph":"To implement the project, we chose the Unity game engine using C#, which allowed us to create a fun and interactive experience for visitors. Thanks to the functionality and flexibility of Unity, we were able to easily integrate audio, video and quizzes, creating a unique museum experience.",
+        "funcHeader":"Functional",
+        "funcList":{
+          "infoPage":"Information pages", 
+          "interactive":"Interactive quizzes",
+          "audio":"Ability to play audio files", 
+          "video":"Ability to play video files"
+          },
+        "resHeader":"Result",
+        "resParagraph":"As a result of our work, a wide range of functions was implemented, presented through information landing pages, audio and video materials, as well as exciting quizzes. These functions interact within the Unity game engine, developed using the C# programming language, to provide a seamless and immersive visitor experience with museum exhibits.",
+        "feedback": "Customer Feedback",
+        "feedbackName":"Museum 'Memory'",
+        "feedbackText": "Great experience with the team! Their interactive tables based on Unity and C# have become a real hit in our museum. Visitors are delighted with landing pages, multimedia content and quizzes. Thank you for a bright and memorable project!",
+        "caseHeader":"Similar cases"
+    },
+    "telegram-app":{
+      "btnBack":"back",
+      "heroHeader":"Co.Transfer",
+      "heroParagraph":"Telegram Web App for transfers.",
+      "badge": {  
+        "Transport": "Transport"
+        },
+      "client": "Client",
+      "clientName" : "community Co.Hub",
+      "clientAbout" : "This is an environment that strengthens you. Types for large-scale problems that require an equally large-scale space to solve them. People who can serve as role models and become truly close friends. A place where fantastic minds are at arm's length.",
+      "sumHDesk": "Brief description of the project",
+      "sumHMob": "Description of the project",
+      "sumHP": "The design of an internal application for Telegram, focused on ordering a transfer in Turkey, is an innovative platform that combines the possibilities of sharing transport and searching for points of interest.",
+      "time" : "Development time",
+      "timeSpent": "3 month",
+      "money": "Budget",
+      "moneySpent": "100.000 ₽",
+      "tech":"Technologies used",
+      "techStack": {
+        "Aiogram":"Aiogram", 
+        "Fast API":"Fast API"
+        },
+      "taskHeader":"Implementation of the tasks",
+      "taskParagraph":"The project was implemented using Aiogram and FastAPI, ensuring efficient operation and high performance. The use of Aiogram allowed for the creation of powerful functionality within Telegram, while FastAPI ensured fast and reliable request processing, ensuring a smooth interaction between users and the application. These tools provided a solid foundation for creating a user-friendly and innovative application that combines the unique capabilities of Telegram with the flexibility and reliability of FastAPI.",
+      "funcHeader":"Functional",
+      "funcList":{
+        "order":"Transfer order", 
+        "share":"Sharing of transport",
+        "find":"Finding a transfer to points of interest"
+        },
+      "resHeader":"Result",
+      "resParagraph":"The application design provides an intuitive interface with easy access to a variety of options. Users can choose from multiple transportation options and destinations, giving them the flexibility to customize their route.",
+      "feedback": "Customer Feedback",
+      "feedbackName":"commynity Co.Hub",
+      "feedbackText": "The bot created by the development team turned out to be an incredibly convenient and useful tool for our travels around Turkey. It allows us to quickly and easily order transfers, select different modes of transport and destinations, which greatly simplifies the planning of our routes. The bot has become an indispensable assistant in organizing our trips, and we are grateful to the team for creating such a convenient and intuitive service.",
+      "caseHeader":"Similar cases"
+     }
 
       },
       "employeesSection": {
