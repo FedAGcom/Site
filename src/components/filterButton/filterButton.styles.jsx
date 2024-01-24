@@ -7,6 +7,8 @@ export const StyledFilterButtonDiv = styled.div`
   overflow: hidden;
   flex-wrap: wrap;
   gap: 15px;
+  align-self: start;
+  margin-left: ${({ routepage }) =>routepage === "cases" ? "0" : "6.5%"};
   position: relative;
 	top: ${({top}) => top ? top : "0"};
   @media only screen and (max-width: 600px) {

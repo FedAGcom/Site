@@ -28,6 +28,7 @@ export const StyledCasesPageMain = styled.main`
 	position: relative;
 	padding: 100px 11.456vw 120px 11.456vw;
 	display: flex;
+	gap: 32px;
 	flex-direction: column;
 	@media only screen and (max-width: 600px) {
 		padding: 80px 4.267vw 80px 4.267vw;
@@ -46,5 +47,5 @@ export const StyledCasesPageHeadline = styled.h1`
   font-size: 60px;
   line-height: 82px;
   color: #333333;
-	margin-top: 30px;
+	// margin-top: 30px;
 `;

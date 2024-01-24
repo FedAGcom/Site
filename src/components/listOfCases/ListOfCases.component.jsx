@@ -18,6 +18,7 @@ import { selectCasesCollection } from "../../redux/cases/cases.selectors";
 import { useTranslation } from "react-i18next";
 import LinkButtonComponent from "../linkButton/LinkButton.component.jsx";
 import { useNavigate, useParams } from "react-router-dom";
+import FilterButtonComponent from "../filterButton/fillterButton.component.jsx";
 
 const ListOfCasesComponent = ({ top, routepage }) => {
 	const { t } = useTranslation();
@@ -56,12 +57,15 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 	return (
 		<>
 			{routepage !== "cases" && (
+				<>
+				<FilterButtonComponent collection="cases"/>
 				<StyledArrowSlider
 					position="left"
 					src={leftArrow}
 					alt="prev"
 					onClick={prevClick}
 				/>
+				</>
 			)}
 			<StyledListOfCases
 				routepage={routepage}
@@ -69,6 +73,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 				{filteredList.map((data, index) => {
 					return routepage !== "cases" ? (
 						(cur - index === numOfEL() || cur - index === 0) && (
+              <>
 							<StyledPreviewOfListElement
 								key={data.key}
 								routepage={routepage}>
@@ -109,6 +114,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 										color={"#B81034"}></LinkButtonComponent>
 								</StyledAboutProjectPartOfCase>
 							</StyledPreviewOfListElement>
+              </>
 						)
 					) : (
 						<StyledPreviewOfListElement
