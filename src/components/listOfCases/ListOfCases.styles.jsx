@@ -148,7 +148,6 @@ export const StyledPreviewOfListElement = styled.li`
 	display: flex;
 	min-width: 35dvw;
 	max-width: 35dvw;
-	//width: ${({ routepage }) => (routepage === "cases" ? "540px" : "445px")};
 	flex-direction: column;
 	height: 643px;
 	background: #ffffff;
@@ -201,12 +200,10 @@ export const StyledPreviewOfListElement = styled.li`
 		routepage === "cases" ? "width: 85dvw" : "width: 55dvw"};
     ${({ routepage }) =>
 		routepage === "cases" ? "min-width: 85dvw;" : "min-width: 55dvw"};
-		
 	}
 	@media only screen and (max-width: 600px) {
     ${({ routepage }) =>
 		routepage === "cases" ? "min-width: 85dvw;" : "min-width: 70dvw"};
-		//min-width: 70dvw;
 		min-height: 482px;
 		max-height: 517px;
 		border-radius: 30px;
@@ -215,36 +212,40 @@ export const StyledPreviewOfListElement = styled.li`
 		min-width: 80dvw;
 	}
 `;
-
 export const StyledListOfCases = styled.ul`
 	position: relative;
-	top: ${({ top }) => top};
+	min-height: 643px;
 	${({ routepage }) =>
 		routepage === "cases" ? "" : "justify-content: center"};
-	min-height: 643px;
-	width: 88dvw;
-	overflow: hidden;
-	flex-direction: row;
+	${({ routepage }) =>
+	routepage === "cases" ? "width: 88dvw" : ""};
+	${({ routepage }) =>
+	routepage === "cases" ? "overflow: hidden" : ""};
+	${({ routepage }) =>
+	routepage === "cases" ? "flex-direction: row" : ""};
+	${({ routepage }) =>
+	routepage === "cases" ? "display: flex" : ""};
 	flex-wrap: ${({ routepage }) => (routepage === "cases" ? "wrap" : "nowrap")};
-	display: flex;
 	gap: ${({ routepage }) => (routepage === "cases" ? "32px" : "9dvw")};
 	&::-webkit-scrollbar {
 		display: none;
 	}
   @media only screen and (max-width: 1100px) {
-		width: 50dvw;
+	${({ routepage }) =>
+	routepage === "cases" ? "width: 50dvw" : ""};
 	}
 	@media only screen and (max-width: 800px) {
     ${({ routepage }) =>
-		routepage === "cases" ? "width: 85dvw" : "width: 55dvw"};
+		routepage === "cases" ? "width: 85dvw" : ""};
 	}
 	@media only screen and (max-width: 600px) {
     ${({ routepage }) =>
-		routepage === "cases" ? "width: 85dvw;" : "width: 70dvw"};
+		routepage === "cases" ? "width: 85dvw;" : ""};
     min-height: 517px;
 	}
   @media only screen and (max-width: 420px) {
-		width: 80dvw;
+	${({ routepage }) =>
+	routepage === "cases" ? "width: 80dvw;" : ""};
 	}
 `;
 export const StyledArrowSlider = styled.img`
