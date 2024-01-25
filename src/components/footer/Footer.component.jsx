@@ -83,14 +83,6 @@ const Footer = () => {
               {t("main.footer.generalList.cases")}
             </StyledNavLinkOfFooter>
           </StyledElementOfFooterSection>
-          <StyledElementOfFooterSection className="disabled-link">
-            <StyledNavLinkOfFooter
-              to="/terms-and-conditions"
-              onClick={scrollToHeader}
-            >
-              {t("main.footer.generalList.termsAndCondition")}
-            </StyledNavLinkOfFooter>
-          </StyledElementOfFooterSection>
         </StyledListOfFooterSections>
 
         <StyledListOfFooterSections className="social-links">

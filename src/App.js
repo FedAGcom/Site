@@ -12,7 +12,6 @@ import ScrollToTop from "./ScrollToTop";
 const HomePage = lazy(() => import('./pages/homePage/HomePage.component'));
 const CareerPage = lazy(() => import('./pages/career/Career.component'));
 const CasesPage = lazy(() => import('./pages/cases/Cases.component'));
-const TechnologiesPage = lazy(() => import('./pages/technologies/Technology.component'));
 const ContactUsPage = lazy(() => import('./pages/contactUs/ContactUs.component'));
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/career' element={<CareerPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
-            <Route path="/technology" element={<TechnologiesPage />} />
             <Route path="/cases/*" element={<CasesPage />} />
           </Routes>
           <Footer />
