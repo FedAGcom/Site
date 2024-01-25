@@ -2,17 +2,21 @@ import styled from "styled-components";
 
 export const StyledFilterButtonDiv = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 64.8%;
+  // flex-direction: row;
+  // width: 64.8%;
+  overflow: hidden;
+  flex-wrap: wrap;
   gap: 15px;
+  align-self: start;
+  margin-left: ${({ routepage, collection }) => (routepage === "cases" || collection === 'technologies') ? "0" : "6.5%"};
   position: relative;
 	top: ${({top}) => top ? top : "0"};
-
   @media only screen and (max-width: 600px) {
     align-items: flex-start;
+    flex-wrap: nowrap;
     padding: 0;
     position: relative;
-    width: 99.73%;
+    max-width: 90dvw;
     height: 49px;
     overflow: scroll;
     &::-webkit-scrollbar {
@@ -20,7 +24,6 @@ export const StyledFilterButtonDiv = styled.div`
     }
   }
 `;
-
 export const StyledFilterButton = styled.button`
   display: flex;
   flex-direction: row;

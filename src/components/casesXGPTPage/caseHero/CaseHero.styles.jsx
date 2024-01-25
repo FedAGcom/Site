@@ -34,6 +34,11 @@ export const CaseHeroText = styled.div`
 		}
 	}
 `;
+export const CaseBadgeWrapper = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+`;
 export const CaseHeroImgWrapper = styled.div`
 	height: 100%;
 	width: 100%;

@@ -7,6 +7,7 @@ import Spinner from "./components/spinner/spinner.component";
 
 import ErrorBoundary from "./components/errorBoundary/ErrorBoundary.component";
 import {GlobalStyle} from "./global.styles";
+import ScrollToTop from "./ScrollToTop";
 
 const HomePage = lazy(() => import('./pages/homePage/HomePage.component'));
 const CareerPage = lazy(() => import('./pages/career/Career.component'));
@@ -31,6 +32,7 @@ function App() {
           <Footer />
         </Suspense>
       </ErrorBoundary>
+      <ScrollToTop />
     </div>
   );
 }

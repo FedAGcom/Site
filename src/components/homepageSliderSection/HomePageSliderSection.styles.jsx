@@ -14,6 +14,7 @@ export const StyledHomePageSliderSection = styled.section`
 `;
 
 export const StyledHomePageSliderSectionHeadline = styled.p`
+  font-family: 'Nunito Sans', 'Inter', sans-serif;
   position: relative;
 	text-align: center;
   min-width: 848px;
@@ -24,11 +25,13 @@ export const StyledHomePageSliderSectionHeadline = styled.p`
   color: #333333;
 	
 	@media only screen and (max-width: 600px) {
+    text-align: left;
     min-width: 91.467vw;
     min-height: 110px;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: normal;
     color: #000000;
 	}
   @media only screen and (max-width: 350px) {

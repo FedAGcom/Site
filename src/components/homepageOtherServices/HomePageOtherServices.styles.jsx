@@ -15,6 +15,7 @@ export const StyledHomePageOtherServicesSection = styled.section`
 	}
 `;
 export const StyledHomePageOtherServicesHeadline = styled.p`
+  font-family: 'Nunito Sans', 'Inter', sans-serif;
   position: relative;
   min-height: 68px;	
 	top: 0;
@@ -26,9 +27,11 @@ export const StyledHomePageOtherServicesHeadline = styled.p`
   @media only screen and (max-width: 600px) {
 	  width: 91.467vw;
     font-size: 40px;
-    line-height: 55px;
 	  font-weight: 600;
 	  min-height: 110px;
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 10px;
   }
   @media only screen and (max-width: 340px) {
 		font-size: 33px;

@@ -30,7 +30,7 @@ import {
 } from "../../redux/cases/cases.selectors";
 
 
-const FilterButtonComponent = ({ collection, top }) => {
+const FilterButtonComponent = ({ collection, top, routepage }) => {
 	const popularTechnologies = useSelector(selectPopularTechnologies);
 	const frontendTechnologies = useSelector(selectFrontendTechnologies);
 	const backendTechnologies = useSelector(selectBackendTechnologies);
@@ -67,7 +67,7 @@ const FilterButtonComponent = ({ collection, top }) => {
 	}
 	const {t} = useTranslation()
 	return (
-		<StyledFilterButtonDiv top={top}>
+		<StyledFilterButtonDiv top={top} routepage={routepage} collection={collection}>
 
 			{
 				buttonCollection.map((data) => {
