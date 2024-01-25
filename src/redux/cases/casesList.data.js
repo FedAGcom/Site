@@ -53,6 +53,7 @@ export const casesListData = {
 		{
 			"key": "X-GPTCase",
 			"imgSource": xGpt,
+			"urlNew": "x-gpt",
 			"url": "X-GPT",
 			"name": "X-GPT",
 			"nameWidth": ["408px", "80px"],
@@ -84,6 +85,7 @@ export const casesListData = {
 			"key": "personalAccountCase",
 			"imgSource": personalAccount,
 			"url": "personal-account",
+			"urlNew": "skkod",
 			"name": "Personal account",
 			"nameWidth": ["239px", "207px"],
 			"tags": [
@@ -110,6 +112,7 @@ export const casesListData = {
 			"key": "RSCase",
 			"imgSource": rsImg,
 			"url": "rs",
+			"urlNew": "rs",
 			"name": "RS",
 			"nameWidth": ["389px", "80px"],
 			"tags": [
@@ -137,6 +140,7 @@ export const casesListData = {
 			"key": "InteractiveTablesForMuseumCase",
 			"imgSource": museumImg,
 			"url": "interactive-tables",
+			"urlNew": "museum",
 			"name": "Interactive tables for museum",
 			"nameWidth": ["499px", "312px"],
 			"tags": [
@@ -164,6 +168,7 @@ export const casesListData = {
 			"key": "TelegramWebAppCase",
 			"imgSource": telegramWebIMG,
 			"url": "telegram-web-app",
+			"urlNew": "telegram-app",
 			"name": "Telegram Web App for transfers",
 			"nameWidth": ["350px", "312px"],
 			"tags": [

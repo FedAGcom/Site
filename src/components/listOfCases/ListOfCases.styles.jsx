@@ -131,7 +131,7 @@ export const StyledArrowButton = styled.img`
 export const StyledPreviewImageOfListElement = styled.img`
 	width: 100%;
 	max-width: 100%;
-	// max-width: ${({ routepage }) =>		routepage === "cases" ? "538px" : "443px"};
+	// max-width: ${({ routepage }) =>	routepage === "cases" ? "538px" : "443px"};
 	min-height: 35%;
 	border-radius: 49px;
 	object-fit: cover;
@@ -158,8 +158,8 @@ export const StyledPreviewOfListElement = styled.li`
 		border-radius: 50%;
 		margin: 0;
     @media only screen and (max-width: 1100px) {
-      margin-top: ${({ routepage }) => (routepage === "cases" ? "0" : "8%")};
-		}
+      margin-top: ${({ routepage }) => (routepage === "cases" ? "40px" : "8%")};
+	}
 	}
 
 	&:hover {
@@ -252,6 +252,10 @@ ${({ position }) => (position === "left" ? "left" : "right")}: 40px;
 	width: 40px;
 	position: absolute;
 	margin-top: 25%;
+	&:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
   @media only screen and (max-width: 1300px) {
     margin-top: 33%;
 	}

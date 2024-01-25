@@ -5,10 +5,11 @@ import { Separator } from '../casePageElements/limits.styles';
 import { useNavigate } from 'react-router-dom';
 import arrowToLeft from '../../../assets/arrow_to_left.svg';
 import { StyledLinkToBack } from '../../casesPage/CasesPage.styles';
-import { CaseHeroImg, CaseHeroImgWrapper, CaseHeroText, CaseWrapper } from './CaseHero.styles';
+import { CaseBadgeWrapper, CaseHeroImg, CaseHeroImgWrapper, CaseHeroText, CaseWrapper } from './CaseHero.styles';
 import CasePageBadge from '../casePageElements/CasePageBadge';
 import CasePageParagraph from '../casePageElements/CasePageParagraph';
 import { useTranslation } from 'react-i18next';
+import FilterButtonComponent from '../../filterButton/fillterButton.component';
 
 function CaseHero(props) {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function CaseHero(props) {
         <CaseHeroText>
           <h1>{t(`main.homepage.singleCase.${props.case.name}.heroHeader`)}</h1>
           <CasePageParagraph>{t(`main.homepage.singleCase.${props.case.name}.heroParagraph`)}</CasePageParagraph>
+          <CaseBadgeWrapper>
           {props.case.heroBadge.map((el) => {
             return (
               <CasePageBadge
@@ -38,6 +40,7 @@ function CaseHero(props) {
               </CasePageBadge>
             );
           })}
+          </CaseBadgeWrapper>
         </CaseHeroText>
         <CaseHeroImgWrapper>
           <CaseHeroImg src={props.case.heroImg} />

@@ -20,17 +20,17 @@ export function CaseSummary(props) {
             <CasePageParagraph>{t(`main.homepage.singleCase.${currentCase.name}.sumHP`)}</CasePageParagraph>
           </CaseSummaryText>
           <CaseSummaryGrid>
-            <div class="block">
+            <div className="block">
               <h3>{t(`main.homepage.singleCase.${currentCase.name}.time`)}</h3>
-              <h3 class="block__red">{t(`main.homepage.singleCase.${props.case.name}.timeSpent`)}</h3>
+              <h3 className="block__red">{t(`main.homepage.singleCase.${props.case.name}.timeSpent`)}</h3>
             </div>
-            <div class="block">
+            <div className="block">
               <h3>{t(`main.homepage.singleCase.${currentCase.name}.money`)}</h3>
-              <h3 class="block__red">{t(`main.homepage.singleCase.${currentCase.name}.moneySpent`)}</h3>
+              <h3 className="block__red">{t(`main.homepage.singleCase.${currentCase.name}.moneySpent`)}</h3>
             </div>
-            <div class="block">
+            <div className="block">
               <h3>{t(`main.homepage.singleCase.${currentCase.name}.tech`)}</h3>
-              <div class="badge__wrapper">
+              <div className="badge__wrapper">
                 {currentCase.sumTechStack.map((el) => {
                   return (
                     <CasePageBadge

@@ -35,6 +35,10 @@ export const StyledHomePageCasesArrow = styled.img`
 	position: relative;
 	width: 110px;
 	height: 23px;
+	&:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
 	//   left: 1000px;
 	// 	top: -22.5px;
 

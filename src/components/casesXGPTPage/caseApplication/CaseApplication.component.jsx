@@ -69,7 +69,7 @@ function ModifiedApplication() {
 						</CasePageHeader>
 					</ContactWithUs>
 					<FormApplication onSubmit={handleSubmit}>
-						<div class="name__wrapper">
+						<div className="name__wrapper">
 							<ApplicationLabel>
 							{t(`main.homepage.requestSection.inputs.firstName`)}
 								<ApplicationInput
