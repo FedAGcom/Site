@@ -39,14 +39,6 @@ export const sliderData = {
 		{
 			"index": 2,
 			"key": "thirdPaginationBullet"
-		},
-		{
-			"index": 3,
-			"key": "fourthPaginationBullet"
-		},
-		{
-			"index": 4,
-			"key": "fifthPaginationBullet"
 		}
 	]
 }

@@ -7,7 +7,8 @@ import {
 	StyledApplicationRequestHeadline,
 	StyledApplicationRequestInput,
 	StyledApplicationRequestLabel, StyledApplicationRequestListOfInputs,
-	StyledApplicationRequestTextArea
+	StyledApplicationRequestTextArea,
+	StyledDivContainer
 } from "./ApplicationLeaveRequest.styles";
 
 import CustomButtonComponent from "../customButton/CustomButton.component";
@@ -60,7 +61,7 @@ const ApplicationLeaveRequestComponent = () => {
 				isLoading
 					? <Spinner />
 					:
-					<div>
+					<StyledDivContainer>
 						<StyledApplicationRequestHeadline>
 							{t('main.homepage.requestSection.headline')}
 						</StyledApplicationRequestHeadline>
@@ -104,11 +105,11 @@ const ApplicationLeaveRequestComponent = () => {
 
 							</StyledApplicationRequestListOfInputs>
 
-							<CustomButtonComponent submit="true" resptop="556px" type="submit" top="312px" left="665px">
+							<CustomButtonComponent submit="true" mobilewidth="100%" top="15px"  type="submit">
 								{t('main.homepage.requestSection.btnText')}
 							</CustomButtonComponent>
 						</StyledApplicationRequestForm>
-					</div>
+					</StyledDivContainer>
 			}
 		</StyledApplicationRequestContainer>
 	);

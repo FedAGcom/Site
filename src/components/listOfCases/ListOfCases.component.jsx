@@ -73,9 +73,8 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 				{filteredList.map((data, index) => {
 					return routepage !== "cases" ? (
 						(cur - index === numOfEL() || cur - index === 0) && (
-              <>
+              <React.Fragment key={data.key}>
 							<StyledPreviewOfListElement
-								key={data.key}
 								routepage={routepage}>
 								<StyledPreviewImageOfListElement
 									routepage={routepage}
@@ -114,7 +113,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 										color={"#B81034"}></LinkButtonComponent>
 								</StyledAboutProjectPartOfCase>
 							</StyledPreviewOfListElement>
-              </>
+              </React.Fragment>
 						)
 					) : (
 						<StyledPreviewOfListElement
