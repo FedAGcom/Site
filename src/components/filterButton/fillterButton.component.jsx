@@ -67,7 +67,7 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 	}
 	const {t} = useTranslation()
 	return (
-		<StyledFilterButtonDiv top={top} routepage={routepage}>
+		<StyledFilterButtonDiv top={top} routepage={routepage} collection={collection}>
 
 			{
 				buttonCollection.map((data) => {

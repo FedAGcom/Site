@@ -8,7 +8,7 @@ export const StyledFilterButtonDiv = styled.div`
   flex-wrap: wrap;
   gap: 15px;
   align-self: start;
-  margin-left: ${({ routepage }) =>routepage === "cases" ? "0" : "6.5%"};
+  margin-left: ${({ routepage, collection }) => (routepage === "cases" || collection === 'technologies') ? "0" : "6.5%"};
   position: relative;
 	top: ${({top}) => top ? top : "0"};
   @media only screen and (max-width: 600px) {
@@ -16,7 +16,7 @@ export const StyledFilterButtonDiv = styled.div`
     flex-wrap: nowrap;
     padding: 0;
     position: relative;
-    width: 99.73%;
+    max-width: 90dvw;
     height: 49px;
     overflow: scroll;
     &::-webkit-scrollbar {

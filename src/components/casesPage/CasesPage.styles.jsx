@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledCasesPage = styled.div`
-	min-height: ${({russian}) => russian === "true" ? "2750px" : "2750px"};
-	@media only screen and (max-width: 600px) {
-    min-height: ${({russian}) => russian === "true" ? "2400px" : "2650px"};
-	}
+	// min-height: ${({russian}) => russian === "true" ? "2750px" : "2750px"};
+	// @media only screen and (max-width: 600px) {
+    // min-height: ${({russian}) => russian === "true" ? "2400px" : "2650px"};
+	// }
 `;
 
 export const StyledLinkToBack = styled.div`

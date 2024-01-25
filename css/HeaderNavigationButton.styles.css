@@ -1,0 +1,66 @@
+.hamburger {
+  width: 7.73%;
+  height: 25px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 4.26%;
+  top: 28.07%;
+}
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger .line {
+  display: block;
+  width: 62%;
+  margin-bottom: 7px;
+  transition: all 1s ease-out;
+  height: 1.7px;
+  background-color: white;
+  overflow: hidden;
+  left: 20.7%;
+  right: 17.23%;
+  top: 22.81%;
+  bottom: 77.19%;
+  position: absolute;
+}
+.hamburger .line:nth-child(2) {
+  width: 41.37%;
+  position: absolute;
+  left: 31.05%;
+  right: 27.57%;
+  top: 50.81%;
+  bottom: 49.19%;
+}
+.hamburger .line:nth-child(3) {
+  margin: 0;
+  width: 62%;
+  left: 20.7%;
+  right: 17.23%;
+  top: 78.81%;
+  bottom: 21.19%;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.hamburger.is-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+.hamburger.is-active .line:nth-child(2) {
+  width: 0;
+}
+.hamburger.is-active .line:nth-child(1),
+.hamburger.is-active .line:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.hamburger.is-active .line:nth-child(1) {
+  transform: translateY(6px);
+}
+.hamburger.is-active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(90deg);
+}/*# sourceMappingURL=HeaderNavigationButton.styles.css.map */

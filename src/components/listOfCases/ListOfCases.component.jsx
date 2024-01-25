@@ -27,7 +27,7 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 	let paramId = Object.values(param)[0];
 	const casesCollections = useSelector(selectCasesCollection);
 
-	let filteredList = casesCollections.filter((data) => paramId !== data.url);
+	let filteredList = casesCollections.filter((data) => paramId !== data.urlNew);
 	const [cur, setCur] = useState(1);
 	const len = filteredList.length;
 	const [width, setWidth] = useState(window.innerWidth);

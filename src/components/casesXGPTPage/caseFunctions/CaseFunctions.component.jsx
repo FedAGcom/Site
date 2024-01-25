@@ -28,14 +28,14 @@ function CaseFunctions(props) {
           })}
         </CaseFunctionsList>
         <CaseFunctionsImgs>
-          <div class="leftColumn">
+          <div className="leftColumn">
             <img
               src={currentCase.funcImgLeft}
               alt="pic"
             />
           </div>
-          <div class="rightColumn">
-            <div class="upperWrap">
+          <div className="rightColumn">
+            <div className="upperWrap">
               <img
                 src={currentCase.funcImgSmallL}
                 alt="pic"
