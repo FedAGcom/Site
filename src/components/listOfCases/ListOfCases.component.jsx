@@ -18,7 +18,7 @@ import {
 import { selectAllCases, selectCasesCollection } from "../../redux/cases/cases.selectors";
 import { useTranslation } from "react-i18next";
 import LinkButtonComponent from "../linkButton/LinkButton.component.jsx";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import FilterButtonComponent from "../filterButton/fillterButton.component.jsx";
 import { switchCasesType } from "../../redux/cases/cases.action.js";
 

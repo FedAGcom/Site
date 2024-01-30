@@ -75,6 +75,8 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 			dispatch(switchCasesType(collection))
 		}
 		setActive(btnName);
+		
+		
 	}
 	
 	const {t} = useTranslation()
@@ -135,7 +137,6 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 						default:
 							break
 					}
-					console.log(data);
 					return (
 						<StyledFilterButton key={data.key} btnwidth={data.btnWidth}
               className={(active === data.name) ? "active" : ""}
