@@ -8,7 +8,8 @@ export const StyledFilterButtonDiv = styled.div`
   flex-wrap: wrap;
   gap: 15px;
   align-self: start;
-  margin-left: ${({ routepage, collection }) => (routepage === "cases" || collection === 'technologies') ? "0" : "6.5%"};
+  margin-left: 0;
+  // margin-left: ${({ routepage, collection }) => (routepage === "cases" || collection === 'technologies') ? "0" : "6.5%"};
   position: relative;
 	top: ${({top}) => top ? top : "0"};
   @media only screen and (max-width: 600px) {

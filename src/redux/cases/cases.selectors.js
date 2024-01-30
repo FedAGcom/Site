@@ -41,6 +41,26 @@ export const selectGamingCases = createSelector(
 	[selectCases],
 	cases => cases.gaming
 );
+export const selectITCases = createSelector(
+	[selectCases],
+	cases => cases.informational_technologies
+);
+export const selectLearningCases = createSelector(
+	[selectCases],
+	cases => cases.learning
+);
+export const selectHistoryCases = createSelector(
+	[selectCases],
+	cases => cases.history
+);
+export const selectTransportCases = createSelector(
+	[selectCases],
+	cases => cases.transport
+);
+export const selectScienceCases = createSelector(
+	[selectCases],
+	cases => cases.science
+);
 
 export const selectCasesCollection = createSelector(
 	[selectCases],

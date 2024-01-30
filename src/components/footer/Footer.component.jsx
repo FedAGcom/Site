@@ -43,10 +43,10 @@ const Footer = () => {
             <a
               className="email-link"
               rel="noreferrer"
-              href="mailto:ask.fedag@gmail.com?subject=The%20FedAG%20team"
+              href="mailto:fedagedu@gmail.com?subject=The%20FedAG%20team"
               target="_blank"
             >
-              ask.fedag@gmail.com
+              fedagedu@gmail.com
             </a>
           </StyledElementOfFooterSection>
           <StyledElementOfFooterSection>
@@ -55,7 +55,7 @@ const Footer = () => {
             </a>
           </StyledElementOfFooterSection>
           <StyledElementOfFooterSection>
-            <div>{t("main.footer.contactsList.company")}&nbsp;• {t("main.footer.contactsList.taxPayer")}&nbsp;7802924391&nbsp;• {t("main.footer.contactsList.stateRegistr")}&nbsp;1227800049762</div>
+            <div>{t("main.footer.contactsList.company")}&nbsp; {t("main.footer.contactsList.taxPayer")}&nbsp;7802924391&nbsp; {t("main.footer.contactsList.stateRegistr")}&nbsp;1227800049762</div>
           </StyledElementOfFooterSection>
         </StyledListOfFooterSections>
 

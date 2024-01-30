@@ -54,7 +54,13 @@
           "Enterprise": "Enterprise",
           "Corporate website": "Corporate website",
           "Health and care": "Health and care",
-          "Gaming": "Gaming"
+          "Gaming": "Gaming",
+          "Informational technologies": "Informational technologies",
+          "Learning": "Learning",
+          "History": "History",
+          "Transport": "Transport",
+          "Science and education": "Science and education"
+
         },
         "cases": {
           "X-GPT": {
