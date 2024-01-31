@@ -54,7 +54,13 @@
           "Enterprise": "Предприятия",
           "Corporate website": "Корпоративные сайты",
           "Health and care": "Здравоохранение",
-          "Gaming": "Игры"
+          "Gaming": "Игры",
+          "Informational technologies": "Информационные технологии",
+          "Learning": "Обучение",
+          "History": "История",
+          "Transport": "Транспорт",
+          "Science and education": "Наука и образование"
+    
         },
         "cases": {
           "X-GPT": {
@@ -106,7 +112,7 @@
       }, 
       "singleCase":{
         "x-gpt":{
-            "btnBack":"назад",
+            "btnBack":"Назад",
             "heroHeader":"X-GPT",
             "heroParagraph":"Веб-приложение для создания академических работ.",
             "badge": {  
@@ -139,7 +145,7 @@
             "caseHeader":"Похожие кейсы"
         },
         "skkod":{
-            "btnBack":"назад",
+            "btnBack":"Назад",
             "heroHeader":"СККОД",
             "heroParagraph":"Личный кабинет для клиентов частной онкологической клиники.",
             "badge": {  
@@ -189,7 +195,7 @@
             "caseHeader":"Похожие кейсы"
         },
         "rs":{
-            "btnBack":"назад",
+            "btnBack":"Назад",
             "heroHeader":"RS",
             "heroParagraph":"Веб приложение для подбора персонала.",
             "badge": {  
@@ -226,7 +232,7 @@
             "caseHeader":"Похожие кейсы"
         },
         "museum":{
-          "btnBack":"назад",
+          "btnBack":"Назад",
           "heroHeader":"Интерактивные столы для музея",
           "heroParagraph":"Тендер от государственного музея в Ставрополе, на разработку дизайна и ПО для интерактивных столов. ",
           "badge": {  
@@ -264,7 +270,7 @@
           "caseHeader":"Похожие кейсы"
       },
       "telegram-app":{
-        "btnBack":"назад",
+        "btnBack":"Назад",
         "heroHeader":"Co.Transfer",
         "heroParagraph":"Telegram Web App для трансферов.",
         "badge": {  

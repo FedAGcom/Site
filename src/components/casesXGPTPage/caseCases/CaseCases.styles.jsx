@@ -5,9 +5,9 @@ export const CaseCasesMain = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 32px;
-	max-width: 87%;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: 77dvw;
+	margin-left: auto;
+	margin-right: auto;
 	h2 {
 		align-self: flex-start;
 		margin-bottom: 32px;

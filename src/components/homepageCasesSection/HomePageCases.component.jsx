@@ -14,11 +14,17 @@ import {
 import FilterButtonComponent from "../filterButton/fillterButton.component";
 import ListOfCasesComponent from "../listOfCases/ListOfCases.component";
 import { CaseCasesMain } from "../casesXGPTPage/caseCases/CaseCases.styles";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAllCases } from "../../redux/cases/cases.selectors";
+import { switchCasesType } from "../../redux/cases/cases.action";
 
 const HomePageCasesComponent = () => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const collection = useSelector(selectAllCases);
 	const handleClickEvent = () => {
 		navigate("/cases");
+		dispatch(switchCasesType(collection));
 	};
 	const { t } = useTranslation();
 	return (
@@ -33,7 +39,6 @@ const HomePageCasesComponent = () => {
 					onClick={handleClickEvent}
 				/>
 			</StyledWrapperOfHeaderArrow>
-			{/* <FilterButtonComponent collection="cases" top="-18px"/> */}
 			<CaseCasesMain>
 				<ListOfCasesComponent
 					top="13px"

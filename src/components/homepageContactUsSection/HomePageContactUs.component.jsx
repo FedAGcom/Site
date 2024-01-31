@@ -29,7 +29,7 @@ const HomePageContactUsComponent = () => {
 				</StyledContactUsParagraphOfHomePage>
 				<CallToComponent phone="+79112507289">
 					<StyledContactUsButtonOfHomePage  phone="true">
-					+7 (911) 250-72-89
+					+7 (911) 351-50-55
 					</StyledContactUsButtonOfHomePage>
 				</CallToComponent>
 			</StyledContactUsElementOfHomePage>

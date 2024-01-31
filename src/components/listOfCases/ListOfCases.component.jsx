@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import leftArrow from "../../assets/arrow-back-outline.svg";
 import rigtArrow from "../../assets/arrow-forward-outline.svg";
@@ -15,11 +15,12 @@ import {
 	StyledArrowSlider,
 } from "./ListOfCases.styles";
 
-import { selectCasesCollection } from "../../redux/cases/cases.selectors";
+import { selectAllCases, selectCasesCollection } from "../../redux/cases/cases.selectors";
 import { useTranslation } from "react-i18next";
 import LinkButtonComponent from "../linkButton/LinkButton.component.jsx";
 import { useNavigate, useParams } from "react-router-dom";
 import FilterButtonComponent from "../filterButton/fillterButton.component.jsx";
+import { switchCasesType } from "../../redux/cases/cases.action.js";
 
 const ListOfCasesComponent = ({ top, routepage }) => {
 	const { t } = useTranslation();
@@ -27,36 +28,95 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 	const param = useParams();
 	let paramId = Object.values(param)[0];
 	const casesCollections = useSelector(selectCasesCollection);
-
-	let filteredList = casesCollections.filter((data) => paramId !== data.urlNew);
+	const dispatch = useDispatch();
+	const collection = useSelector(selectAllCases);
 	const settings = {
 		arrows: false,
 		dots: true,
-		infinite: true,
+		infinite: false,
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		responsive: [
 			{
-			  breakpoint: 1100,
-			  settings: {
-				slidesToShow: 1,
-			  }
-			}
-		]
-	  };
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
+	};
 
 	return (
 		<>
+			{routepage !== "cases" && (
+				<FilterButtonComponent
+					collection="cases"
+					top="-18px"
+				/>
+			)}
+
 			<StyledListOfCases
 				routepage={routepage}
 				top={top}>
 				{routepage !== "cases" && (
 					<Slider {...settings}>
-						{filteredList.map((data) => {
+						{casesCollections
+							.filter((data) => paramId !== data.urlNew)
+							.map((data) => {
+								return (
+									<React.Fragment key={data.key}>
+										<StyledPreviewOfListElement routepage={routepage}>
+											<StyledPreviewImageOfListElement
+												routepage={routepage}
+												src={data.imgSource}
+												alt={data.name}
+											/>
+
+											<StyledAboutProjectPartOfCase routepage={routepage}>
+												<StyledNameOfProject
+													namewidth={data.nameWidth}
+													routepage={routepage}>
+													{t(
+														`main.homepage.casesSection.cases.${data.name}.headline`
+													)}
+												</StyledNameOfProject>
+
+												<StyledTechStackOfCase>
+													{data.tags.map((tag) => (
+														<StyledProjectTagsButton
+															className="btnTags"
+															key={tag.key}
+															tag="true">
+															<StyledProjectTagsButtonSpan tag="true">
+																{t(
+																	`main.homepage.casesSection.cases.${
+																		data.name
+																	}.tags.${tag.tagName || tag.categoryName}`
+																)}
+															</StyledProjectTagsButtonSpan>
+														</StyledProjectTagsButton>
+													))}
+												</StyledTechStackOfCase>
+												<LinkButtonComponent
+													onClick={() =>{ 
+														navigate(`/cases${data.navTo}`)
+														dispatch(switchCasesType(collection));
+													}}
+													bgcolor={"white"}
+													color={"#B81034"}></LinkButtonComponent>
+											</StyledAboutProjectPartOfCase>
+										</StyledPreviewOfListElement>
+									</React.Fragment>
+								);
+							})}
+					</Slider>
+				)}
+				{routepage === "cases" && (
+					<>
+						{casesCollections.map((data) => {
 							return (
 								<React.Fragment key={data.key}>
-									<StyledPreviewOfListElement
-											routepage={routepage}>
+									<StyledPreviewOfListElement routepage={routepage}>
 										<StyledPreviewImageOfListElement
 											routepage={routepage}
 											src={data.imgSource}
@@ -89,7 +149,10 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 												))}
 											</StyledTechStackOfCase>
 											<LinkButtonComponent
-												onClick={() => navigate(`/cases${data.navTo}`)}
+												onClick={() => {
+													navigate(`/cases${data.navTo}`);
+													dispatch(switchCasesType(collection));
+											}}
 												bgcolor={"white"}
 												color={"#B81034"}></LinkButtonComponent>
 										</StyledAboutProjectPartOfCase>
@@ -97,60 +160,8 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 								</React.Fragment>
 							);
 						})}
-					</Slider>
-				)}
-				{routepage === "cases" && (
-					<>
-					{filteredList.map((data) => {
-						return (
-							<React.Fragment key={data.key}>
-								<StyledPreviewOfListElement
-									routepage={routepage}>
-									<StyledPreviewImageOfListElement
-										routepage={routepage}
-										src={data.imgSource}
-										alt={data.name}
-									/>
-
-									<StyledAboutProjectPartOfCase routepage={routepage}>
-										<StyledNameOfProject
-											namewidth={data.nameWidth}
-											routepage={routepage}>
-											{t(
-												`main.homepage.casesSection.cases.${data.name}.headline`
-											)}
-										</StyledNameOfProject>
-									
-
-										<StyledTechStackOfCase>
-											{data.tags.map((tag) => (
-												<StyledProjectTagsButton
-													className="btnTags"
-													key={tag.key}
-													tag="true">
-													<StyledProjectTagsButtonSpan tag="true">
-														{t(
-															`main.homepage.casesSection.cases.${
-																data.name
-															}.tags.${tag.tagName || tag.categoryName}`
-														)}
-													</StyledProjectTagsButtonSpan>
-												</StyledProjectTagsButton>
-											))}
-										</StyledTechStackOfCase>
-										<LinkButtonComponent
-											onClick={() => navigate(`/cases${data.navTo}`)}
-											bgcolor={"white"}
-											color={"#B81034"}></LinkButtonComponent>
-									</StyledAboutProjectPartOfCase>
-								</StyledPreviewOfListElement>
-							</React.Fragment>
-						);
-					})}
 					</>
 				)}
-
-
 			</StyledListOfCases>
 		</>
 	);

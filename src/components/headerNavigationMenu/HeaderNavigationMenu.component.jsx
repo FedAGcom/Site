@@ -41,7 +41,7 @@ const HeaderNavigationMenuComponent = () => {
   return (
     <StyledNav className={classNameValue}>
       <StyledHeaderCallTo>
-        <CallToComponent phone="+79112507289">+7 (911) 250-72-89</CallToComponent>
+        <CallToComponent phone="+79113515055">+7 (911) 351-50-55</CallToComponent>
       </StyledHeaderCallTo>
       <StyledNavigationLine />
       <StyledUnorderedList>
