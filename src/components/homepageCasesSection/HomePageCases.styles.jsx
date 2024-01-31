@@ -49,8 +49,9 @@ export const StyledHomePageCasesArrow = styled.img`
 `;
 
 export const StyledWrapperOfHeaderArrow = styled.div`
-	margin-left: 6.5%;
-	margin-right: 6.5%;
+	max-width: 77dvw;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

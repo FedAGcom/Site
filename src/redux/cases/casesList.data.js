@@ -272,11 +272,130 @@ export const casesListData = {
 	"marketplace": [],
 	"enterprise": [],
 	"corporate_website": [],
-	"health_and_care": [
+	"learning":[
+		{
+			"key": "X-GPTCase",
+			"imgSource": xGpt,
+			"urlNew": "x-gpt",
+			"url": "X-GPT",
+			"name": "X-GPT",
+			"nameWidth": ["408px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allXCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Python",
+					"key": "allXCPythonTag"
+				},
+				{
+					"tagName": "FastAPI",
+					"key": "allXCFastAPITag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allXCReactTag"
+				},
+				{
+					"categoryName": "Education",
+					"key": "AllXCEducationTag"
+				}
+			],
+			"navTo": "/x-gpt"
+		},
+	],
+	"transport":[
+		{
+			"key": "TelegramWebAppCase",
+			"imgSource": telegramWebIMG,
+			"url": "telegram-web-app",
+			"urlNew": "telegram-app",
+			"name": "Telegram Web App for transfers",
+			"nameWidth": ["350px", "312px"],
+			"tags": [
+				{
+					"categoryName": "Transport",
+					"key": "allTWACTransportTag"
+				},
+				{
+					"tagName": "FastAPI",
+					"key": "allTWACFastAPITag"
+				},
+				{
+					"tagName": "Aiogram",
+					"key": "allTWACAiogramTag"
+				}
+			],
+			"navTo": "/telegram-app"
+		}
+	],
+	"science":[	
+		{
+		"key": "InteractiveTablesForMuseumCase",
+		"imgSource": museumImg,
+		"url": "interactive-tables",
+		"urlNew": "museum",
+		"name": "Interactive tables for museum",
+		"nameWidth": ["499px", "312px"],
+		"tags": [
+			{
+				"categoryName": "Science and education",
+				"key": "allITMCScinceAndEducationTag"
+			},
+			{
+				"tagName": "C#",
+				"key": "allITMCC#Tag"
+			},
+			{
+				"tagName": "History",
+				"key": "allITMCHistoryTag"
+			},
+			{
+				"tagName": "Unity",
+				"key": "allITMCUnityTag"
+			}
+		],
+		"navTo": "/museum"
+	},
+	],
+	"informational_technologies": [
+		{
+			"key": "X-GPTCase",
+			"imgSource": xGpt,
+			"urlNew": "x-gpt",
+			"url": "X-GPT",
+			"name": "X-GPT",
+			"nameWidth": ["408px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allXCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Python",
+					"key": "allXCPythonTag"
+				},
+				{
+					"tagName": "FastAPI",
+					"key": "allXCFastAPITag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allXCReactTag"
+				},
+				{
+					"categoryName": "Education",
+					"key": "AllXCEducationTag"
+				}
+			],
+			"navTo": "/x-gpt"
+		},
 		{
 			"key": "personalAccountCase",
 			"imgSource": personalAccount,
 			"url": "personal-account",
+			"urlNew": "skkod",
 			"name": "Personal account",
 			"nameWidth": ["239px", "207px"],
 			"tags": [
@@ -303,6 +422,7 @@ export const casesListData = {
 			"key": "RSCase",
 			"imgSource": rsImg,
 			"url": "rs",
+			"urlNew": "rs",
 			"name": "RS",
 			"nameWidth": ["389px", "80px"],
 			"tags": [
@@ -327,6 +447,63 @@ export const casesListData = {
 
 		},
 	],
+	"health_and_care": [
+		{
+			"key": "RSCase",
+			"imgSource": rsImg,
+			"url": "rs",
+			"urlNew": "rs",
+			"name": "RS",
+			"nameWidth": ["389px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allRSCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Java Spring",
+					"key": "allRSCJavaSpringTag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allRSCReact.jsTag"
+				},
+				{
+					"categoryName": "Health and care",
+					"key": "allRSCHealthAndCareTag"
+				}
+			],
+			"navTo": "/rs"
+
+		},
+		{
+			"key": "personalAccountCase",
+			"imgSource": personalAccount,
+			"url": "personal-account",
+			"urlNew": "skkod",
+			"name": "Personal account",
+			"nameWidth": ["239px", "207px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allPACInformationTechnologyTag"
+				},
+				{
+					"tagName": "Java Spring",
+					"key": "allPACJavaSpringTag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allPACReact.jsTag"
+				},
+				{
+					"categoryName": "Health and care",
+					"key": "allPACHealthAndCareTag"
+				}
+			],
+			"navTo": "/skkod"
+		},
+	],
 	
 	"mainButton": {
 		"name": "mainButton"
@@ -340,28 +517,35 @@ export const casesListData = {
 			"key": "allBtn"
 		},
 		{
-			"name": "Marketplace",
-			"btnWidth": "151px",
-			"spanWidth": "111px",
-			"key": "marketplaceBtn"
-		},
-		{
-			"name": "Enterprise",
-			"btnWidth": "132px",
-			"spanWidth": "92px",
-			"key": "enterpriseBtn"
-		},
-		{
-			"name": "Corporate website",
-			"btnWidth": "205px",
-			"spanWidth": "165px",
-			"key": "corporateWebsiteBtn"
-		},
-		{
 			"name": "Health and care",
 			"btnWidth": "182px",
 			"spanWidth": "142px",
 			"key": "healthAndCareBtn"
-		}
+		},
+		{
+			"name": "Informational technologies",
+			"btnWidth": "182px",
+			"spanWidth": "142px",
+			"key": "informationalTechnologiesBtn"
+		},
+		{
+			"name": "Learning",
+			"btnWidth": "182px",
+			"spanWidth": "142px",
+			"key": "learningBtn"
+		},
+		{
+			"name": "Transport",
+			"btnWidth": "182px",
+			"spanWidth": "142px",
+			"key": "transportBtn"
+		},
+		{
+			"name": "Science and education",
+			"btnWidth": "182px",
+			"spanWidth": "142px",
+			"key": "scienceBtn"
+		},
+		
 	]
 }

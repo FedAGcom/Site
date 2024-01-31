@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 
@@ -26,7 +26,12 @@ import {
 	selectGamingCases,
 	selectHealthAndCareCases,
 	selectMarketplaceCases,
-	selectEnterpriseCases
+	selectEnterpriseCases,
+	selectLearningCases,
+	selectITCases,
+	selectHistoryCases,
+	selectTransportCases,
+	selectScienceCases,
 } from "../../redux/cases/cases.selectors";
 
 
@@ -42,6 +47,12 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 	const healthAndCareCases = useSelector(selectHealthAndCareCases);
 	const marketplaceCases = useSelector(selectMarketplaceCases);
 	const enterpriseCases = useSelector(selectEnterpriseCases);
+	const ITcases = useSelector(selectITCases);
+	const learningCases = useSelector(selectLearningCases);
+	const historyCases = useSelector(selectHistoryCases);
+	const transportCases = useSelector(selectTransportCases);
+	const scienceCases = useSelector(selectScienceCases);
+
 
 	let buttonCollection;
 	const techButtons = useSelector(selectTechnologiesButtons);
@@ -54,8 +65,8 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 	}
 
 	const [active, setActive] = useState((collection === "technologies") ? "Popular" : "All");
+	
 	const dispatch = useDispatch();
-
 	const handleEvent = (collection, btnName) => {
 		if ((btnName === "Frontend") || (btnName === "Popular")
 			|| (btnName === "Backend") || (btnName === "DevOps")) {
@@ -64,7 +75,10 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 			dispatch(switchCasesType(collection))
 		}
 		setActive(btnName);
+		
+		
 	}
+	
 	const {t} = useTranslation()
 	return (
 		<StyledFilterButtonDiv top={top} routepage={routepage} collection={collection}>
@@ -104,7 +118,22 @@ const FilterButtonComponent = ({ collection, top, routepage }) => {
 						case "Enterprise":
 							dataCollection = enterpriseCases
 							break
-
+						case "Informational technologies":
+							dataCollection = ITcases
+							break
+						case "Learning":
+							dataCollection = learningCases
+						break
+						case "History":
+							dataCollection = historyCases
+							break
+						case "Transport":
+							dataCollection = transportCases
+							break
+						case "Science and education":
+							dataCollection = scienceCases
+						break
+						
 						default:
 							break
 					}

@@ -146,8 +146,8 @@ export const StyledPreviewImageOfListElement = styled.img`
 export const StyledPreviewOfListElement = styled.li`
 	position: relative;
 	display: flex;
-	min-width: 35dvw;
-	max-width: 35dvw;
+	min-width: ${({ routepage }) => (routepage === "cases" ? "35dvw" : "28dvw")};
+	max-width: ${({ routepage }) => (routepage === "cases" ? "35dvw" : "28dvw")};
 	flex-direction: column;
 	height: 643px;
 	background: #ffffff;
@@ -191,6 +191,9 @@ export const StyledPreviewOfListElement = styled.li`
 			}
 		}
 	}
+	@media only screen and (max-width: 1250px) {
+		min-width: 35dvw;
+		max-width: 35dvw;}
 	@media only screen and (max-width: 1100px) {
 		width: 50dvw;
 		min-width: 50dvw;
