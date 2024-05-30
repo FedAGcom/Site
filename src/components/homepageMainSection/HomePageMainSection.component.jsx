@@ -1,26 +1,34 @@
 import React from "react";
 
 import HomePageHeroTextComponent from "../homepageHeroText/HomePageHeroText.component";
-import HomePageScoreComponent from "../homepageScore/HomePageScore.component";
+import HomePageMainSectionHeader from "../homePageMainSectionHeader/HomePageMainSectionHeader";
+import HomePageMainSectionTeam from "../homePageMainSectionTeam/HomePageMainSectionTeam";
+import HomePageMainSectionReviews from "../homePageMainSectionReviews/HomePageMainSectionReviews";
+import HomePageMainSectionPortfolio from "../homePageMainSectionPortfolio/HomePageMainSectionPortfolio";
 
 import {
-	StyledLogoTypeOfMainSection,
 	StyledMainSectionOfHomePage,
-	StyledPreviewImageOfMainSection
+	StyledMainSectionWrapper,
+	StyledMainSectionWrapperRight,
+	StyledMainSectionOfHomePageInner
 } from "./HomePageMainSection.styles";
 
 const HomePageMainSectionComponent = () => {
   return (
 		<StyledMainSectionOfHomePage>
-
-			<HomePageHeroTextComponent />
-
-			<StyledPreviewImageOfMainSection />
-
-			<HomePageScoreComponent />
-
-			<StyledLogoTypeOfMainSection />
-
+			<StyledMainSectionOfHomePageInner>
+				<HomePageMainSectionHeader/>
+				<StyledMainSectionWrapper>
+					<HomePageHeroTextComponent />
+					<StyledMainSectionWrapperRight>
+						<StyledMainSectionWrapper>
+							<HomePageMainSectionTeam />
+							<HomePageMainSectionReviews />
+						</StyledMainSectionWrapper>
+						<HomePageMainSectionPortfolio/>
+					</StyledMainSectionWrapperRight>
+				</StyledMainSectionWrapper>
+			</StyledMainSectionOfHomePageInner>
 		</StyledMainSectionOfHomePage>
   );
 };
