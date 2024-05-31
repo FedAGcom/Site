@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
 export const StyledCustomButton = styled.button`
+  display: ${({icon}) => icon ? 'flex' : "block"};
+  align-items: ${({icon}) => icon ? 'center' : "stretch"};
+  justify-content: ${({icon}) => icon ? 'center' : "flex-start"};
+  gap: ${({icon}) => icon ? '25px' : "0"};
   position: relative;
   border: 0;
-  height: 52px;
+  height: ${({height}) => height ? height : "52px"};;
   width: ${({width}) => width ? width : "350px"};
   left: ${({ left }) => left ? left : ""};
   top: ${({ top }) => top ? top : ""};
-  color: white;
-  background: #B81034;
-  border-radius: 5px;
+  color: ${({ color }) => color ? color : "white"};
+  background: ${({backgroundColor}) => backgroundColor ? backgroundColor : "#B81034"};
+  border-radius: ${({borderRadius}) => borderRadius ? borderRadius : "5px"};
+  z-index: ${({zIndex}) => zIndex ? zIndex : 'auto'};
   @media only screen and (max-width: 600px) {
     position: relative;
 	  width: ${({mobilewidth}) => mobilewidth ? mobilewidth : "91.467vw"};

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledTechStackSection = styled.section`
-  margin: 120px 0;
+  margin: 260px 0;
 	padding: 0 165px 0 165px;
 	width: 100vw;
 	min-height: 438px;

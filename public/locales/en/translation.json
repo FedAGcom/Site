@@ -7,6 +7,10 @@
     },
     "homepage": {
       "mainSection": {
+        "headerParagraph": "IT - a company specializing in the development of Internet business solutions for small and medium-sized businesses.",
+        "teamHeadline": "Our team",
+        "portfolio": "Portfolio",
+        "application": "Submit application",
         "headline": "Outsourcing solutions for your business",
         "paragraph": "Unlock Your Business Potential with Our Tailored Outsourcing Solutions",
         "buttonText": "Build a project",
