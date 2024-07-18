@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import gleb from "../../assets/employees/gleb.png";
 import fedor from "../../assets/employees/fedor.png";
-import alexander from "../../assets/employees/alexander.png";
 import georgii from "../../assets/employees/goergii.png";
 import vladislav from "../../assets/employees/vladislav.png";
 import andrey from "../../assets/employees/andrey.png";
@@ -10,8 +9,6 @@ import arsenii from "../../assets/employees/arsenii.png";
 
 const setBackgroundImage = (name) => {
 	switch(name) {
-		case "Alexander":
-			return alexander
 		case "Fedor":
 			return fedor
 		case "Gleb Makarenko":

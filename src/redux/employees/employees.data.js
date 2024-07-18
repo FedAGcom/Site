@@ -1,4 +1,3 @@
-import alexander from '../../assets/employees/alexander.png'
 import fedor from '../../assets/employees/fedor.png'
 export const employeesList = {
 	"score": [
@@ -19,12 +18,6 @@ export const employeesList = {
 			"name": "Fedor",
 			"position": "CEO",
 			"imageSource": fedor
-		},
-		{
-			"key": "mainCTOAlexander",
-			"name": "Alexander",
-			"position": "CTO",
-			"imageSource": alexander
 		}
 	],
 	"general": [
