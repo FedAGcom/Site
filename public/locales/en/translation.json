@@ -91,6 +91,33 @@
               "Health and care": "Health and care"
             }
           },
+          "poc": {
+            "headline": "Personal account of users of the glucose monitoring system",
+            "tags": {
+              "Information technologies": "Information technologies",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Health and care": "Health and care"
+            }
+          },
+          "ASG": {
+            "headline": "Online store of customizable clothing and accessories",
+            "tags": {
+              "Information technologies": "Information technologies",
+              "Python": "Python",
+              "React.js": "React.js",
+              "FastAPI": "FastAPI"
+            }
+          },
+          "TM": {
+            "headline": "Web service for conducting profile testing of applicants and employees",
+            "tags": {
+              "Information technologies": "Information technologies",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Testing": "Testing"
+            }
+          },
           "Interactive tables for museum": {
             "headline": "Interactive tables for museum",
             "tags": {
