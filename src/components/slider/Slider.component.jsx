@@ -95,7 +95,7 @@ const SliderComponent = () => {
 								<div className="slide-customer-review">
 									<img className="slide-customer-image" src={slide.imageSource} alt={slide.clientName}/>
 									<p className="slide-customer-name">{t(`main.homepage.sliderSection.slides.${slide.caseName}.name`)}</p>
-									<p className="slide-customer-company">{slide.caseName}</p>
+									{/* <p className="slide-customer-company">{slide.caseName}</p> */}
 								</div>
 							</div>
 						)

@@ -48,12 +48,12 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 
 	return (
 		<>
-			{routepage !== "cases" && (
+			{/* {routepage !== "cases" && (
 				<FilterButtonComponent
 					collection="cases"
 					top="-18px"
 				/>
-			)}
+			)} */}
 
 			<StyledListOfCases
 				routepage={routepage}
@@ -97,13 +97,13 @@ const ListOfCasesComponent = ({ top, routepage }) => {
 														</StyledProjectTagsButton>
 													))}
 												</StyledTechStackOfCase>
-												<LinkButtonComponent
+												{/* <LinkButtonComponent
 													onClick={() =>{ 
 														navigate(`/cases${data.navTo}`)
 														dispatch(switchCasesType(collection));
 													}}
 													bgcolor={"white"}
-													color={"#B81034"}></LinkButtonComponent>
+													color={"#B81034"}></LinkButtonComponent> */}
 											</StyledAboutProjectPartOfCase>
 										</StyledPreviewOfListElement>
 									</React.Fragment>

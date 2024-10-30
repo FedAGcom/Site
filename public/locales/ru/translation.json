@@ -74,7 +74,7 @@
             }
           },
           "Personal account": {
-            "headline": "SKKOD",
+            "headline": "Личный кабинет пациентов и врачей",
             "tags": {
               "Information technologies": "Информационные технологии",
               "Java Spring": "Java Spring",
@@ -83,12 +83,39 @@
             }
           },
           "RS": {
-            "headline": "RS",
+            "headline": "Автоматизированная система тестирования и проведения собеседований",
             "tags": {
               "Information technologies": "Информационные технологии",
               "Java Spring": "Java Spring",
               "React.js": "React.js",
               "Health and care": "Здравоохранение"
+            }
+          },
+          "poc": {
+            "headline": "Личный кабинет пользователей системы мониторинга уровня глюкозы",
+            "tags": {
+              "Information technologies": "Информационные технологии",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Health and care": "Здравоохранение"
+            }
+          },
+          "ASG": {
+            "headline": "Интернет-магазин кастомизируемой одежды и аксессуаров",
+            "tags": {
+              "Information technologies": "Информационные технологии",
+              "Python": "Python",
+              "React.js": "React.js",
+              "FastAPI": "FastAPI"
+            }
+          },
+          "TM": {
+            "headline": "Веб-сервис для проведения профильных тестирований соискателей и сотрудников",
+            "tags": {
+              "Information technologies": "Информационные технологии",
+              "Java Spring": "Java Spring",
+              "React.js": "React.js",
+              "Testing": "Тестирование"
             }
           },
           "Interactive tables for museum": {
@@ -480,7 +507,7 @@
         "instagram": "Instagram",
         "telegram": "Telegram",
         "vc": "Vc.ru",
-        "behance": "Behance",
+        "behance": "HH",
         "linkedIn": "LinkedIn",
         "habr": "Habr",
         "gitHub": "GitHub"

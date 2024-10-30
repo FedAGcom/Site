@@ -22,10 +22,10 @@ const HomePageCasesComponent = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const collection = useSelector(selectAllCases);
-	const handleClickEvent = () => {
-		navigate("/cases");
-		dispatch(switchCasesType(collection));
-	};
+	// const handleClickEvent = () => {
+	// 	navigate("/cases");
+	// 	dispatch(switchCasesType(collection));
+	// };
 	const { t } = useTranslation();
 	return (
 		<StyledHomePageCasesSection>
@@ -33,11 +33,11 @@ const HomePageCasesComponent = () => {
 				<StyledHomePageCasesHeadline>
 					{t("main.homepage.casesSection.headline")}
 				</StyledHomePageCasesHeadline>
-				<StyledHomePageCasesArrow
+				{/* <StyledHomePageCasesArrow
 					src={arrowBtn}
 					alt="button"
 					onClick={handleClickEvent}
-				/>
+				/> */}
 			</StyledWrapperOfHeaderArrow>
 			<CaseCasesMain>
 				<ListOfCasesComponent

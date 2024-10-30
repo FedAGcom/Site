@@ -3,6 +3,9 @@ const personalAccount = require("../../assets/cases/persAccount.png")
 const rsImg = require("../../assets/cases/rs.png")
 const museumImg = require("../../assets/cases/museum.png")
 const telegramWebIMG = require("../../assets/cases/telegramWeb.png")
+const tmImg = require("../../assets/cases/tm/ТМ.png")
+const pocImg = require("../../assets/cases/poccheck/poccheck.png")
+const asgImg = require("../../assets/cases/asg/агс.png")
 
 const gptHeroImg = require("../../assets/cases/xgpt/gptLogo.png")
 const gptSumImg = require("../../assets/cases/xgpt/gptMob.png")
@@ -50,37 +53,37 @@ const coFeedbackImg = require("../../assets/cases/telegram-app/feedback.png")
 
 export const casesListData = {
 	"all": [
-		{
-			"key": "X-GPTCase",
-			"imgSource": xGpt,
-			"urlNew": "x-gpt",
-			"url": "X-GPT",
-			"name": "X-GPT",
-			"nameWidth": ["408px", "80px"],
-			"tags": [
-				{
-					"tagName": "Information technologies",
-					"key": "allXCInformationTechnologyTag"
-				},
-				{
-					"tagName": "Python",
-					"key": "allXCPythonTag"
-				},
-				{
-					"tagName": "FastAPI",
-					"key": "allXCFastAPITag"
-				},
-				{
-					"tagName": "React.js",
-					"key": "allXCReactTag"
-				},
-				{
-					"categoryName": "Education",
-					"key": "AllXCEducationTag"
-				}
-			],
-			"navTo": "/x-gpt"
-		},
+		// {
+		// 	"key": "X-GPTCase",
+		// 	"imgSource": xGpt,
+		// 	"urlNew": "x-gpt",
+		// 	"url": "X-GPT",
+		// 	"name": "X-GPT",
+		// 	"nameWidth": ["408px", "80px"],
+		// 	"tags": [
+		// 		{
+		// 			"tagName": "Information technologies",
+		// 			"key": "allXCInformationTechnologyTag"
+		// 		},
+		// 		{
+		// 			"tagName": "Python",
+		// 			"key": "allXCPythonTag"
+		// 		},
+		// 		{
+		// 			"tagName": "FastAPI",
+		// 			"key": "allXCFastAPITag"
+		// 		},
+		// 		{
+		// 			"tagName": "React.js",
+		// 			"key": "allXCReactTag"
+		// 		},
+		// 		{
+		// 			"categoryName": "Education",
+		// 			"key": "AllXCEducationTag"
+		// 		}
+		// 	],
+		// 	"navTo": "/x-gpt"
+		// },
 		{
 			"key": "personalAccountCase",
 			"imgSource": personalAccount,
@@ -134,6 +137,92 @@ export const casesListData = {
 				}
 			],
 			"navTo": "/rs"
+
+		},
+		{
+			"key": "TM",
+			"imgSource": tmImg,
+			"url": "tm",
+			"urlNew": "tm",
+			"name": "TM",
+			"nameWidth": ["389px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allTMCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Java Spring",
+					"key": "allTMCJavaSpringTag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allTMCReact.jsTag"
+				},
+				{
+					"tagName": "Testing",
+					"key": "allTMCTest.jsTag"
+				},
+				
+			],
+			"navTo": "/tm"
+
+		},
+		{
+			"key": "poc",
+			"imgSource": pocImg,
+			"url": "poc",
+			"urlNew": "poc",
+			"name": "poc",
+			"nameWidth": ["389px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allPOCCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Java Spring",
+					"key": "allPOCCJavaSpringTag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allPOCCReact.jsTag"
+				},
+				{
+					"tagName": "Health and care",
+					"key": "allPOCCHealth.jsTag"
+				},
+				
+			],
+			"navTo": "/poc"
+		},
+		{
+			"key": "ASG",
+			"imgSource": asgImg,
+			"url": "asg",
+			"urlNew": "asg",
+			"name": "ASG",
+			"nameWidth": ["389px", "80px"],
+			"tags": [
+				{
+					"tagName": "Information technologies",
+					"key": "allASGCInformationTechnologyTag"
+				},
+				{
+					"tagName": "Python",
+					"key": "allASGCPythonTag"
+				},
+				{
+					"tagName": "React.js",
+					"key": "allASGCReact.jsTag"
+				},
+				{
+					"tagName": "FastAPI",
+					"key": "allFastAPICTest.jsTag"
+				},
+				
+			],
+			"navTo": "/asg"
 
 		},
 		{

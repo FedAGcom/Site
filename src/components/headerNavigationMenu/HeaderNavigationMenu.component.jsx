@@ -40,26 +40,26 @@ const HeaderNavigationMenuComponent = () => {
 
   return (
     <StyledNav className={classNameValue}>
-      <StyledHeaderCallTo>
+      {/* <StyledHeaderCallTo>
         <CallToComponent phone="+79113515055">+7 (911) 351-50-55</CallToComponent>
-      </StyledHeaderCallTo>
+      </StyledHeaderCallTo> */}
       <StyledNavigationLine />
       <StyledUnorderedList>
-        <StyledListElements onClick={handleEvent}>
+        {/* <StyledListElements onClick={handleEvent}>
           <StyledNavLink
             onClick={scrollToServices}
             to="/"
             className={xPos ? 'disabled' : ''}>
             {t('main.header.services')}
           </StyledNavLink>
-        </StyledListElements>
-        <StyledListElements onClick={handleEvent}>
+        </StyledListElements> */}
+        {/* <StyledListElements onClick={handleEvent}>
           <StyledNavLink
             to="/cases"
             className={xPos ? 'disabled' : ''}>
             {t('main.header.cases')}
           </StyledNavLink>
-        </StyledListElements>
+        </StyledListElements> */}
         <StyledListElements onClick={handleEvent}>
           <StyledNavLink
             to="/contact-us"

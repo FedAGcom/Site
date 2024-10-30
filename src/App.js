@@ -28,7 +28,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/career' element={<CareerPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
-            <Route path="/cases/*" element={<CasesPage />} />
+            {/* <Route path="/cases/*" element={<CasesPage />} /> */}
           </Routes>
           <Footer />
         </Suspense>
