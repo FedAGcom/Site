@@ -2,7 +2,7 @@ import React from "react";
 
 import HomePageHeroTextComponent from "../homepageHeroText/HomePageHeroText.component";
 import HomePageScoreComponent from "../homepageScore/HomePageScore.component";
-
+import './homepage.styles.scss';
 import {
 	StyledLogoTypeOfMainSection,
 	StyledMainSectionOfHomePage,
@@ -11,17 +11,19 @@ import {
 
 const HomePageMainSectionComponent = () => {
   return (
-		<StyledMainSectionOfHomePage>
+		<section className="main-section">
 
 			<HomePageHeroTextComponent />
 
-			<StyledPreviewImageOfMainSection />
+			<div className="preview-image">
 
 			<HomePageScoreComponent />
+			<div className="logo-type"/>
+			</div>
 
-			<StyledLogoTypeOfMainSection />
 
-		</StyledMainSectionOfHomePage>
+
+		</section>
   );
 };
 

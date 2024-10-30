@@ -6,8 +6,11 @@ export const StyledTechStackSection = styled.section`
 	width: 100vw;
 	min-height: 438px;
 	position: relative;
+  display: flex;
+  justify-content: center;
 	
 	@media only screen and (max-width: 600px) {
+    display: block;
 		margin: 80px 0;
 		min-height: 483px;
     padding: 0 4.267vw;
