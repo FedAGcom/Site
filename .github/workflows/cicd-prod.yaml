@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: develop
+          ref: master
       - name: Build and push the image
         run: |
           docker login --username deniel369 --password ${{ secrets.FEDAG_TOKEN }} ghcr.io
