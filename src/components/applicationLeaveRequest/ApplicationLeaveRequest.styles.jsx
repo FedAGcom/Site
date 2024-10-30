@@ -16,7 +16,7 @@ export const StyledDivContainer = styled.div`
   align-items: center;
   padding: 80px 95px;
   gap:50px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1300px) {
     flex-direction: column;
     padding: 80px 16px;
     
@@ -76,7 +76,7 @@ export const StyledApplicationRequestContainer = styled.section`
   background: #272727;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1300px) {
     width: 100vw;
     height: 802px;
 	  margin: 80px 0;
@@ -88,7 +88,7 @@ export const StyledApplicationRequestHeadline = styled.p`
   font-size: 50px;
   line-height: 68.2px;
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 1300px) {
     font-weight: 600;
     font-size: 40px;
     line-height: 55px;
