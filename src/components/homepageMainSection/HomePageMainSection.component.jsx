@@ -2,28 +2,18 @@ import React from "react";
 
 import HomePageHeroTextComponent from "../homepageHeroText/HomePageHeroText.component";
 import HomePageScoreComponent from "../homepageScore/HomePageScore.component";
-import './homepage.styles.scss';
-import {
-	StyledLogoTypeOfMainSection,
-	StyledMainSectionOfHomePage,
-	StyledPreviewImageOfMainSection
-} from "./HomePageMainSection.styles";
+import "./homepage.styles.scss";
 
 const HomePageMainSectionComponent = () => {
   return (
-		<section className="main-section">
+    <section className="main-section">
+      <HomePageHeroTextComponent />
 
-			<HomePageHeroTextComponent />
-
-			<div className="preview-image">
-
-			<HomePageScoreComponent />
-			<div className="logo-type"/>
-			</div>
-
-
-
-		</section>
+      <div className="preview-image">
+        <HomePageScoreComponent />
+        <div className="logo-type" />
+      </div>
+    </section>
   );
 };
 
