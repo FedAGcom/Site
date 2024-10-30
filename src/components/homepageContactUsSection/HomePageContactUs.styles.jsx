@@ -15,7 +15,7 @@ export const StyledContactUsButtonOfHomePage = styled.button`
 	background-color: #B81034;
   border-radius: 5px;
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 900px) {
 		width: 83.467vw;
 	}
 	
@@ -65,7 +65,7 @@ export const StyledContactUsParagraphOfHomePage = styled.p`
   text-align: center;
   color: #FFFFFF;
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 900px) {
     max-width: 85.467vw;
     min-height: 75px;
 	}
@@ -80,7 +80,7 @@ export const StyledContactUsHeadlineOfHomePage = styled.p`
   line-height: 38px;
   color: #FFFFFF;
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 900px) {
 		min-height: ${({small}) => small ? "38px" : "76px"};
     min-width: ${({ small }) => small ? "39.867vw" : "64.667vw"};
 		text-align: center;
@@ -95,7 +95,7 @@ export const StyledContactUsIconOfHomePage = styled.div`
   //top: 50px;
 	background-image: url(${({ phone }) => phone ? phoneIcon : emailIcon});
   background-repeat: no-repeat;
-	@media only screen and (max-width: 600px){
+	@media only screen and (max-width: 900px){
 		//left: 32.267vw;
 	}
 `;
@@ -113,7 +113,7 @@ export const StyledContactUsElementOfHomePage = styled.div`
 	gap: 10px;
 	
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 900px) {
     min-width: 91.467vw;
     min-height: ${({ small }) => small ? "410px" : "448px"};
 	}
@@ -121,7 +121,7 @@ export const StyledContactUsElementOfHomePage = styled.div`
 export const StyledContactUsOfHomePage = styled.section`
   margin: 120px 0 120px 0;
 	display: flex;
-	flex-direction: row;
+	justify-content: center;
 	gap: 30px;
 	position: relative;
 	padding: 0 11.458vw;
@@ -132,7 +132,7 @@ export const StyledContactUsOfHomePage = styled.section`
 	background-image: url(${backgroundVector});
 	background-position: -33px 61px;
 	
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 900px) {
 		margin: 110px 0 80px 0;
 		flex-direction: column;
 		gap: 20px;

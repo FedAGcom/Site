@@ -69,7 +69,7 @@ const SliderComponent = () => {
 		}
 	}
 	return (
-		<div className="slider">
+		<div className="slider" style={{display: "flex", justifyContent: "center", marginTop: "35px"}}>
 			<div
 				className={translateFrom + " slider-container"}
 

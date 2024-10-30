@@ -5,7 +5,7 @@ export const CaseCasesMain = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 32px;
-	max-width: 77dvw;
+	// max-width: 77dvw;
 	margin-left: auto;
 	margin-right: auto;
 	h2 {

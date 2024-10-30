@@ -4,7 +4,7 @@ div {
     height: 402px;
     width: 1110px;
     display: flex;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
       width: 97.466vw;
     }
 
@@ -20,7 +20,7 @@ div {
         }
         &.active-slide {
           animation: fadeActiveFromL 1s;
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 900px) {
             animation: fadePreviousFromL 0.5s;
           }
         }
@@ -39,7 +39,7 @@ div {
         }
         &.active-slide {
           animation: fadeActiveFromR 1s;
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 900px) {
             animation: fadeNextFromR 0.5s;
           }
         }
@@ -65,7 +65,7 @@ div {
       height: 28px;
       top: 12px;
       left: 15px;
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 900px) {
         top: 20px;
         left: 3.2vw;
       }
@@ -86,7 +86,7 @@ div {
       height: 28px;
       top: 21px;
       left: 307px;
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 900px) {
         top: 14px;
         left: 84vw;
       }
@@ -135,7 +135,7 @@ div {
   &.next-slide {
     position: relative;
     top: 39px;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 900px){
       display: none;
     }
   }
@@ -151,7 +151,7 @@ div {
     width: 448px;
     height: 347px;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
       left: 0;
       width: 97.867vw;
       height: 412px;
@@ -160,7 +160,7 @@ div {
       border-radius: 20px;
       background-color: #f2f2f2;
       height: 251px;
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 900px) {
         height: 248px;
       }
 
@@ -174,7 +174,7 @@ div {
         font-size: 18px;
         line-height: 25px;
         color: #333333;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           width: 91.467vw;
           top: 20px;
           left: 12px;
@@ -185,7 +185,7 @@ div {
         position: relative;
         top: 20px;
         left: 24px;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           top: 20px;
           left: 3.2vw;
         }
@@ -195,7 +195,7 @@ div {
         position: relative;
         top: 51px;
         left: 384px;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           top: 14px;
           left: 84vw;
         }
@@ -211,7 +211,7 @@ div {
         //left: 184px;
         width: 80px;
         height: 80px;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           //left: 38.4vw;
           border: 1px solid #790A22;
           border-radius: 50px;
@@ -227,7 +227,7 @@ div {
         line-height: 27px;
         text-align: center;
         color: #B81034;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           top: -38px;
         }
       }
@@ -241,7 +241,7 @@ div {
         line-height: 22px;
         text-align: center;
         color: #333333;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 900px) {
           top: -37px;
         }
       }
@@ -261,7 +261,7 @@ div {
   align-items: flex-start;
   padding: 0;
   gap: 6px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     display: none;
   }
 
@@ -295,7 +295,7 @@ div {
     animation: arrow-btn-clicked 0.3s ease;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     height: 50px;
     width: 50px;
     top: 352px;
@@ -337,7 +337,7 @@ div {
 .arrow-left-btn {
   background: url("../../assets/homepage/slider/button_left.svg");
   left: 451px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     background-size: cover;
     left: 33.067vw;
   }
@@ -345,7 +345,7 @@ div {
 .arrow-right-btn {
   right: 451px;
   background: url("../../assets/homepage/slider/button_right.svg");
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     background-size: cover;
     right: 33.067vw;
   }
