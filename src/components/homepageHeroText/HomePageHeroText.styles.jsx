@@ -4,16 +4,16 @@ export const StyledHeroTextOfMainSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
+  // position: relative;
   width: 635px;
   min-height: 100px;
-	left: 11.458vw;
-  top: 200px;
+	// left: 11.458vw;
+  // top: 200px;
 
   @media only screen and (max-width: 600px) {
     width: 91.467vw;
-    left: 4.267vw;
-    top: 211px;
+    // left: 4.267vw;
+    // top: 211px;
   }
 `;
 

@@ -1,0 +1,55 @@
+.main-section{
+    width: 100vw;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 120px 10px;
+    background: #272727;
+    border-radius: 0 0 50px 50px;
+  
+    @media only screen and (max-width: 600px) {
+      height: 771px;
+      align-items: center;
+      border-radius: 0 0 30px 30px;
+    }
+}
+.preview-image{
+    position: relative;
+    width: 445px;
+    min-height: 498px;
+    // left: 830px;
+    // top: 142px;
+    border-radius: 20px;
+  
+    background-image: url("../../assets/homepage/mainPhotoForBadge.png");
+    background-repeat: no-repeat;
+    // background-size: cover;
+  
+    @media only screen and (max-width: 600px) {
+      width: 94.133vw;
+      min-height: 305px;
+      // left: -75px;
+      // top: 0;
+  
+      background-image: url("../../assets/homepage/mainPhotoForMobileBadge.png");
+      background-size: cover;
+      display: none;
+    }
+}
+.logo-type{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 81%;
+    top: -8%;
+    background-image: url("../../assets/homepage/logoIcon.svg");
+    background-size: cover;
+    @media only screen and (max-width: 600px) {
+      width: 66px;
+      height: 66px;
+      left: 65.6%;
+      top: 19px;
+      opacity: 0.8;
+    }
+}

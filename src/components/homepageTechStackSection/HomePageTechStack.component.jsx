@@ -14,6 +14,8 @@ const HomePageTechStackComponent = () => {
 	const isRussian = i18n.resolvedLanguage === "ru"
 	return (
 		<StyledTechStackSection russian={isRussian.toString()}>
+			<div>
+
 			<StyledHeadlineOfTechStackSection>
 				{t('main.homepage.technologiesSection.headline')}
 			</StyledHeadlineOfTechStackSection>
@@ -25,6 +27,7 @@ const HomePageTechStackComponent = () => {
 			<FilterButtonComponent collection="technologies"/>
 
 			<HomePageListOfTechStackComponent />
+			</div>
 		</StyledTechStackSection>
 	);
 };
