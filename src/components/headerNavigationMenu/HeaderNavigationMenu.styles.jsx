@@ -147,7 +147,7 @@ export const StyledListElements = styled.li`
 
 export const StyledUnorderedList = styled.ul`
 	list-style-type: none;
-	width: 340px;
+	width: 240px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

@@ -24,11 +24,11 @@ const HomePageComponent = () => {
 				<HomePageTechStackComponent />
 				<HomePageApproachComponent />
 				<HomePageCasesComponent />
-				<HomePageEmployeesComponent />
+				{/* <HomePageEmployeesComponent /> */}
 				<HomePageContactUsComponent />
 				<HomePageSliderSectionComponent />
 				<ApplicationLeaveRequestComponent />
-				<HomePageOtherServicesComponent />
+				{/* <HomePageOtherServicesComponent /> */}
 			</StyledHomePage>
 		</Suspense>
 	)

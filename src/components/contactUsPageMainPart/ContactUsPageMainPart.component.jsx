@@ -44,8 +44,8 @@ const ContactUsPageMainSectionComponent = () => {
 			</StyledContactUsPageMainSectionLinks>
 
 
-			<StyledContactUsPageMainSectionHeadline>{t('main.contactUsPage.mainSection.secondHeadline')}</StyledContactUsPageMainSectionHeadline>
-			<StyledContactUsPageMainSectionListOfBlocks>
+			{/* <StyledContactUsPageMainSectionHeadline>{t('main.contactUsPage.mainSection.secondHeadline')}</StyledContactUsPageMainSectionHeadline> */}
+			{/* <StyledContactUsPageMainSectionListOfBlocks>
 				<StyledContactUsPageMainSectionBlock>
 					<StyledContactUsPageMainSectionParagraph>
 						{t('main.contactUsPage.mainSection.paragraph')}
@@ -78,7 +78,7 @@ const ContactUsPageMainSectionComponent = () => {
 					</StyledContactUsPageMainSectionParagraph>
 					<LinkButtonComponent path="https://www.linkedin.com/company/fedag-edu/" color="#B81034" bgcolor="white"/>
 				</StyledContactUsPageMainSectionBlock>
-			</StyledContactUsPageMainSectionListOfBlocks>
+			</StyledContactUsPageMainSectionListOfBlocks> */}
 		</StyledContactUsPageMainSection>
 	);
 };

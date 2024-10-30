@@ -78,11 +78,11 @@ const Footer = () => {
               {t("main.footer.generalList.career")}
             </StyledNavLinkOfFooter>
           </StyledElementOfFooterSection>
-          <StyledElementOfFooterSection>
+          {/* <StyledElementOfFooterSection>
             <StyledNavLinkOfFooter to="/cases" onClick={scrollToHeader}>
               {t("main.footer.generalList.cases")}
             </StyledNavLinkOfFooter>
-          </StyledElementOfFooterSection>
+          </StyledElementOfFooterSection> */}
         </StyledListOfFooterSections>
 
         <StyledListOfFooterSections className="social-links">
@@ -90,11 +90,11 @@ const Footer = () => {
             {t("main.footer.socialLinksList.headline")}
           </StyledElementOfFooterSection>
 
-          <StyledElementOfFooterSection>
+          {/* <StyledElementOfFooterSection>
             <a rel="noreferrer" href="https://t.me/fedagEdu" target="_blank">
               {t("main.footer.socialLinksList.telegram")}
             </a>
-          </StyledElementOfFooterSection>
+          </StyledElementOfFooterSection> */}
           <StyledElementOfFooterSection>
             <a
               rel="noreferrer"
@@ -107,7 +107,7 @@ const Footer = () => {
           <StyledElementOfFooterSection>
             <a
               rel="noreferrer"
-              href="https://www.behance.net/fedag"
+              href="https://spb.hh.ru/employer/10318135"
               target="_blank"
             >
               {t("main.footer.socialLinksList.behance")}
@@ -123,7 +123,7 @@ const Footer = () => {
               {t("main.footer.socialLinksList.habr")}
             </a>
           </StyledElementOfFooterSection>
-          <StyledElementOfFooterSection>
+          {/* <StyledElementOfFooterSection>
             <a
               rel="noreferrer"
               href="https://github.com/FedAGcom"
@@ -131,7 +131,7 @@ const Footer = () => {
             >
               {t("main.footer.socialLinksList.gitHub")}
             </a>
-          </StyledElementOfFooterSection>
+          </StyledElementOfFooterSection> */}
         </StyledListOfFooterSections>
         <StyledListOfFooterSections>
           <StyledElementOfFooterSection>
