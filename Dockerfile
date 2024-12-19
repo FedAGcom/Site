@@ -1,4 +1,4 @@
-FROM node:20.5.0-alpine
+FROM node:20.17-alpine
 
 RUN npm install -g npm@latest
 
